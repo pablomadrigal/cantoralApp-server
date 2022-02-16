@@ -1,0 +1,195 @@
+{
+  "id": 1,
+  "titulo": "LA ESPADA DEL ESPÍRITU",
+  "subtitulo": [],
+  "basadoEn": null,
+  "cantoral": [
+    {
+        "Nombre": "CADV2013",
+        "Numero": 1 
+    }
+  ]
+  "autor": [
+    {
+        "Nombre": "Federico Carranza",
+        "Tipo": "Autor"
+    }
+  ],
+  "ordenVersos": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V1",
+    "F1"
+  ],
+  "tematica": [
+    "Espiritual",
+    "Espada del Espiritú"
+  ],
+  "introAcordes": [],
+  "versos": [
+    {
+      "tipoVerso": "V1",
+      "lineas": [
+        {
+          "numeroLinea": 0,
+          "acordesList": [
+            {
+                "begin": 30,
+                "end": 45,
+                "chor": "DoM"
+            }
+          ],
+          "letra": "Dios se_ha forjado con nosotros una_espada"
+        },
+        {
+          "numeroLinea": 1,
+          "acordesList": [],
+          "letra": "y nos toma_en su derecha poderosa."
+        },
+        {
+          "numeroLinea": 2,
+          "acordesList": [],
+          "letra": "Se levanta / el Señor a_hacer la guerra;"
+        },
+        {
+          "numeroLinea": 3,
+          "acordesList": [],
+          "letra": "con justicia_al enemigo vencerá."
+        }
+      ]
+    },
+    {
+      "tipoVerso": "V2",
+      "lineas": [
+        {
+          "numeroLinea": 0,
+          "acordesList": [],
+          "letra": "Y con su fuego_enardeciendo nuestro pecho"
+        },
+        {
+          "numeroLinea": 1,
+          "acordesList": [],
+          "letra": "sus guerreros avanzamos jubilosos,"
+        },
+        {
+          "numeroLinea": 2,
+          "acordesList": [],
+          "letra": "a_abatir con mano fuerte_y tenso brazo"
+        },
+        {
+          "numeroLinea": 3,
+          "acordesList": [],
+          "letra": "a las huestes del mal del enemigo."
+        }
+      ]
+    },
+    {
+      "tipoVerso": "V3",
+      "lineas": [
+        {
+          "numeroLinea": 0,
+          "acordesList": [],
+          "letra": "Marchando_al frente de nosotros está_un bravo,"
+        },
+        {
+          "numeroLinea": 1,
+          "acordesList": [],
+          "letra": "Capitán de gran poder y de gran fuerza:"
+        },
+        {
+          "numeroLinea": 2,
+          "acordesList": [],
+          "letra": "Jesucristo,_Hijo de Dios, León de Judá↘;"
+        },
+        {
+          "numeroLinea": 3,
+          "acordesList": [],
+          "letra": "a_él seguimos y_en su Nombre combatimos."
+        }
+      ]
+    },
+    {
+      "tipoVerso": "V4",
+      "lineas": [
+        {
+          "numeroLinea": 0,
+          "acordesList": [],
+          "letra": "Y revestidos hemos sido de_armas nobles,"
+        },
+        {
+          "numeroLinea": 1,
+          "acordesList": [],
+          "letra": "de las armas de la luz del Señor mismo:"
+        },
+        {
+          "numeroLinea": 2,
+          "acordesList": [],
+          "letra": "armadura / invencible,_escudo fuerte,"
+        },
+        {
+          "numeroLinea": 3,
+          "acordesList": [],
+          "letra": "y la_espada siempre fiel de su Palabra."
+        }
+      ]
+    },
+    {
+      "tipoVerso": "V5",
+      "lineas": [
+        {
+          "numeroLinea": 0,
+          "acordesList": [],
+          "letra": "No nos domina nunca_el miedo_a la derrota,"
+        },
+        {
+          "numeroLinea": 1,
+          "acordesList": [],
+          "letra": "la victoria_está ganada_en Jesucristo;"
+        },
+        {
+          "numeroLinea": 2,
+          "acordesList": [],
+          "letra": "abatidos ya la muerte / y el pecado,"
+        },
+        {
+          "numeroLinea": 3,
+          "acordesList": [],
+          "letra": "el Señor es vencedor, a / él la gloria."
+        }
+      ]
+    },
+    {
+      "tipoVerso": "F1",
+      "lineas": [
+        {
+          "numeroLinea": 0,
+          "acordesList": [],
+          "letra": "{ ¡Digno_el Señor de los Ejérci↘tos!"
+        },
+        {
+          "numeroLinea": 1,
+          "acordesList": [],
+          "letra": "¡Fuerte_el Señor Omnipote↘nte!"
+        },
+        {
+          "numeroLinea": 2,
+          "acordesList": [],
+          "letra": "¡Gloria_al Señor Podero↘so!"
+        },
+        {
+          "numeroLinea": 3,
+          "acordesList": [],
+          "letra": "¡Honor al Señor nuestro Dios! } (2)"
+        },
+        {
+          "numeroLinea": 4,
+          "acordesList": [],
+          "letra": "¡Honor al Señor nuestro Dios!"
+        }
+      ]
+    }
+  ]
+}

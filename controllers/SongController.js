@@ -1,38 +1,40 @@
-const Book = require("../models/BookModel");
+const Song = require("../models/SongModel");
 const { body, validationResult } = require("express-validator");
 const { sanitizeBody } = require("express-validator");
 const apiResponse = require("../helpers/apiResponse");
 const auth = require("../middlewares/jwt");
+const utility = require("../helpers/utility");
 var mongoose = require("mongoose");
 mongoose.set("useFindAndModify", false);
 
-// Book Schema
-function BookData(data) {
+// Song Schema
+function SongData(data) {
   this.id = data._id;
-  this.title = data.title;
-  this.description = data.description;
-  this.isbn = data.isbn;
-  this.createdAt = data.createdAt;
+  this.Title = data.Title;
+  this.Subtitles = data.Subtitles;
+  this.BasedOn = data.BasedOn;
+  this.SongBooks = data.SongBooks;
+  this.VerseOrder = data.VerseOrder;
+  this.SongTheme = data.SongTheme;
+  this.ChoresIntro = data.ChoresIntro;
+  this.History = data.History;
 }
 
 /**
- * Book List.
+ * Song List.
  *
  * @returns {Object}
  */
-exports.bookList = [
+exports.songList = [
   auth,
   function (req, res) {
     try {
-      Book.find(
-        { user: req.user._id },
-        "_id title description isbn createdAt"
-      ).then((books) => {
-        if (books.length > 0) {
+      Song.find().then((songs) => {
+        if (songs.length > 0) {
           return apiResponse.successResponseWithData(
             res,
             "Operation success",
-            books
+            songs
           );
         } else {
           return apiResponse.successResponseWithData(
@@ -43,36 +45,32 @@ exports.bookList = [
         }
       });
     } catch (err) {
-      //throw error in json response with status 500.
       return apiResponse.ErrorResponse(res, err);
     }
   },
 ];
 
 /**
- * Book Detail.
+ * Song Detail.
  *
  * @param {string}      id
  *
  * @returns {Object}
  */
-exports.bookDetail = [
+exports.songDetail = [
   auth,
   function (req, res) {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
       return apiResponse.successResponseWithData(res, "Operation success", {});
     }
     try {
-      Book.findOne(
-        { _id: req.params.id, user: req.user._id },
-        "_id title description isbn createdAt"
-      ).then((book) => {
-        if (book !== null) {
-          let bookData = new BookData(book);
+      Song.findById(req.params.id).then((song) => {
+        if (song !== null) {
+          let songData = new SongData(song);
           return apiResponse.successResponseWithData(
             res,
             "Operation success",
-            bookData
+            songData
           );
         } else {
           return apiResponse.successResponseWithData(
@@ -92,37 +90,29 @@ exports.bookDetail = [
 /**
  * Book store.
  *
- * @param {string}      title
- * @param {string}      description
- * @param {string}      isbn
+ * @param {string}      title 		required
+ * @param {string}      subtitles
+ * @param {string}      basedOn
+ * @param {string}      songTheme
+ * @param {string}      choresIntro
+ * @param {string}      history
  *
  * @returns {Object}
  */
-exports.bookStore = [
+exports.songStore = [
   auth,
   body("title", "Title must not be empty.").isLength({ min: 1 }).trim(),
-  body("description", "Description must not be empty.")
-    .isLength({ min: 1 })
-    .trim(),
-  body("isbn", "ISBN must not be empty")
-    .isLength({ min: 1 })
-    .trim()
-    .custom((value, { req }) => {
-      return Book.findOne({ isbn: value, user: req.user._id }).then((book) => {
-        if (book) {
-          return Promise.reject("Book already exist with this ISBN no.");
-        }
-      });
-    }),
   sanitizeBody("*").escape(),
   (req, res) => {
     try {
       const errors = validationResult(req);
-      var book = new Book({
-        title: req.body.title,
-        user: req.user,
-        description: req.body.description,
-        isbn: req.body.isbn,
+      var song = new Song({
+        Title: req.body.title,
+        Subtitles: req.body.subtitles,
+        BasedOn: req.body.basedOn,
+        SongTheme: req.body.songTheme,
+        ChoresIntro: req.body.choresIntro,
+        History: `${req.user.email}/${utility.getDate()}/Create/`, //${JSON.stringify(req.body)}`
       });
 
       if (!errors.isEmpty()) {
@@ -133,21 +123,21 @@ exports.bookStore = [
         );
       } else {
         //Save book.
-        book.save(function (err) {
+        song.save(function (err) {
           if (err) {
             return apiResponse.ErrorResponse(res, err);
           }
-          let bookData = new BookData(book);
+          let songData = new SongData(song);
           return apiResponse.successResponseWithData(
             res,
             "Book add Success.",
-            bookData
+            songData
           );
         });
       }
     } catch (err) {
       //throw error in json response with status 500.
-      return apiResponse.ErrorResponse(res, err);
+      return apiResponse.ErrorResponse(res, err.message);
     }
   },
 ];
@@ -238,56 +228,6 @@ exports.bookUpdate = [
           });
         }
       }
-    } catch (err) {
-      //throw error in json response with status 500.
-      return apiResponse.ErrorResponse(res, err);
-    }
-  },
-];
-
-/**
- * Book Delete.
- *
- * @param {string}      id
- *
- * @returns {Object}
- */
-exports.bookDelete = [
-  auth,
-  function (req, res) {
-    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-      return apiResponse.validationErrorWithData(
-        res,
-        "Invalid Error.",
-        "Invalid ID"
-      );
-    }
-    try {
-      Book.findById(req.params.id, function (err, foundBook) {
-        if (foundBook === null) {
-          return apiResponse.notFoundResponse(
-            res,
-            "Book not exists with this id"
-          );
-        } else {
-          //Check authorized user
-          if (foundBook.user.toString() !== req.user._id) {
-            return apiResponse.unauthorizedResponse(
-              res,
-              "You are not authorized to do this operation."
-            );
-          } else {
-            //delete book.
-            Book.findByIdAndRemove(req.params.id, function (err) {
-              if (err) {
-                return apiResponse.ErrorResponse(res, err);
-              } else {
-                return apiResponse.successResponse(res, "Book delete Success.");
-              }
-            });
-          }
-        }
-      });
     } catch (err) {
       //throw error in json response with status 500.
       return apiResponse.ErrorResponse(res, err);
