@@ -3,6 +3,7 @@ const { body, validationResult } = require("express-validator");
 const { sanitizeBody } = require("express-validator");
 const apiResponse = require("../helpers/apiResponse");
 const auth = require("../middlewares/jwt");
+const utility = require("../helpers/utility");
 var mongoose = require("mongoose");
 mongoose.set("useFindAndModify", false);
 
@@ -73,53 +74,47 @@ exports.songDetail = [
 /**
  * Book store.
  * 
- * @param {string}      title 
- * @param {string}      subtitles
- * @param {string}      basedOn
- * @param {string}      songBooks
- * @param {string}      verseOrder
- * @param {string}      songTheme
- * @param {string}      choresIntro
- * @param {string}      history
+ * @param {string}      title 		required
+ * @param {string}      subtitles	
+ * @param {string}      basedOn		
+ * @param {string}      songTheme	
+ * @param {string}      choresIntro	
+ * @param {string}      history		
  * 
  * @returns {Object}
  */
-exports.bookStore = [
+exports.songStore = [
 	auth,
 	body("title", "Title must not be empty.").isLength({ min: 1 }).trim(),
-	body("description", "Description must not be empty.").isLength({ min: 1 }).trim(),
-	body("isbn", "ISBN must not be empty").isLength({ min: 1 }).trim().custom((value,{req}) => {
-		return Book.findOne({isbn : value,user: req.user._id}).then(book => {
-			if (book) {
-				return Promise.reject("Book already exist with this ISBN no.");
-			}
-		});
-	}),
 	sanitizeBody("*").escape(),
 	(req, res) => {
 		try {
 			const errors = validationResult(req);
-			var book = new Book(
-				{ title: req.body.title,
-					user: req.user,
-					description: req.body.description,
-					isbn: req.body.isbn
-				});
+			var song = new Song(
+				{ 
+					Title: req.body.title,
+					Subtitles: req.body.subtitles,
+					BasedOn: req.body.basedOn,
+					SongTheme: req.body.songTheme,
+					ChoresIntro: req.body.choresIntro,
+					History: `${req.user.email}/${utility.getDate()}/Create/${JSON.stringify(req.body)}`
+				}
+			);
 
 			if (!errors.isEmpty()) {
 				return apiResponse.validationErrorWithData(res, "Validation Error.", errors.array());
 			}
 			else {
 				//Save book.
-				book.save(function (err) {
+				song.save(function (err) {
 					if (err) { return apiResponse.ErrorResponse(res, err); }
-					let bookData = new BookData(book);
-					return apiResponse.successResponseWithData(res,"Book add Success.", bookData);
+					let songData = new SongData(song);
+					return apiResponse.successResponseWithData(res,"Book add Success.", songData);
 				});
 			}
 		} catch (err) {
 			//throw error in json response with status 500. 
-			return apiResponse.ErrorResponse(res, err);
+			return apiResponse.ErrorResponse(res, err.message);
 		}
 	}
 ];

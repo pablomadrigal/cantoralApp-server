@@ -7,3 +7,8 @@ exports.randomNumber = function (length) {
 	}
 	return Number(text);
 };
+
+exports.getDate = function () {
+	var today = new Date();
+	return `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`
+}

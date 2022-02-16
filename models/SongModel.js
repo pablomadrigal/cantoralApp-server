@@ -30,11 +30,11 @@ var SongSchema = new Schema({
 	Subtitles: {type: [String]},
 	BasedOn: {type: String},
 	SongBooks: {type: [SongBookSchema]},
-	VerseOrder: {type:[String], required: true},
+	VerseOrder: {type:[String]},
 	SongTheme: {type:[String]},
 	ChoresIntro: {type:[ChorSchema]},
-	Verses: {type: [VerseSchema], required: true},
+	Verses: {type: [VerseSchema]},
 	History: {type: String}
 }, {timestamps: true});
 
-mongoose.model("Song", SongSchema);
+module.exports = mongoose.model("Song", SongSchema);
