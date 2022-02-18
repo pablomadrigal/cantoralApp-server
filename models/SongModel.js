@@ -21,7 +21,7 @@ var LineSchema = new Schema({
 
 var VerseSchema = new Schema({
   VerseName: { type: String, required: true },
-  VerseType: { type: String },
+  VerseType: String ,
   Lines: { type: [LineSchema], required: true },
 });
 
@@ -36,6 +36,8 @@ var SongSchema = new Schema(
     ChoresIntro: { type: [ChorSchema] },
     Verses: { type: [VerseSchema] },
     History: { type: String },
+    Active: {type: Boolean, default: true},
+    Deleted: {type: Boolean, default: false},
   },
   { timestamps: true }
 );
