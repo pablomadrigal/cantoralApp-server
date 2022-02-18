@@ -1,9 +1,9 @@
 exports.constants = {
   admin: {
-    name: "admin",
-    email: "admin@admin.com",
+    name: 'admin',
+    email: 'admin@admin.com',
   },
   confirmEmails: {
-    from: "cantoralapp@riamusica.org",
+    from: 'cantoralapp@riamusica.org',
   },
 };

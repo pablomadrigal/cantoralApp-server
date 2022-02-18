@@ -1,8 +1,9 @@
-var express = require("express");
-const MailController = require("../controllers/MailController");
+const express = require('express');
+const MailController = require('../controllers/MailController');
 
-var router = express.Router();
+// eslint-disable-next-line new-cap
+const router = express.Router();
 
-router.post("/send", MailController.sendMail);
+router.post('/send', MailController.sendMail);
 
 module.exports = router;
