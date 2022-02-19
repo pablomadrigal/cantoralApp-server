@@ -29,7 +29,7 @@ const SongSchema = new Schema(
     {
       Title: {type: String, require: true},
       Subtitles: {type: [String]},
-      BasedOn: {type: String},
+      BasedOn: {type: [String]},
       SongBooks: {type: [SongBookSchema]},
       VerseOrder: {type: [String]},
       SongTheme: {type: [String]},

@@ -33,6 +33,11 @@ function SongLightData(data) {
   this.SongTheme = data.SongTheme;
 }
 
+function SongBookData(data) {
+  this.BookName = data.BookName;
+  this.Number = data.Number;
+};
+
 /**
  * Song List.
  *
@@ -166,25 +171,62 @@ exports.songDetail = [
  * Book store.
  *
  * @param {string}      title required
- * @param {string}      subtitles
- * @param {string}      basedOn
- * @param {string}      songTheme
- * @param {string}      history
+ * @param {json}      subtitles
+ * @param {json}      basedOn
+ * @param {json}      songTheme
+ * @param {json}      songBooks
  *
  * @return {Object}
  */
 exports.songStore = [
   auth,
   body('title', 'Title must not be empty.').isLength({min: 1}).trim(),
+  body('subtitles')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('basedOn')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('songTheme')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('songBooks')
+      .optional()
+      .isJSON({allow_primitives: true}),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
+      let subtitles = [];
+      if (req.body.subtitles) {
+        subtitles = JSON.parse(req.body.subtitles);
+      }
+
+      let basedOn = [];
+      if (req.body.basedOn) {
+        basedOn = JSON.parse(req.body.basedOn);
+      }
+
+      let songThemes = [];
+      if (req.body.songTheme) {
+        songThemes = JSON.parse(req.body.songTheme);
+      }
+
+      let songBooksJSON = null;
+      let songBooks = [];
+      if (req.body.songBooks) {
+        songBooksJSON = JSON.parse(req.body.songBooks);
+        songBooks=songBooksJSON.map((songBook) =>{
+          return new SongBookData(songBook);
+        });
+      }
+
       const errors = validationResult(req);
       const song = new Song({
         Title: req.body.title,
-        Subtitles: req.body.subtitles,
-        BasedOn: req.body.basedOn,
-        SongTheme: req.body.songTheme,
+        Subtitles: subtitles,
+        BasedOn: basedOn,
+        SongTheme: songThemes,
+        SongBooks: songBooks,
         History: `${req.user.email}/${utility.getDate()}/Create/`,
       });
 
@@ -220,25 +262,63 @@ exports.songStore = [
  *
  * @param {string}      id required
  * @param {string}      title required
- * @param {string}      subtitles
- * @param {string}      basedOn
- * @param {string}      songTheme
- * @param {string}      history
+ * @param {json}      subtitles
+ * @param {json}      basedOn
+ * @param {json}      songTheme
+ * @param {json}      songBooks
  *
  * @return {Object}
  */
 exports.songUpdate = [
   auth,
   body('title', 'Title must not be empty.').isLength({min: 1}).trim(),
+  body('subtitles')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('basedOn')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('songTheme')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('songBooks')
+      .optional()
+      .isJSON({allow_primitives: true}),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
+      let subtitles = [];
+      if (req.body.subtitles) {
+        subtitles = JSON.parse(req.body.subtitles);
+      }
+
+      let basedOn = [];
+      if (req.body.basedOn) {
+        basedOn = JSON.parse(req.body.basedOn);
+      }
+
+      let songThemes = [];
+      if (req.body.songTheme) {
+        songThemes = JSON.parse(req.body.songTheme);
+      }
+
+      let songBooksJSON = null;
+      let songBooks = [];
+      if (req.body.songBooks) {
+        songBooksJSON = JSON.parse(req.body.songBooks);
+        songBooks=songBooksJSON.map((songBook) =>{
+          return new SongBookData(songBook);
+        });
+      }
+
       const errors = validationResult(req);
       const song = new Song({
         Title: req.body.title,
-        Subtitles: req.body.subtitles,
-        BasedOn: req.body.basedOn,
-        SongTheme: req.body.songTheme,
+        Subtitles: subtitles,
+        BasedOn: basedOn,
+        SongTheme: songThemes,
+        SongBooks: songBooks,
+        _id: req.params.id,
       });
       if (!errors.isEmpty()) {
         return apiResponse.validationErrorWithData(
@@ -261,10 +341,11 @@ exports.songUpdate = [
                   'Song not exists with this id',
               );
             } else {
-              // update song.
               song.History = `${foundSong.History}\n${
                 req.user.email
               }/${utility.getDate()}/Update/${JSON.stringify(req.body)}}`;
+
+              // update song.
               Song.findByIdAndUpdate(req.params.id, song, {}, function(err) {
                 if (err) {
                   return apiResponse.errorResponse(res, err);
