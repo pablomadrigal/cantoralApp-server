@@ -6,9 +6,9 @@ const songRouter = require('./song');
 
 const app = express();
 
-app.use('/auth/', authRouter);
-app.use('/book/', bookRouter);
-app.use('/mail/', mailRouter);
-app.use('/song/', songRouter);
+app.use('/v1/auth/', authRouter);
+app.use('/v1/book/', bookRouter);
+app.use('/v1/mail/', mailRouter);
+app.use('/v1/song/', songRouter);
 
 module.exports = app;

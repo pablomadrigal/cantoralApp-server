@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 
 const AutorSchema = new Schema(
     {
-      Nombre: {type: String, required: true},
-      Apellido: {type: String, required: true},
+      Name: {type: String, required: true},
+      LastName: {type: String, required: true},
+      History: {type: String},
     },
     {timestamps: true},
 );

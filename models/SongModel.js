@@ -7,6 +7,11 @@ const SongBookSchema = new Schema({
   Number: {type: String, required: true},
 });
 
+const AuthorSchema = new Schema({
+  Authors: {type: Schema.Types.ObjectId, ref: 'Author', required: true},
+  Type: {type: Schema.Types.ObjectId, required: true},
+});
+
 const ChorSchema = new Schema({
   Beginning: {type: Number, required: true},
   End: {type: Number, required: true},
@@ -31,6 +36,7 @@ const SongSchema = new Schema(
       Subtitles: {type: [String]},
       BasedOn: {type: [String]},
       SongBooks: {type: [SongBookSchema]},
+      Authors: {type: [AuthorSchema]},
       VerseOrder: {type: [String]},
       SongTheme: {type: [String]},
       ChoresIntro: {type: [ChorSchema]},

@@ -368,3 +368,115 @@ exports.songUpdate = [
     }
   },
 ];
+
+/**
+ * Song update.
+ *
+ * @param {string}      id required
+ * @param {string}      title required
+ * @param {json}      subtitles
+ * @param {json}      basedOn
+ * @param {json}      songTheme
+ * @param {json}      songBooks
+ *
+ * @return {Object}
+ */
+exports.songUpdate = [
+  auth,
+  body('title', 'Title must not be empty.').isLength({min: 1}).trim(),
+  body('subtitles')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('basedOn')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('songTheme')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  body('songBooks')
+      .optional()
+      .isJSON({allow_primitives: true}),
+  sanitizeBody('*').escape(),
+  (req, res) => {
+    try {
+      let subtitles = [];
+      if (req.body.subtitles) {
+        subtitles = JSON.parse(req.body.subtitles);
+      }
+
+      let basedOn = [];
+      if (req.body.basedOn) {
+        basedOn = JSON.parse(req.body.basedOn);
+      }
+
+      let songThemes = [];
+      if (req.body.songTheme) {
+        songThemes = JSON.parse(req.body.songTheme);
+      }
+
+      let songBooksJSON = null;
+      let songBooks = [];
+      if (req.body.songBooks) {
+        songBooksJSON = JSON.parse(req.body.songBooks);
+        songBooks=songBooksJSON.map((songBook) =>{
+          return new SongBookData(songBook);
+        });
+      }
+
+      const errors = validationResult(req);
+      const song = new Song({
+        Title: req.body.title,
+        Subtitles: subtitles,
+        BasedOn: basedOn,
+        SongTheme: songThemes,
+        SongBooks: songBooks,
+        _id: req.params.id,
+      });
+      if (!errors.isEmpty()) {
+        return apiResponse.validationErrorWithData(
+            res,
+            'Validation Error.',
+            errors.array(),
+        );
+      } else {
+        if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+          return apiResponse.validationErrorWithData(
+              res,
+              'Invalid Error.',
+              'Invalid ID',
+          );
+        } else {
+          Song.findById(req.params.id, function(err, foundSong) {
+            if (foundSong === null) {
+              return apiResponse.notFoundResponse(
+                  res,
+                  'Song not exists with this id',
+              );
+            } else {
+              song.History = `${foundSong.History}\n${
+                req.user.email
+              }/${utility.getDate()}/Update/${JSON.stringify(req.body)}}`;
+
+              // update song.
+              Song.findByIdAndUpdate(req.params.id, song, {}, function(err) {
+                if (err) {
+                  return apiResponse.errorResponse(res, err);
+                } else {
+                  const songData = new SongData(song);
+                  return apiResponse.successResponseWithData(
+                      res,
+                      'Song update Success.',
+                      songData,
+                  );
+                }
+              });
+            }
+          });
+        }
+      }
+    } catch (err) {
+      // throw error in json response with status 500.
+      return apiResponse.errorResponse(res, err.message);
+    }
+  },
+];
