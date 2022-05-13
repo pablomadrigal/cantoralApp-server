@@ -1,12 +1,13 @@
-var express = require("express");
-const BookController = require("../controllers/BookController");
+const express = require('express');
+const BookController = require('../controllers/BookController');
 
-var router = express.Router();
+// eslint-disable-next-line new-cap
+const router = express.Router();
 
-router.get("/", BookController.bookList);
-router.get("/:id", BookController.bookDetail);
-router.post("/", BookController.bookStore);
-router.put("/:id", BookController.bookUpdate);
-router.delete("/:id", BookController.bookDelete);
+router.get('/', BookController.bookList);
+router.get('/:id', BookController.bookDetail);
+router.post('/', BookController.bookStore);
+router.put('/:id', BookController.bookUpdate);
+router.delete('/:id', BookController.bookDelete);
 
 module.exports = router;
