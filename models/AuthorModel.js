@@ -6,7 +6,6 @@ const AutorSchema = new Schema(
     {
       Name: {type: String, required: true},
       LastName: {type: String, required: true},
-      History: {type: String},
     },
     {timestamps: true},
 );

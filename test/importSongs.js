@@ -106,6 +106,177 @@ const Club = mongoose.model('Club', clubSchema);
 
 // Now, the interesting part:
 data = [
+  {
+    'Title': 'LA ESPADA DEL ESPÍRITU',
+    'BasedOn': null,
+    'SongBooks': [
+      {'CADV2011': 1},
+      {'CADV2019': 1},
+      {'Jesed2016': '1'},
+    ],
+    'VerseOrder': ['V1', 'V2', 'V3', 'V4', 'V5', 'V1', 'F1'],
+    'SongTheme': [],
+    'ChoresIntro': [],
+    'Verses': [
+      {
+        'VerseName': 'V1',
+        'Lines': [
+          {
+            'LineNumber': 0,
+            'Chores': [],
+            'Letter': 'Dios se_ha forjado con nosotros una_espada',
+          },
+          {
+            'LineNumber': 1,
+            'Chores': [],
+            'Letter': 'y nos toma_en su derecha poderosa.',
+          },
+          {
+            'LineNumber': 2,
+            'Chores': [],
+            'Letter': 'Se levanta / el Señor a_hacer la guerra;',
+          },
+          {
+            'LineNumber': 3,
+            'Chores': [],
+            'Letter': 'con justicia_al enemigo vencerá.',
+          },
+        ],
+      },
+      {
+        'VerseName': 'V2',
+        'Lines': [
+          {
+            'LineNumber': 0,
+            'Chores': [],
+            'Letter': 'Y con su fuego_enardeciendo nuestro pecho',
+          },
+          {
+            'LineNumber': 1,
+            'Chores': [],
+            'Letter': 'sus guerreros avanzamos jubilosos,',
+          },
+          {
+            'LineNumber': 2,
+            'Chores': [],
+            'Letter': 'a_abatir con mano fuerte_y tenso brazo',
+          },
+          {
+            'LineNumber': 3,
+            'Chores': [],
+            'Letter': 'a las huestes del mal del enemigo.',
+          },
+        ],
+      },
+      {
+        'VerseName': 'V3',
+        'Lines': [
+          {
+            'LineNumber': 0,
+            'Chores': [],
+            'Letter': 'Marchando_al frente de nosotros está_un bravo,',
+          },
+          {
+            'LineNumber': 1,
+            'Chores': [],
+            'Letter': 'Capitán de gran poder y de gran fuerza:',
+          },
+          {
+            'LineNumber': 2,
+            'Chores': [],
+            'Letter': 'Jesucristo,_Hijo de Dios, León de Judá↘;',
+          },
+          {
+            'LineNumber': 3,
+            'Chores': [],
+            'Letter': 'a_él seguimos y_en su Nombre combatimos.',
+          },
+        ],
+      },
+      {
+        'VerseName': 'V4',
+        'Lines': [
+          {
+            'LineNumber': 0,
+            'Chores': [],
+            'Letter': 'Y revestidos hemos sido de_armas nobles,',
+          },
+          {
+            'LineNumber': 1,
+            'Chores': [],
+            'Letter': 'de las armas de la luz del Señor mismo:',
+          },
+          {
+            'LineNumber': 2,
+            'Chores': [],
+            'Letter': 'armadura / invencible,_escudo fuerte,',
+          },
+          {
+            'LineNumber': 3,
+            'Chores': [],
+            'Letter': 'y la_espada siempre fiel de su Palabra.',
+          },
+        ],
+      },
+      {
+        'VerseName': 'V5',
+        'Lines': [
+          {
+            'LineNumber': 0,
+            'Chores': [],
+            'Letter': 'No nos domina nunca_el miedo_a la derrota,',
+          },
+          {
+            'LineNumber': 1,
+            'Chores': [],
+            'Letter': 'la victoria_está ganada_en Jesucristo;',
+          },
+          {
+            'LineNumber': 2,
+            'Chores': [],
+            'Letter': 'abatidos ya la muerte / y el pecado,',
+          },
+          {
+            'LineNumber': 3,
+            'Chores': [
+
+            ],
+            'Letter': 'el Señor es vencedor, a / él la gloria.',
+          },
+        ],
+      },
+      {
+        'VerseName': 'F1',
+        'Lines': [
+          {
+            'LineNumber': 0,
+            'Chores': [],
+            'Letter': '{ ¡Digno_el Señor de los Ejérci↘tos!',
+          },
+          {
+            'LineNumber': 1,
+            'Chores': [],
+            'Letter': '¡Fuerte_el Señor Omnipote↘nte!',
+          },
+          {
+            'LineNumber': 2,
+            'Chores': [],
+            'Letter': '¡Gloria_al Señor Podero↘so!',
+          },
+          {
+            'LineNumber': 3,
+            'Chores': [],
+            'Letter': '¡Honor al Señor nuestro Dios! } (2)',
+          },
+          {
+            'LineNumber': 4,
+            'Chores': [],
+            'Letter': '¡Honor al Señor nuestro Dios!',
+          },
+        ],
+      },
+    ],
+  },
   {'name': 'Barcelona'},
   {'name': 'Real Madrid'},
   {'name': 'Valencia'},

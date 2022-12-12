@@ -9,13 +9,20 @@ const SongBookSchema = new Schema({
 
 const AuthorSchema = new Schema({
   Authors: {type: Schema.Types.ObjectId, ref: 'Author', required: true},
-  Type: {type: Schema.Types.ObjectId, required: true},
+  Type: {
+    type: String,
+    required: true,
+  },
 });
 
 const ChorSchema = new Schema({
   Beginning: {type: Number, required: true},
   End: {type: Number, required: true},
-  Type: {type: String, required: true},
+  Type: {
+    type: String,
+    enum: ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'],
+    required: true,
+  },
 });
 
 const LineSchema = new Schema({
@@ -25,8 +32,7 @@ const LineSchema = new Schema({
 });
 
 const VerseSchema = new Schema({
-  VerseName: {type: String, required: true},
-  VerseType: String,
+  Type: {type: String, required: true},
   Lines: {type: [LineSchema], required: true},
 });
 
