@@ -326,42 +326,39 @@ exports.songUpdate = [
             'Validation Error.',
             errors.array(),
         );
-      } else {
-        if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-          return apiResponse.validationErrorWithData(
-              res,
-              'Invalid Error.',
-              'Invalid ID',
-          );
-        } else {
-          Song.findById(req.params.id, function(err, foundSong) {
-            if (foundSong === null) {
-              return apiResponse.notFoundResponse(
-                  res,
-                  'Song not exists with this id',
-              );
-            } else {
-              song.History = `${foundSong.History}\n${
-                req.user.email
-              }/${utility.getDate()}/Update/${JSON.stringify(req.body)}}`;
-
-              // update song.
-              Song.findByIdAndUpdate(req.params.id, song, {}, function(err) {
-                if (err) {
-                  return apiResponse.errorResponse(res, err);
-                } else {
-                  const songData = new SongData(song);
-                  return apiResponse.successResponseWithData(
-                      res,
-                      'Song update Success.',
-                      songData,
-                  );
-                }
-              });
-            }
-          });
-        }
       }
+      if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        return apiResponse.validationErrorWithData(
+            res,
+            'Invalid Error.',
+            'Invalid ID',
+        );
+      }
+      Song.findById(req.params.id, function(err, foundSong) {
+        if (foundSong === null) {
+          return apiResponse.notFoundResponse(
+              res,
+              'Song not exists with this id',
+          );
+        }
+        song.History = `${foundSong.History}\n${
+          req.user.email
+        }/${utility.getDate()}/Update/${JSON.stringify(req.body)}}`;
+
+        // update song.
+        Song.findByIdAndUpdate(req.params.id, song, {}, function(err) {
+          if (err) {
+            return apiResponse.errorResponse(res, err);
+          } else {
+            const songData = new SongData(song);
+            return apiResponse.successResponseWithData(
+                res,
+                'Song update Success.',
+                songData,
+            );
+          }
+        });
+      });
     } catch (err) {
       // throw error in json response with status 500.
       return apiResponse.errorResponse(res, err.message);
@@ -438,42 +435,39 @@ exports.songUpdate = [
             'Validation Error.',
             errors.array(),
         );
-      } else {
-        if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-          return apiResponse.validationErrorWithData(
-              res,
-              'Invalid Error.',
-              'Invalid ID',
-          );
-        } else {
-          Song.findById(req.params.id, function(err, foundSong) {
-            if (foundSong === null) {
-              return apiResponse.notFoundResponse(
-                  res,
-                  'Song not exists with this id',
-              );
-            } else {
-              song.History = `${foundSong.History}\n${
-                req.user.email
-              }/${utility.getDate()}/Update/${JSON.stringify(req.body)}}`;
-
-              // update song.
-              Song.findByIdAndUpdate(req.params.id, song, {}, function(err) {
-                if (err) {
-                  return apiResponse.errorResponse(res, err);
-                } else {
-                  const songData = new SongData(song);
-                  return apiResponse.successResponseWithData(
-                      res,
-                      'Song update Success.',
-                      songData,
-                  );
-                }
-              });
-            }
-          });
-        }
       }
+      if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        return apiResponse.validationErrorWithData(
+            res,
+            'Invalid Error.',
+            'Invalid ID',
+        );
+      }
+      Song.findById(req.params.id, function(err, foundSong) {
+        if (foundSong === null) {
+          return apiResponse.notFoundResponse(
+              res,
+              'Song not exists with this id',
+          );
+        }
+        song.History = `${foundSong.History}\n${
+          req.user.email
+        }/${utility.getDate()}/Update/${JSON.stringify(req.body)}}`;
+
+        // update song.
+        Song.findByIdAndUpdate(req.params.id, song, {}, function(err) {
+          if (err) {
+            return apiResponse.errorResponse(res, err);
+          } else {
+            const songData = new SongData(song);
+            return apiResponse.successResponseWithData(
+                res,
+                'Song update Success.',
+                songData,
+            );
+          }
+        });
+      });
     } catch (err) {
       // throw error in json response with status 500.
       return apiResponse.errorResponse(res, err.message);

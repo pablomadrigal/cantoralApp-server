@@ -171,46 +171,42 @@ exports.authorUpdate = [
         lastName: req.body.lastName,
         _id: req.params.id,
       });
-
       if (!errors.isEmpty()) {
         return apiResponse.validationErrorWithData(
             res,
             'Validation Error.',
             errors.array(),
         );
-      } else {
-        if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-          return apiResponse.validationErrorWithData(
-              res,
-              'Invalid Error.',
-              'Invalid ID',
-          );
-        } else {
-          Author.findById(req.params.id, function(err, foundAuthor) {
-            if (foundAuthor === null) {
-              return apiResponse.notFoundResponse(
-                  res,
-                  'Author not exists with this id',
-              );
-            } else {
-              // update author.
-              Author.findByIdAndUpdate(req.params.id, author, {},
-                  function(err) {
-                    if (err) {
-                      return apiResponse.errorResponse(res, err);
-                    } else {
-                      const authorData = new AuthorData(author);
-                      return apiResponse.successResponseWithData(
-                          res,
-                          'Author update Success.',
-                          authorData,
-                      );
-                    }
-                  });
-            }
-          });
-        }
       }
+      if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        return apiResponse.validationErrorWithData(
+            res,
+            'Invalid Error.',
+            'Invalid ID',
+        );
+      }
+      Author.findById(req.params.id, function(err, foundAuthor) {
+        if (foundAuthor === null) {
+          return apiResponse.notFoundResponse(
+              res,
+              'Author not exists with this id',
+          );
+        }
+        // update author.
+        Author.findByIdAndUpdate(req.params.id, author, {},
+            function(err) {
+              if (err) {
+                return apiResponse.errorResponse(res, err);
+              } else {
+                const authorData = new AuthorData(author);
+                return apiResponse.successResponseWithData(
+                    res,
+                    'Author update Success.',
+                    authorData,
+                );
+              }
+            });
+      });
     } catch (err) {
       // throw error in json response with status 500.
       return apiResponse.errorResponse(res, err);

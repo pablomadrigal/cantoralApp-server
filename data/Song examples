@@ -1,18 +1,17 @@
 {
-  "id": 1,
   "titulo": "LA ESPADA DEL ESPÍRITU",
   "subtitulo": [],
   "basadoEn": null,
   "cantoral": [
     {
-        "Nombre": "CADV2013",
-        "Numero": 1 
+      "Nombre": "CADV2013",
+      "Numero": 1
     }
-  ]
+  ],
   "autor": [
     {
-        "Nombre": "Federico Carranza",
-        "Tipo": "Autor"
+      "Nombre": "Federico Carranza",
+      "Tipo": "Autor"
     }
   ],
   "ordenVersos": [
@@ -37,9 +36,9 @@
           "numeroLinea": 0,
           "acordesList": [
             {
-                "begin": 30,
-                "end": 45,
-                "chor": "DoM"
+              "begin": 30,
+              "end": 45,
+              "chor": "DoM"
             }
           ],
           "letra": "Dios se_ha forjado con nosotros una_espada"
