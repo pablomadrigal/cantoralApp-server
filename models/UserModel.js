@@ -10,13 +10,16 @@ const UserSchema = new mongoose.Schema(
       confirmOTP: {type: String, required: false},
       otpTries: {type: Number, required: false, default: 0},
       status: {type: Boolean, required: true, default: 1},
+      isAdmin: {type: Boolean, required: true, default: 0},
     },
     {timestamps: true},
 );
 
 // Virtual for user's full name
 UserSchema.virtual('fullName').get(function() {
-  return this.firstName + ' ' + this.lastName;
+  return firstName + ' ' + lastName;
 });
 
-module.exports = mongoose.model('User', UserSchema);
+const myAdminDB = mongoose.connection.useDb('usersAdmin');
+
+module.exports = myAdminDB.model('User', UserSchema);

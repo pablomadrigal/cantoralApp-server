@@ -34,7 +34,7 @@ describe('Auth', () => {
     it('It should send validation error for Register', (done) => {
       chai
           .request(server)
-          .post('/api/auth/register')
+          .post('/api/v1/auth/register')
           .send({email: testData.email})
           .end((_err, res) => {
             res.should.have.status(400);
@@ -50,7 +50,7 @@ describe('Auth', () => {
     it('It should Register user', (done) => {
       chai
           .request(server)
-          .post('/api/auth/register')
+          .post('/api/v1/auth/register')
           .send(testData)
           .end((_err, res) => {
             res.should.have.status(200);
@@ -69,7 +69,7 @@ describe('Auth', () => {
     it('it should Send account not confirm notice.', (done) => {
       chai
           .request(server)
-          .post('/api/auth/login')
+          .post('/api/v1/auth/login')
           .send({email: testData.email, password: testData.password})
           .end((_err, res) => {
             res.should.have.status(401);
@@ -88,7 +88,7 @@ describe('Auth', () => {
     it('It should resend  confirm OTP', (done) => {
       chai
           .request(server)
-          .post('/api/auth/resend-verify-otp')
+          .post('/api/v1/auth/resend-verify-otp')
           .send({email: testData.email})
           .end((_err, res) => {
             res.should.have.status(200);
@@ -109,7 +109,7 @@ describe('Auth', () => {
     it('It should verify confirm OTP', (done) => {
       chai
           .request(server)
-          .post('/api/auth/verify-otp')
+          .post('/api/v1/auth/verify-otp')
           .send({email: testData.email, otp: testData.confirmOTP})
           .end((_err, res) => {
             res.should.have.status(200);
@@ -125,7 +125,7 @@ describe('Auth', () => {
     it('It should send validation error for Login', (done) => {
       chai
           .request(server)
-          .post('/api/auth/login')
+          .post('/api/v1/auth/login')
           .send({email: testData.email})
           .end((_err, res) => {
             res.should.have.status(400);
@@ -141,7 +141,7 @@ describe('Auth', () => {
     it('it should Send failed user Login', (done) => {
       chai
           .request(server)
-          .post('/api/auth/login')
+          .post('/api/v1/auth/login')
           .send({email: 'admin@admin.com', password: '1234'})
           .end((_err, res) => {
             res.should.have.status(401);
@@ -157,7 +157,7 @@ describe('Auth', () => {
     it('it should do user Login', (done) => {
       chai
           .request(server)
-          .post('/api/auth/login')
+          .post('/api/v1/auth/login')
           .send({email: testData.email, password: testData.password})
           .end((_err, res) => {
             res.should.have.status(200);

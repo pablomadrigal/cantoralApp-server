@@ -1,6 +1,6 @@
 /* eslint-disable require-jsdoc */
 /* eslint-disable valid-jsdoc */
-const Book = require('../models/BookModel');
+const Author = require('../models/AuthorModel');
 const {body, validationResult} = require('express-validator');
 const {sanitizeBody} = require('express-validator');
 const apiResponse = require('../helpers/apiResponse');
@@ -8,33 +8,32 @@ const auth = require('../middlewares/jwt');
 const mongoose = require('mongoose');
 mongoose.set('useFindAndModify', false);
 
-// Book Schema
-function BookData(data) {
+// Author Schema
+function AuthorData(data) {
   this.id = data._id;
   this.name = data.name;
   this.lastName = data.lastName;
-  this.history = data.history;
   this.createdAt = data.createdAt;
 }
 
 /**
- * Book List.
+ * Author List.
  *
  * @return {Object}
  */
-exports.bookList = [
+exports.authorList = [
   auth,
   function(req, res) {
     try {
-      Book.find(
+      Author.find(
           {user: req.user._id},
-          '_id title description isbn createdAt',
-      ).then((books) => {
-        if (books.length > 0) {
+          '_id name lastName createdAt',
+      ).then((authors) => {
+        if (authors.length > 0) {
           return apiResponse.successResponseWithData(
               res,
               'Operation success',
-              books,
+              authors,
           );
         } else {
           return apiResponse.successResponseWithData(
@@ -52,29 +51,27 @@ exports.bookList = [
 ];
 
 /**
- * Book Detail.
+ * Author Detail.
  *
- * @param {string}      id
+ * @param {string}      name
+ * @param {string}      lastName
  *
  * @return {Object}
  */
-exports.bookDetail = [
+exports.authorDetail = [
   auth,
   function(req, res) {
-    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-      return apiResponse.successResponseWithData(res, 'Operation success', {});
-    }
     try {
-      Book.findOne(
-          {_id: req.params.id, user: req.user._id},
-          '_id title description isbn createdAt',
-      ).then((book) => {
-        if (book !== null) {
-          const bookData = new BookData(book);
+      Author.findOne(
+          {name: req.params.name, lastName: req.user.lastName},
+          '_id name lastName createdAt',
+      ).then((author) => {
+        if (author !== null) {
+          const authorData = new AuthorData(author);
           return apiResponse.successResponseWithData(
               res,
               'Operation success',
-              bookData,
+              authorData,
           );
         } else {
           return apiResponse.successResponseWithData(
@@ -92,39 +89,26 @@ exports.bookDetail = [
 ];
 
 /**
- * Book store.
+ * Author store.
  *
- * @param {string}      title
- * @param {string}      description
- * @param {string}      isbn
+ * @param {string}      name
+ * @param {string}      lastName
  *
  * @return {Object}
  */
-exports.bookStore = [
+exports.authorStore = [
   auth,
-  body('title', 'Title must not be empty.').isLength({min: 1}).trim(),
-  body('description', 'Description must not be empty.')
+  body('name', 'Name must not be empty.').isLength({min: 1}).trim(),
+  body('lastName', 'Last name must not be empty.')
       .isLength({min: 1})
       .trim(),
-  body('isbn', 'ISBN must not be empty')
-      .isLength({min: 1})
-      .trim()
-      .custom((value, {req}) => {
-        return Book.findOne({isbn: value, user: req.user._id}).then((book) => {
-          if (book) {
-            return Promise.reject('Book already exist with this ISBN no.');
-          }
-        });
-      }),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
       const errors = validationResult(req);
-      const book = new Book({
-        title: req.body.title,
-        user: req.user,
-        description: req.body.description,
-        isbn: req.body.isbn,
+      const author = new Author({
+        name: req.body.name,
+        lastName: req.body.lastName,
       });
 
       if (!errors.isEmpty()) {
@@ -134,16 +118,26 @@ exports.bookStore = [
             errors.array(),
         );
       } else {
-        // Save book.
-        book.save(function(err) {
+        Author.findOne({
+          name: req.body.name,
+          lastName: req.body.lastName,
+        }).then((oldAuthor) => {
+          if (oldAuthor) {
+            return Promise.reject(
+                new Error('Author already exist.'),
+            );
+          }
+        });
+        // Save Author.
+        author.save(function(err) {
           if (err) {
             return apiResponse.errorResponse(res, err);
           }
-          const bookData = new BookData(book);
+          const authorData = new AuthorData(author);
           return apiResponse.successResponseWithData(
               res,
-              'Book add Success.',
-              bookData,
+              'Author add Success.',
+              authorData,
           );
         });
       }
@@ -155,106 +149,79 @@ exports.bookStore = [
 ];
 
 /**
- * Book update.
+ * Author update.
  *
- * @param {string}      title
- * @param {string}      description
- * @param {string}      isbn
+ * @param {string}      name
+ * @param {string}      lastName
  *
  * @return {Object}
  */
-exports.bookUpdate = [
+exports.authorUpdate = [
   auth,
-  body('title', 'Title must not be empty.').isLength({min: 1}).trim(),
-  body('description', 'Description must not be empty.')
+  body('name', 'Title must not be empty.').isLength({min: 1}).trim(),
+  body('lastName', 'Description must not be empty.')
       .isLength({min: 1})
       .trim(),
-  body('isbn', 'ISBN must not be empty')
-      .isLength({min: 1})
-      .trim()
-      .custom((value, {req}) => {
-        return Book.findOne({
-          isbn: value,
-          user: req.user._id,
-          _id: {$ne: req.params.id},
-        }).then((book) => {
-          if (book) {
-            return Promise.reject('Book already exist with this ISBN no.');
-          }
-        });
-      }),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
       const errors = validationResult(req);
-      const book = new Book({
-        title: req.body.title,
-        description: req.body.description,
-        isbn: req.body.isbn,
+      const author = new Author({
+        name: req.body.name,
+        lastName: req.body.lastName,
         _id: req.params.id,
       });
-
       if (!errors.isEmpty()) {
         return apiResponse.validationErrorWithData(
             res,
             'Validation Error.',
             errors.array(),
         );
-      } else {
-        if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-          return apiResponse.validationErrorWithData(
-              res,
-              'Invalid Error.',
-              'Invalid ID',
-          );
-        } else {
-          Book.findById(req.params.id, function(err, foundBook) {
-            if (foundBook === null) {
-              return apiResponse.notFoundResponse(
-                  res,
-                  'Book not exists with this id',
-              );
-            } else {
-              // Check authorized user
-              if (foundBook.user.toString() !== req.user._id) {
-                return apiResponse.unauthorizedResponse(
-                    res,
-                    'You are not authorized to do this operation.',
-                );
-              } else {
-                // update book.
-                Book.findByIdAndUpdate(req.params.id, book, {}, function(err) {
-                  if (err) {
-                    return apiResponse.ErrorResponse(res, err);
-                  } else {
-                    const bookData = new BookData(book);
-                    return apiResponse.successResponseWithData(
-                        res,
-                        'Book update Success.',
-                        bookData,
-                    );
-                  }
-                });
-              }
-            }
-          });
-        }
       }
+      if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        return apiResponse.validationErrorWithData(
+            res,
+            'Invalid Error.',
+            'Invalid ID',
+        );
+      }
+      Author.findById(req.params.id, function(err, foundAuthor) {
+        if (foundAuthor === null) {
+          return apiResponse.notFoundResponse(
+              res,
+              'Author not exists with this id',
+          );
+        }
+        // update author.
+        Author.findByIdAndUpdate(req.params.id, author, {},
+            function(err) {
+              if (err) {
+                return apiResponse.errorResponse(res, err);
+              } else {
+                const authorData = new AuthorData(author);
+                return apiResponse.successResponseWithData(
+                    res,
+                    'Author update Success.',
+                    authorData,
+                );
+              }
+            });
+      });
     } catch (err) {
       // throw error in json response with status 500.
-      return apiResponse.ErrorResponse(res, err);
+      return apiResponse.errorResponse(res, err);
     }
   },
 ];
 
 /**
- * Book Delete.
+ * Author Delete.
  *
  * @param {string}      id
  *
  * @return {Object}
  */
-exports.bookDelete = [
+exports.authorDelete = [
   auth,
   function(req, res) {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -265,34 +232,26 @@ exports.bookDelete = [
       );
     }
     try {
-      Book.findById(req.params.id, function(err, foundBook) {
-        if (foundBook === null) {
+      Author.findById(req.params.id, function(err, foundAuthor) {
+        if (foundAuthor === null) {
           return apiResponse.notFoundResponse(
               res,
-              'Book not exists with this id',
+              'Author not exists with this id',
           );
         } else {
-          // Check authorized user
-          if (foundBook.user.toString() !== req.user._id) {
-            return apiResponse.unauthorizedResponse(
-                res,
-                'You are not authorized to do this operation.',
-            );
-          } else {
-            // delete book.
-            Book.findByIdAndRemove(req.params.id, function(err) {
-              if (err) {
-                return apiResponse.ErrorResponse(res, err);
-              } else {
-                return apiResponse.successResponse(res, 'Book delete Success.');
-              }
-            });
-          }
+          // delete book.
+          Author.findByIdAndRemove(req.params.id, function(err) {
+            if (err) {
+              return apiResponse.errorResponse(res, err);
+            } else {
+              return apiResponse.successResponse(res, 'Author delete Success.');
+            }
+          });
         }
       });
     } catch (err) {
       // throw error in json response with status 500.
-      return apiResponse.ErrorResponse(res, err);
+      return apiResponse.errorResponse(res, err);
     }
   },
 ];
