@@ -1,0 +1,70 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["google"],
+  "overrides": [
+    { "files": ["*.ts", "*.tsx"], "parserOptions": { "project": ["./tsconfig.json"] } },
+    { "files": ["**/*.e2e.js", "e2e/**/*.js"] }
+  ],
+  "plugins": [
+    "react",
+    "react-native",
+    "@typescript-eslint",
+    "unused-imports",
+    "jest",
+    "detox",
+    "import"
+  ],
+  "rules": {
+    "no-console": "error",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "unused-imports/no-unused-imports-ts": "error",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-no-bind": "off",
+    "react/require-default-props": "off",
+    // Import
+    "import/no-cycle": "warn",
+    "import/no-unresolved": "error",
+    "import/named": "error",
+    "import/namespace": "error",
+    "import/default": "error",
+    "import/export": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "group": "external",
+            "pattern": "react*",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"]
+      }
+    ],
+    "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      { "functions": false, "variables": false, "classes": true }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
+}

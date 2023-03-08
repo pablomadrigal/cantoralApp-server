@@ -1,10 +1,9 @@
 const express = require('express');
+const UserController = require('../controllers/UserController');
+
 // eslint-disable-next-line new-cap
 const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', {title: 'Express'});
-});
+router.get('/me', UserController.me);
 
 module.exports = router;

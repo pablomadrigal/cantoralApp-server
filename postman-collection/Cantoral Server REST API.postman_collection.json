@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "b59237a7-b99e-401e-b0c6-39203c202949",
-		"name": "REST API NodeJS",
-		"description": "A boilerplate for REST API Development with Node.js and Expressjs",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "3a871041-dde1-4128-8271-45cfef3d25cf",
+		"name": "Cantoral Server REST API",
+		"description": "Example of all the cantoral-server API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19318485"
 	},
 	"item": [
 		{
@@ -41,20 +42,17 @@
 								},
 								{
 									"key": "email",
-									"value": "test@testing.com",
+									"value": "me@pablomadrigal.com",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/auth/register?=",
-							"protocol": "http",
+							"raw": "{{Base URL}}/auth/register?=",
 							"host": [
-								"localhost"
+								"{{Base URL}}"
 							],
-							"port": "3000",
 							"path": [
-								"api",
 								"auth",
 								"register"
 							],
@@ -85,7 +83,7 @@
 							"urlencoded": [
 								{
 									"key": "email",
-									"value": "test@testing.com",
+									"value": "me@pablomadrigal.com",
 									"type": "text"
 								},
 								{
@@ -96,14 +94,11 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/auth/login",
-							"protocol": "http",
+							"raw": "{{Base URL}}/auth/login",
 							"host": [
-								"localhost"
+								"{{Base URL}}"
 							],
-							"port": "3000",
 							"path": [
-								"api",
 								"auth",
 								"login"
 							]
@@ -128,25 +123,22 @@
 							"urlencoded": [
 								{
 									"key": "email",
-									"value": "mjsuthar@yopmail.com",
+									"value": "me@pablomadrigal.com",
 									"type": "text"
 								},
 								{
 									"key": "otp",
-									"value": "6442",
+									"value": "3029",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/auth/verify-otp",
-							"protocol": "http",
+							"raw": "{{Base URL}}/auth/verify-otp",
 							"host": [
-								"localhost"
+								"{{Base URL}}"
 							],
-							"port": "3000",
 							"path": [
-								"api",
 								"auth",
 								"verify-otp"
 							]
@@ -177,14 +169,11 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/auth/resend-verify-otp",
-							"protocol": "http",
+							"raw": "{{Base URL}}/auth/resend-verify-otp",
 							"host": [
-								"localhost"
+								"{{Base URL}}"
 							],
-							"port": "3000",
 							"path": [
-								"api",
 								"auth",
 								"resend-verify-otp"
 							]
@@ -200,6 +189,16 @@
 				{
 					"name": "Book Store",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -252,6 +251,16 @@
 				{
 					"name": "Book List",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -278,6 +287,16 @@
 				{
 					"name": "Book Detail",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -305,6 +324,16 @@
 				{
 					"name": "Book Update",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -358,6 +387,16 @@
 				{
 					"name": "Book Delete",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -382,7 +421,315 @@
 					},
 					"response": []
 				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
 			]
+		},
+		{
+			"name": "Song",
+			"item": [
+				{
+					"name": "Song Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Song 1",
+									"type": "text"
+								},
+								{
+									"key": "songBooks",
+									"value": "{BookName: 'song book 1', Number: 1}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base URL}}/song",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"song"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Song List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Base URL}}/song",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"song"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Song Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Base URL}}/song/620daa7dd4213c0de7379c8f",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"song",
+								"620daa7dd4213c0de7379c8f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Song List Light",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Base URL}}/song/light",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"song",
+								"light"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Song List Light Active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Base URL}}/song/light/active",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"song",
+								"light",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Song Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Song 1",
+									"type": "text"
+								},
+								{
+									"key": "subtitles",
+									"value": "cancion 1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base URL}}/song/620daa7dd4213c0de7379c8f",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"song",
+								"620daa7dd4213c0de7379c8f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "auth_key",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+		},
+		{
+			"key": "Base URL",
+			"value": "http://localhost:3000/api"
 		}
 	]
 }
