@@ -48,6 +48,7 @@ const SongSchema = new Schema(
     ChoresIntro: { type: [ChorSchema] },
     Verses: { type: [VerseSchema] },
     History: { type: String },
+    MusicURL: { type: String },
     Active: { type: Boolean, default: true },
     Deleted: { type: Boolean, default: false }
   },
