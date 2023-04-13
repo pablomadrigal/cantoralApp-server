@@ -45,10 +45,9 @@ function SongBookData(data) {
  * @return {Object}
  */
 exports.songList = [
-  auth,
   function (req, res) {
     try {
-      Song.find().then((songs) => {
+      Song.find({ Active: true, Deleted: false }).then((songs) => {
         if (songs.length > 0) {
           return apiResponse.successResponseWithData(res, 'Operation success', songs)
         } else {
@@ -67,7 +66,6 @@ exports.songList = [
  * @return {Object}
  */
 exports.songListLightActive = [
-  auth,
   function (req, res) {
     try {
       Song.find({ Active: true, Deleted: false }).then((songs) => {
