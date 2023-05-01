@@ -5,7 +5,6 @@ const { body, validationResult } = require('express-validator')
 const { sanitizeBody } = require('express-validator')
 const apiResponse = require('../helpers/apiResponse')
 const auth = require('../middlewares/jwt')
-const utility = require('../helpers/utility')
 const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false)
 

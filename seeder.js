@@ -1,13 +1,10 @@
 require('dotenv').config()
-const users = require('./data/users')
 const songs = require('./data/datos')
 const songBooks = require('./data/songBooks')
 const authors = require('./data/authors')
-const UserDev = require('./models/UserModel')
 const Song = require('./models/SongModel')
 const SongBook = require('./models/SongBookModel')
 const Author = require('./models/AuthorModel')
-const utility = require('./helpers/utility')
 
 // DB connection
 const MONGODB_URL = process.env.MONGODB_URL
@@ -30,12 +27,9 @@ const db = mongoose.connection
 
 const importData = async () => {
   try {
-    await UserDev.deleteMany()
     await SongBook.deleteMany()
     await Author.deleteMany()
     await Song.deleteMany()
-    const createdUsers = await UserDev.insertMany(users)
-    console.log('Users imported')
     const adminUser = createdUsers[0].email
     console.log(adminUser)
     await SongBook.insertMany(songBooks)
@@ -43,7 +37,6 @@ const importData = async () => {
     await Author.insertMany(authors)
     console.log('Authors imported')
     const songBooksInDB = await SongBook.find({})
-    console.log(songBooksInDB)
     const songsUpdated = songs.map((song) => {
       const cantorales = song.Cancioneros.map((cantoral) => {
         const foundSongBook = songBooksInDB.find((sb) => sb.Name === cantoral.BookName)
