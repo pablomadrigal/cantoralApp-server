@@ -23,3 +23,5 @@ UserSchema.virtual('fullName').get(function() {
 const myAdminDB = mongoose.connection.useDb('usersAdmin');
 
 module.exports = myAdminDB.model('User', UserSchema);
+module.exports = mongoose.model('UserDev', UserSchema)
+

@@ -1,8 +1,12 @@
 require('dotenv').config()
 const users = require('./data/users')
 const songs = require('./data/datos')
-const User = require('./models/UserModel')
+const songBooks = require('./data/songBooks')
+const authors = require('./data/authors')
+const UserDev = require('./models/UserModel')
 const Song = require('./models/SongModel')
+const SongBook = require('./models/SongBookModel')
+const Author = require('./models/AuthorModel')
 const utility = require('./helpers/utility')
 
 // DB connection
@@ -26,16 +30,29 @@ const db = mongoose.connection
 
 const importData = async () => {
   try {
-    await User.deleteMany()
+    await UserDev.deleteMany()
+    await SongBook.deleteMany()
+    await Author.deleteMany()
     await Song.deleteMany()
-    const createdUsers = await User.insertMany(users)
+    const createdUsers = await UserDev.insertMany(users)
+    console.log('Users imported')
     const adminUser = createdUsers[0].email
-    const sampleSongs = songs.map((song) => {
-      return { ...song, history: `${adminUser}/${utility.getDate()}/Create/` }
-    })
-    console.log(sampleSongs)
-    await Song.insertMany(sampleSongs)
     console.log(adminUser)
+    await SongBook.insertMany(songBooks)
+    console.log('SongBooks imported')
+    await Author.insertMany(authors)
+    console.log('Authors imported')
+    const songBooksInDB = await SongBook.find({})
+    console.log(songBooksInDB)
+    const songsUpdated = songs.map((song) => {
+      const cantorales = song.Cancioneros.map((cantoral) => {
+        const foundSongBook = songBooksInDB.find((sb) => sb.Name === cantoral.BookName)
+        if (foundSongBook) return { SongBookId: foundSongBook._id, Number: cantoral.Number }
+      })
+      return { ...song, SongBooks: cantorales || [], Authors: [] }
+    })
+    await Song.insertMany(songsUpdated)
+    console.log('Songs imported')
     console.log('Data imported')
     process.exit()
   } catch (e) {

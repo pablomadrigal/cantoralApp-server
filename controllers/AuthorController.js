@@ -89,7 +89,7 @@ exports.authorDetail = [
 ];
 
 /**
- * Author store.
+ * Author Create.
  *
  * @param {string}      name
  * @param {string}      lastName
@@ -99,9 +99,7 @@ exports.authorDetail = [
 exports.authorStore = [
   auth,
   body('name', 'Name must not be empty.').isLength({min: 1}).trim(),
-  body('lastName', 'Last name must not be empty.')
-      .isLength({min: 1})
-      .trim(),
+  body('lastName', 'Last name can be empty.').optional(),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
@@ -158,61 +156,43 @@ exports.authorStore = [
  */
 exports.authorUpdate = [
   auth,
-  body('name', 'Title must not be empty.').isLength({min: 1}).trim(),
-  body('lastName', 'Description must not be empty.')
-      .isLength({min: 1})
-      .trim(),
+  body('name', 'Name must not be empty.').isLength({ min: 1 }).trim(),
+  body('lastName', 'Last name can be empty.').optional(),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
-      const errors = validationResult(req);
+      const errors = validationResult(req)
       const author = new Author({
         name: req.body.name,
         lastName: req.body.lastName,
-        _id: req.params.id,
-      });
+        _id: req.params.id
+      })
       if (!errors.isEmpty()) {
-        return apiResponse.validationErrorWithData(
-            res,
-            'Validation Error.',
-            errors.array(),
-        );
+        return apiResponse.validationErrorWithData(res, 'Validation Error.', errors.array())
       }
       if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-        return apiResponse.validationErrorWithData(
-            res,
-            'Invalid Error.',
-            'Invalid ID',
-        );
+        return apiResponse.validationErrorWithData(res, 'Invalid Error.', 'Invalid ID')
       }
-      Author.findById(req.params.id, function(err, foundAuthor) {
+      Author.findById(req.params.id, function (err, foundAuthor) {
         if (foundAuthor === null) {
-          return apiResponse.notFoundResponse(
-              res,
-              'Author not exists with this id',
-          );
+          return apiResponse.notFoundResponse(res, 'Author not exists with this id')
         }
         // update author.
-        Author.findByIdAndUpdate(req.params.id, author, {},
-            function(err) {
-              if (err) {
-                return apiResponse.errorResponse(res, err);
-              } else {
-                const authorData = new AuthorData(author);
-                return apiResponse.successResponseWithData(
-                    res,
-                    'Author update Success.',
-                    authorData,
-                );
-              }
-            });
-      });
+        Author.findByIdAndUpdate(req.params.id, author, {}, function (err) {
+          if (err) {
+            return apiResponse.errorResponse(res, err)
+          } else {
+            const authorData = new AuthorData(author)
+            return apiResponse.successResponseWithData(res, 'Author update Success.', authorData)
+          }
+        })
+      })
     } catch (err) {
       // throw error in json response with status 500.
-      return apiResponse.errorResponse(res, err);
+      return apiResponse.errorResponse(res, err)
     }
-  },
-];
+  }
+]
 
 /**
  * Author Delete.

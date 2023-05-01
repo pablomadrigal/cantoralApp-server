@@ -20,7 +20,8 @@ function SongData(data) {
   this.SongTheme = data.SongTheme
   this.ChoresIntro = data.ChoresIntro
   this.Verses = data.Verses
-  this.History = data.History
+  this.Capo = data.Capo
+  this.Version = data.Version
   this.MusicURL = data.MusicURL
 }
 
@@ -135,7 +136,7 @@ exports.songDetail = [
 ]
 
 /**
- * Book store.
+ * Song Create
  *
  * @param {string}      title required
  * @param {json}      subtitles
@@ -143,6 +144,7 @@ exports.songDetail = [
  * @param {json}      songTheme
  * @param {json}      songBooks
  * @param {string}    musicUrl
+ * @param {number}    capo
  *
  * @return {Object}
  */
@@ -154,6 +156,7 @@ exports.songStore = [
   body('songTheme').optional().isJSON({ allow_primitives: true }),
   body('songBooks').optional().isJSON({ allow_primitives: true }),
   body('musicUrl').optional(),
+  body('capo').optional().isNumeric(),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
@@ -189,7 +192,7 @@ exports.songStore = [
         SongTheme: songThemes,
         SongBooks: songBooks,
         MusicURL: req.body.musicUrl | '',
-        History: `${req.user.email}/${utility.getDate()}/Create/`
+        Capo: req.body.capo | 0
       })
 
       if (!errors.isEmpty()) {
@@ -225,6 +228,7 @@ exports.songStore = [
  * @param {json}      songTheme
  * @param {json}      songBooks
  * @param {string}    musicUrl
+ * @param {number}    capo
  *
  * @return {Object}
  */
@@ -236,6 +240,7 @@ exports.songUpdate = [
   body('songTheme').optional().isJSON({ allow_primitives: true }),
   body('songBooks').optional().isJSON({ allow_primitives: true }),
   body('musicUrl').optional(),
+  body('capo').optional().isNumeric(),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
@@ -271,6 +276,7 @@ exports.songUpdate = [
         SongTheme: songThemes,
         SongBooks: songBooks,
         MusicURL: req.body.musicUrl | '',
+        Capo: req.body.capo | 0,
         _id: req.params.id
       })
       if (!errors.isEmpty()) {
@@ -284,6 +290,7 @@ exports.songUpdate = [
           return apiResponse.notFoundResponse(res, 'Song not exists with this id')
         }
         // update song.
+        song.Version = foundSong.Version + 1
         Song.findByIdAndUpdate(req.params.id, song, {}, function (err) {
           if (err) {
             return apiResponse.errorResponse(res, err)

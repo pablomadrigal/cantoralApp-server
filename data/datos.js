@@ -2,7 +2,7 @@ module.exports = [
   {
     Title: 'LA ESPADA DEL ESPÍRITU',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 1 },
       { BookName: 'CADV2019', Number: 1 },
       { BookName: 'Jesed2016', Number: '1' }
@@ -71,7 +71,7 @@ module.exports = [
   {
     Title: 'NACIMOS EN UNA BATALLA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 2 },
       { BookName: 'CADV2019', Number: 2 },
       { BookName: 'Jesed2016', Number: '2' }
@@ -138,7 +138,7 @@ module.exports = [
   {
     Title: 'SEÑOR, TÚ REINAS',
     BasedOn: ['(Sal 97)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 3 },
       { BookName: 'CADV2019', Number: 3 },
       { BookName: 'Jesed2016', Number: '3' }
@@ -239,7 +239,7 @@ module.exports = [
   {
     Title: '¿A QUIÉN TENGO EN EL CIELO?',
     BasedOn: ['(SALMO 73)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 4 },
       { BookName: 'CADV2019', Number: 4 },
       { BookName: 'Jesed2016', Number: '4' }
@@ -328,7 +328,7 @@ module.exports = [
   {
     Title: 'LA VOZ DEL SEÑƒOR',
     BasedOn: ['(Sal  29)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 5 },
       { BookName: 'CADV2019', Number: 5 },
       { BookName: 'Jesed2016', Number: '5' }
@@ -437,7 +437,7 @@ module.exports = [
   {
     Title: 'GRANDE ES NUESTRO DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 6 },
       { BookName: 'CADV2019', Number: 6 },
       { BookName: 'Jesed2016', Number: '6' }
@@ -510,7 +510,7 @@ module.exports = [
   {
     Title: 'AL SEÑOR INVOCARÉ',
     BasedOn: ['(Sal 18:3,46)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 7 },
       { BookName: 'CADV2019', Number: 7 },
       { BookName: 'Jesed2016', Number: '7' }
@@ -549,7 +549,7 @@ module.exports = [
   {
     Title: 'SHEMÁ, ISRAEL',
     BasedOn: ['(Dt 6:4ss; Mt 22:38-39)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 8 },
       { BookName: 'CADV2019', Number: 8 },
       { BookName: 'Jesed2016', Number: '8' }
@@ -623,7 +623,7 @@ module.exports = [
   {
     Title: 'TÚ ERES MI DIOS',
     BasedOn: ['Sal 16'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 9 },
       { BookName: 'CADV2019', Number: 9 },
       { BookName: 'Jesed2016', Number: '9' }
@@ -699,7 +699,7 @@ module.exports = [
   {
     Title: 'CANTAD ALEGRES A DIOS',
     BasedOn: ['(Sal 100)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 10 },
       { BookName: 'CADV2019', Number: 10 },
       { BookName: 'Jesed2016', Number: '10' }
@@ -756,7 +756,7 @@ module.exports = [
   {
     Title: 'OH CIUDAD DE DIOS',
     BasedOn: ['Salmo 87'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 11 },
       { BookName: 'Jesed2016', Number: '11' }
@@ -791,7 +791,7 @@ module.exports = [
   {
     Title: 'GUSTAD Y VED',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 12 },
       { BookName: 'CADV2019', Number: 12 },
       { BookName: 'Jesed2016', Number: '12' }
@@ -889,7 +889,7 @@ module.exports = [
   {
     Title: 'DEN AL SEÑOR SUS ALABANZAS ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 13 },
       { BookName: 'CADV2019', Number: 13 },
       { BookName: 'Jesed2016', Number: '13' }
@@ -969,7 +969,7 @@ module.exports = [
   {
     Title: 'HONRA Y GLORIA',
     BasedOn: ['(Ap 7:12; 11:15; 12:10)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 14 },
       { BookName: 'CADV2019', Number: 14 },
       { BookName: 'Jesed2016', Number: '14' }
@@ -1020,7 +1020,7 @@ module.exports = [
   {
     Title: 'GLORIA POR SIEMPRE',
     BasedOn: ['(Ap 5:5-13)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 15 },
       { BookName: 'CADV2019', Number: 15 },
       { BookName: 'Jesed2016', Number: '15' }
@@ -1058,7 +1058,7 @@ module.exports = [
   {
     Title: 'ALZAD ESTANDARTES DE AMOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 16 },
       { BookName: 'CADV2019', Number: 16 },
       { BookName: 'Jesed2016', Number: '16' }
@@ -1149,7 +1149,7 @@ module.exports = [
   {
     Title: 'NOMBRE SOBRE TODO NOMBRE',
     BasedOn: ['(Flp 2:10-11)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 17 },
       { BookName: 'CADV2019', Number: 17 },
       { BookName: 'Jesed2016', Number: '17' }
@@ -1211,7 +1211,7 @@ module.exports = [
   {
     Title: 'ESTE ES MI DESEO: HONRARTE, OH DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 319 },
       { BookName: 'CADV2019', Number: 18 },
       { BookName: 'Jesed2016', Number: '18' }
@@ -1243,7 +1243,7 @@ module.exports = [
   {
     Title: 'YO CELEBRARÉ TU AMOR ETERNAMENTE',
     BasedOn: ['(Sal 89)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 19 },
       { BookName: 'CADV2019', Number: 19 },
       { BookName: 'Jesed2016', Number: '19' }
@@ -1324,7 +1324,7 @@ module.exports = [
   {
     Title: 'EXALTADO SEAS, SEÑOR',
     BasedOn: ['(Sal 57:9-11)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 20 },
       { BookName: 'CADV2019', Number: 20 },
       { BookName: 'Jesed2016', Number: '20' }
@@ -1406,7 +1406,7 @@ module.exports = [
   {
     Title: 'NUESTRO DIOS REINA YA',
     BasedOn: ['(Is 52:7)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 21 },
       { BookName: 'CADV2019', Number: 21 },
       { BookName: 'Jesed2016', Number: '21' }
@@ -1434,7 +1434,7 @@ module.exports = [
   {
     Title: 'VENGAN, CANTEMOS DE GOZO AL SEÑOR',
     BasedOn: ['(Sal 95:1-7)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 457 },
       { BookName: 'CADV2019', Number: 22 },
       { BookName: 'Jesed2016', Number: '22' }
@@ -1513,7 +1513,7 @@ module.exports = [
   {
     Title: 'SOMOS PUEBLO',
     BasedOn: ['(1 Pe 2:5-9)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 23 },
       { BookName: 'CADV2019', Number: 23 },
       { BookName: 'Jesed2016', Number: '23' }
@@ -1577,7 +1577,7 @@ module.exports = [
   {
     Title: 'EL SEÑOR ES MI PASTOR',
     BasedOn: ['(Sal 23)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 24 },
       { BookName: 'CADV2019', Number: 24 },
       { BookName: 'Jesed2016', Number: '24' }
@@ -1653,7 +1653,7 @@ module.exports = [
   {
     Title: 'ENSEÑAME A BUSCARTE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 422 },
       { BookName: 'CADV2019', Number: 25 },
       { BookName: 'Jesed2016', Number: '25' }
@@ -1685,7 +1685,7 @@ module.exports = [
   {
     Title: 'DIGNO ES EL  SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 26 },
       { BookName: 'CADV2019', Number: 26 },
       { BookName: 'Jesed2016', Number: '26' }
@@ -1737,7 +1737,7 @@ module.exports = [
   {
     Title: 'OÍ POR FIN UNA GRAN VOZ',
     BasedOn: ['(Ap 21:1-4)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 27 },
       { BookName: 'CADV2019', Number: 27 },
       { BookName: 'Jesed2016', Number: '27' }
@@ -1802,7 +1802,7 @@ module.exports = [
   {
     Title: 'RESUCITÓ, RESUCITÓ',
     BasedOn: ['(1 Cor 15:55, 2Tm 2:11-12)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 28 },
       { BookName: 'CADV2019', Number: 28 },
       { BookName: 'Jesed2016', Number: '28' }
@@ -1875,7 +1875,7 @@ module.exports = [
   {
     Title: 'HONOR AL NOMBRE DE JESÚS',
     BasedOn: ['(“Coronación”)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 29 },
       { BookName: 'CADV2019', Number: 29 },
       { BookName: 'Jesed2016', Number: '29' }
@@ -1953,7 +1953,7 @@ module.exports = [
   {
     Title: 'HIMNO DE GLORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 30 },
       { BookName: 'CADV2019', Number: 30 },
       { BookName: 'Jesed2016', Number: '30' }
@@ -2022,7 +2022,7 @@ module.exports = [
   {
     Title: 'AL QUE NOS AMÓ',
     BasedOn: ['(Ap 1:5b-6)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 31 },
       { BookName: 'CADV2019', Number: 31 },
       { BookName: 'Jesed2016', Number: '31' }
@@ -2082,7 +2082,7 @@ module.exports = [
   {
     Title: 'EN ALTO A CRISTO QUIERO VER',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 311 },
       { BookName: 'CADV2019', Number: 32 },
       { BookName: 'Jesed2016', Number: '32' }
@@ -2121,7 +2121,7 @@ module.exports = [
   {
     Title: 'LOS ÁRBOLES DEL CAMPO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 33 },
       { BookName: 'CADV2019', Number: 33 },
       { BookName: 'Jesed2016', Number: '33' }
@@ -2161,7 +2161,7 @@ module.exports = [
   {
     Title: 'ALABEN A DIOS EN SU TEMPLO SAGRADO (SALMO 150)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 34 },
       { BookName: 'CADV2019', Number: 34 },
       { BookName: 'Jesed2016', Number: '34' }
@@ -2221,7 +2221,7 @@ module.exports = [
   {
     Title: 'ARRIBA, HOMBRES DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 35 },
       { BookName: 'CADV2019', Number: 35 },
       { BookName: 'Jesed2016', Number: '35' }
@@ -2298,7 +2298,7 @@ module.exports = [
   {
     Title: '¡OH TU FIDELIDAD!',
     BasedOn: ['(Lm 3:22-24)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 36 },
       { BookName: 'CADV2019', Number: 36 },
       { BookName: 'Jesed2016', Number: '36' }
@@ -2365,7 +2365,7 @@ module.exports = [
   {
     Title: 'MUÉSTRAME, SEÑOR, TUS CAMINOS',
     BasedOn: '(Sal 25:4-7)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 37 },
       { BookName: 'CADV2019', Number: 37 },
       { BookName: 'Jesed2016', Number: '37' }
@@ -2410,7 +2410,7 @@ module.exports = [
   {
     Title: 'OH SEÑOR, QUIERO ALABARTE',
     BasedOn: ['(Sal 9:2-3)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 38 },
       { BookName: 'CADV2019', Number: 38 },
       { BookName: 'Jesed2016', Number: '38' }
@@ -2437,7 +2437,7 @@ module.exports = [
   {
     Title: 'GRANDES  MARAVILLAS',
     BasedOn: '(Ap. 15:3-4)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 39 },
       { BookName: 'CADV2019', Number: 39 },
       { BookName: 'Jesed2016', Number: '39' }
@@ -2503,7 +2503,7 @@ module.exports = [
   {
     Title: '¡VIVA EL REY!',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 40 },
       { BookName: 'CADV2019', Number: 40 },
       { BookName: 'Jesed2016', Number: '40' }
@@ -2549,7 +2549,7 @@ module.exports = [
   {
     Title: 'CANTAD ALELUYA',
     BasedOn: ['(cf. Heb 12:22-27)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 41 },
       { BookName: 'CADV2019', Number: 41 },
       { BookName: 'Jesed2016', Number: '41' }
@@ -2629,7 +2629,7 @@ module.exports = [
   {
     Title: '¡ALÁBENLO! (ISAÍAS 42)',
     BasedOn: ['(Is 42:10-13)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 42 },
       { BookName: 'CADV2019', Number: 42 },
       { BookName: 'Jesed2016', Number: '42' }
@@ -2697,7 +2697,7 @@ module.exports = [
   {
     Title: 'ACERQUÉMONOS AL TRONO DE LA GRACIA',
     BasedOn: ['(Heb 4:16;  Sal 22:3;  Sal 84:1-2)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 43 },
       { BookName: 'CADV2019', Number: 43 },
       { BookName: 'Jesed2016', Number: '43' }
@@ -2744,7 +2744,7 @@ module.exports = [
   {
     Title: 'LO QUE RESPIRA',
     BasedOn: '(SALMO 150)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 44 },
       { BookName: 'CADV2019', Number: 44 },
       { BookName: 'Jesed2016', Number: '44' }
@@ -2800,7 +2800,7 @@ module.exports = [
   {
     Title: 'SALVE, OH CRISTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 45 },
       { BookName: 'CADV2019', Number: 45 },
       { BookName: 'Jesed2016', Number: '45' }
@@ -2829,7 +2829,7 @@ module.exports = [
   {
     Title: 'CANTO DE ALEGRÍA AL DIOS SALVADOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 46 },
       { BookName: 'CADV2019', Number: 46 },
       { BookName: 'Jesed2016', Number: '46' }
@@ -2881,7 +2881,7 @@ module.exports = [
   {
     Title: 'YO TE EXALTO',
     BasedOn: ['(Sal 97:9)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 47 },
       { BookName: 'CADV2019', Number: 47 },
       { BookName: 'Jesed2016', Number: '47' }
@@ -2944,7 +2944,7 @@ module.exports = [
   {
     Title: 'MIL VOCES PARA CELEBRAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 48 },
       { BookName: 'CADV2019', Number: 48 },
       { BookName: 'Jesed2016', Number: '48' }
@@ -3017,7 +3017,7 @@ module.exports = [
   {
     Title: 'VICTORIOSO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 49 },
       { BookName: 'CADV2019', Number: 49 },
       { BookName: 'Jesed2016', Number: '49' }
@@ -3081,7 +3081,7 @@ module.exports = [
   {
     Title: 'LA LUZ DE JESÚS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 50 },
       { BookName: 'CADV2019', Number: 50 },
       { BookName: 'Jesed2016', Number: '50' }
@@ -3129,7 +3129,7 @@ module.exports = [
   {
     Title: 'MAJESTAD',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 51 },
       { BookName: 'CADV2019', Number: 51 },
       { BookName: 'Jesed2016', Number: '51' }
@@ -3163,7 +3163,7 @@ module.exports = [
   {
     Title: 'EL SEÑOR ES MI FUERZA',
     BasedOn: ['(Sal 18,  Sal 34)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 52 },
       { BookName: 'CADV2019', Number: 52 },
       { BookName: 'Jesed2016', Number: '52' }
@@ -3210,7 +3210,7 @@ module.exports = [
   {
     Title: 'NUESTRO DIOS CON SU PODER ',
     BasedOn: '(ROMANOS 8)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 53 },
       { BookName: 'CADV2019', Number: 53 },
       { BookName: 'Jesed2016', Number: '53' }
@@ -3274,7 +3274,7 @@ module.exports = [
   {
     Title: 'ABRE MIS OJOS, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 310 },
       { BookName: 'CADV2019', Number: 54 },
       { BookName: 'Jesed2016', Number: '54' }
@@ -3324,7 +3324,7 @@ module.exports = [
   {
     Title: 'EL SEÑOR REINA, GÓCESE LA TIERRA',
     BasedOn: ['(Sal 97:1, 4, 6, 11-12)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 55 },
       { BookName: 'CADV2019', Number: 55 },
       { BookName: 'Jesed2016', Number: '55' }
@@ -3384,7 +3384,7 @@ module.exports = [
   {
     Title: 'SOLO QUIERO CONOCER A JESÚS',
     BasedOn: ['(Flp 3:7-10)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 56 },
       { BookName: 'CADV2019', Number: 56 },
       { BookName: 'Jesed2016', Number: '56' }
@@ -3431,7 +3431,7 @@ module.exports = [
   {
     Title: 'AL REY DE LOS SIGLOS (1)',
     BasedOn: ['(1 Tm 1, 17)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 425 },
       { BookName: 'CADV2019', Number: 57 },
       { BookName: 'Jesed2016', Number: '57' }
@@ -3462,7 +3462,7 @@ module.exports = [
   {
     Title: 'ESTE ES EL DÍA EN QUE ACTUÓ EL SEÑOR',
     BasedOn: ['(SALMO 118)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 58 },
       { BookName: 'CADV2019', Number: 58 },
       { BookName: 'Jesed2016', Number: '58' }
@@ -3528,7 +3528,7 @@ module.exports = [
   {
     Title: 'MAGNIFIQUEMOS AL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 472 },
       { BookName: 'CADV2019', Number: 59 },
       { BookName: 'Jesed2016', Number: '59' }
@@ -3582,7 +3582,7 @@ module.exports = [
   {
     Title: 'MI FUERZA ERES TÚ, SEÑOR',
     BasedOn: ['(cf. Éx 15)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 60 },
       { BookName: 'CADV2019', Number: 60 },
       { BookName: 'Jesed2016', Number: '60' }
@@ -3622,7 +3622,7 @@ module.exports = [
   {
     Title: 'MI ALMA ALABA AL SEÑOR',
     BasedOn: ['(Lc. 1:46-49)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 61 },
       { BookName: 'CADV2019', Number: 61 },
       { BookName: 'Jesed2016', Number: '61' }
@@ -3657,7 +3657,7 @@ module.exports = [
   {
     Title: 'RENDID HONOR AL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 62 },
       { BookName: 'CADV2019', Number: 62 },
       { BookName: 'Jesed2016', Number: '62' }
@@ -3734,7 +3734,7 @@ module.exports = [
   {
     Title: 'DIOS ES NUESTRO AMPARO',
     BasedOn: '(SALMO 46)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 63 },
       { BookName: 'CADV2019', Number: 63 },
       { BookName: 'Jesed2016', Number: '63' }
@@ -3805,7 +3805,7 @@ module.exports = [
   {
     Title: 'LIBRE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 64 },
       { BookName: 'CADV2019', Number: 64 },
       { BookName: 'Jesed2016', Number: '64' }
@@ -3905,7 +3905,7 @@ module.exports = [
   {
     Title: 'SANTO, SANTO, SANTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 65 },
       { BookName: 'CADV2019', Number: 65 },
       { BookName: 'Jesed2016', Number: '65' }
@@ -3971,7 +3971,7 @@ module.exports = [
   {
     Title: 'MIRAD, DIOS ES MI SALVACIÓN',
     BasedOn: ['(Is 12:2)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 66 },
       { BookName: 'CADV2019', Number: 66 },
       { BookName: 'Jesed2016', Number: '66' }
@@ -3995,7 +3995,7 @@ module.exports = [
   {
     Title: '¡ALABEN AL SEÑOR TODOS LOS PUEBLOS!',
     BasedOn: ['(cf. Sal 118:1-4)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 67 },
       { BookName: 'CADV2019', Number: 67 },
       { BookName: 'Jesed2016', Number: '67' }
@@ -4043,7 +4043,7 @@ module.exports = [
   {
     Title: 'LUCHEMOS SIEMPRE EN EL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 314 },
       { BookName: 'CADV2019', Number: 68 },
       { BookName: 'Jesed2016', Number: '68' }
@@ -4113,7 +4113,7 @@ module.exports = [
   {
     Title: 'ÉL ES ETERNO',
     BasedOn: ['Col 1:15-20; Heb 1:3'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 337 },
       { BookName: 'CADV2019', Number: 69 },
       { BookName: 'Jesed2016', Number: '69' }
@@ -4156,7 +4156,7 @@ module.exports = [
   {
     Title: 'BUENO ES ALABARTE',
     BasedOn: ['(Sal 92:12)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 70 },
       { BookName: 'CADV2019', Number: 70 },
       { BookName: 'Jesed2016', Number: '70' }
@@ -4187,7 +4187,7 @@ module.exports = [
   {
     Title: 'AL REY DE LOS SIGLOS (2)',
     BasedOn: [' (1 Tm 1:17)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 425 },
       { BookName: 'CADV2019', Number: 70 },
       { BookName: 'Jesed2016', Number: '70' }
@@ -4218,7 +4218,7 @@ module.exports = [
   {
     Title: 'TE DOY GRACIAS, SEÑOR',
     BasedOn: ['SALMO 138'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 71 },
       { BookName: 'CADV2019', Number: 71 },
       { BookName: 'Jesed2016', Number: '71' }
@@ -4289,7 +4289,7 @@ module.exports = [
   {
     Title: 'AL REY DE LOS SIGLOS (2)',
     BasedOn: ' (1 Tm 1:17)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 72 },
       { BookName: 'CADV2019', Number: 72 },
       { BookName: 'Jesed2016', Number: '72' }
@@ -4336,7 +4336,7 @@ module.exports = [
   {
     Title: 'MARANATHA',
     BasedOn: ['(Is 45:8)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 73 },
       { BookName: 'CADV2019', Number: 73 },
       { BookName: 'Jesed2016', Number: '73' }
@@ -4386,7 +4386,7 @@ module.exports = [
   {
     Title: 'TE EXALTARÉ,  MI DIOS, MI REY',
     BasedOn: ['(Sal 145:1-3)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 74 },
       { BookName: 'CADV2019', Number: 74 },
       { BookName: 'Jesed2016', Number: '74' }
@@ -4420,7 +4420,7 @@ module.exports = [
   {
     Title: 'DÍAS DE ELÍAS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 329 },
       { BookName: 'CADV2019', Number: 75 },
       { BookName: 'Jesed2016', Number: '75' }
@@ -4492,7 +4492,7 @@ module.exports = [
   {
     Title: 'ABRID PASO AL SALVADOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 76 },
       { BookName: 'CADV2019', Number: 76 },
       { BookName: 'Jesed2016', Number: '76' }
@@ -4542,7 +4542,7 @@ module.exports = [
   {
     Title: 'GRANDES Y MARAVILLOSAS SON TUS OBRAS',
     BasedOn: ['APOCALIPSIS 15'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 77 },
       { BookName: 'CADV2019', Number: 77 },
       { BookName: 'Jesed2016', Number: '77' }
@@ -4592,7 +4592,7 @@ module.exports = [
   {
     Title: 'QUE LOS PUEBLOS TE CELEBREN',
     BasedOn: ['(Sal 67)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 78 },
       { BookName: 'CADV2019', Number: 78 },
       { BookName: 'Jesed2016', Number: '78' }
@@ -4642,7 +4642,7 @@ module.exports = [
   {
     Title: 'SANTO, TÚ ERES SANTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 79 },
       { BookName: 'CADV2019', Number: 79 },
       { BookName: 'Jesed2016', Number: '79' }
@@ -4695,7 +4695,7 @@ module.exports = [
   {
     Title: 'GLORIA A JESUCRISTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 80 },
       { BookName: 'CADV2019', Number: 80 },
       { BookName: 'Jesed2016', Number: '80' }
@@ -4760,7 +4760,7 @@ module.exports = [
   {
     Title: 'SU GRAN PODER PROCLAMAD',
     BasedOn: ['(SALMO 96)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 81 },
       { BookName: 'CADV2019', Number: 81 },
       { BookName: 'Jesed2016', Number: '81' }
@@ -4813,7 +4813,7 @@ module.exports = [
   {
     Title: 'HACIA LA CASA DE DIOS',
     BasedOn: ['(Sal 122)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 82 },
       { BookName: 'CADV2019', Number: 82 },
       { BookName: 'Jesed2016', Number: '82' }
@@ -4881,7 +4881,7 @@ module.exports = [
   {
     Title: 'VEN Y ADORA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 83 },
       { BookName: 'CADV2019', Number: 83 },
       { BookName: 'Jesed2016', Number: '83' }
@@ -4912,7 +4912,7 @@ module.exports = [
   {
     Title: 'VEN, JESÚS, NUESTRA ESPERANZA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 84 },
       { BookName: 'CADV2019', Number: 84 },
       { BookName: 'Jesed2016', Number: '84' }
@@ -4984,7 +4984,7 @@ module.exports = [
   {
     Title: 'POR LOS GLORIOSOS SANTOS DEL AYER',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 85 },
       { BookName: 'CADV2019', Number: 85 },
       { BookName: 'Jesed2016', Number: '85' }
@@ -5088,7 +5088,7 @@ module.exports = [
   {
     Title: 'QUIERO SER FIEL A CRISTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 86 },
       { BookName: 'CADV2019', Number: 86 },
       { BookName: 'Jesed2016', Number: '86' }
@@ -5146,7 +5146,7 @@ module.exports = [
   {
     Title: 'OH CRISTO, TE ACLAMAMOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 87 },
       { BookName: 'CADV2019', Number: 87 },
       { BookName: 'Jesed2016', Number: '87' }
@@ -5186,7 +5186,7 @@ module.exports = [
   {
     Title: 'POR TU ETERNO AMOR',
     BasedOn: ['(Sal 57)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 435 },
       { BookName: 'CADV2019', Number: 88 },
       { BookName: 'Jesed2016', Number: '88' }
@@ -5224,7 +5224,7 @@ module.exports = [
   {
     Title: 'PROCLAMEMOS LA GRANDEZA DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 301 },
       { BookName: 'CADV2019', Number: 89 },
       { BookName: 'Jesed2016', Number: '89' }
@@ -5275,7 +5275,7 @@ module.exports = [
   {
     Title: 'ALABA, ALMA MÍA, AL SEÑOR (1)',
     BasedOn: ['(Sal 146)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 90 },
       { BookName: 'CADV2019', Number: 90 },
       { BookName: 'Jesed2016', Number: '90' }
@@ -5325,7 +5325,7 @@ module.exports = [
   {
     Title: 'HINEY MAH TOV',
     BasedOn: ['(Sal 133:1)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 91 },
       { BookName: 'CADV2019', Number: 91 },
       { BookName: 'Jesed2016', Number: '91' }
@@ -5367,7 +5367,7 @@ module.exports = [
   {
     Title: 'SALMO133: CÓMO ES MARAVILLOSO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 92 },
       { BookName: 'CADV2019', Number: 92 },
       { BookName: 'Jesed2016', Number: '92' }
@@ -5421,7 +5421,7 @@ module.exports = [
   {
     Title: 'HAZME ARDER, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 494 },
       { BookName: 'CADV2019', Number: 93 },
       { BookName: 'Jesed2016', Number: '93' }
@@ -5459,7 +5459,7 @@ module.exports = [
   {
     Title: 'SOBERANO DE LOS CIELOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 94 },
       { BookName: 'CADV2019', Number: 94 },
       { BookName: 'Jesed2016', Number: '94' }
@@ -5515,7 +5515,7 @@ module.exports = [
   {
     Title: 'ESPÍRITU SANTO, VEN, VEN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 95 },
       { BookName: 'CADV2019', Number: 95 },
       { BookName: 'Jesed2016', Number: '95' }
@@ -5555,7 +5555,7 @@ module.exports = [
   {
     Title: 'SOLO UNA COSA',
     BasedOn: ['(Sal 27:4, 8, 11, 13)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 96 },
       { BookName: 'CADV2019', Number: 96 },
       { BookName: 'Jesed2016', Number: '96' }
@@ -5622,7 +5622,7 @@ module.exports = [
   {
     Title: '¡OH YAHVÉ, SEÑOR NUESTRO!',
     BasedOn: ['(Sal 8; Sab 9:1-33; Ef 1:4-6)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 97 },
       { BookName: 'CADV2019', Number: 97 },
       { BookName: 'Jesed2016', Number: '97' }
@@ -5694,7 +5694,7 @@ module.exports = [
   {
     Title: 'BUENO ES DAR GRACIAS A YAHVÉ',
     BasedOn: ['(Cántico de Ana, 1 Sam 2:1-10)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 98 },
       { BookName: 'CADV2019', Number: 98 },
       { BookName: 'Jesed2016', Number: '98' }
@@ -5760,7 +5760,7 @@ module.exports = [
   {
     Title: 'BENDECIRÉ A YAHVÉ EN TODO TIEMPO (SALMO 34)',
     BasedOn: '(Sal 34:2-9, 20-21)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 99 },
       { BookName: 'CADV2019', Number: 99 },
       { BookName: 'Jesed2016', Number: '99' }
@@ -5833,7 +5833,7 @@ module.exports = [
   {
     Title: 'CANTEMOS AL SEÑOR',
     BasedOn: ['(ÉXODO 15 )'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 100 },
       { BookName: 'CADV2019', Number: 100 },
       { BookName: 'Jesed2016', Number: '100' }
@@ -5908,7 +5908,7 @@ module.exports = [
   {
     Title: 'ALELUYA, BATID PALMAS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 101 },
       { BookName: 'CADV2019', Number: 101 },
       { BookName: 'Jesed2016', Number: '101' }
@@ -5972,7 +5972,7 @@ module.exports = [
   {
     Title: 'SOLO DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 102 },
       { BookName: 'CADV2019', Number: 102 },
       { BookName: 'Jesed2016', Number: '102' }
@@ -6004,7 +6004,7 @@ module.exports = [
   {
     Title: 'EN LOS VALLES SE OIRÁ UN CANTO A DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 103 },
       { BookName: 'CADV2019', Number: 103 },
       { BookName: 'Jesed2016', Number: '103' }
@@ -6036,7 +6036,7 @@ module.exports = [
   {
     Title: 'LA VOZ DEL QUE CLAMA EN EL DESIERTO',
     BasedOn: ['(Is 40:35; Sal 24:6, 8, 10)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 104 },
       { BookName: 'CADV2019', Number: 104 },
       { BookName: 'Jesed2016', Number: '104' }
@@ -6141,7 +6141,7 @@ module.exports = [
   {
     Title: 'YO TE ENSALZO MI DIOS Y REY',
     BasedOn: ['(SALMO 145)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 105 },
       { BookName: 'CADV2019', Number: 105 },
       { BookName: 'Jesed2016', Number: '105' }
@@ -6212,7 +6212,7 @@ module.exports = [
   {
     Title: 'CRISTO JESÚS, NUESTRA OBLACIÓN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 106 },
       { BookName: 'CADV2019', Number: 106 },
       { BookName: 'Jesed2016', Number: '106' }
@@ -6289,7 +6289,7 @@ module.exports = [
   {
     Title: 'EL MAGNÍFICAT',
     BasedOn: ['(Lc 1:37, 4654; Jn 1:14)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 107 },
       { BookName: 'CADV2019', Number: 107 },
       { BookName: 'Jesed2016', Number: '107' }
@@ -6379,7 +6379,7 @@ module.exports = [
   {
     Title: '¡SÍ! TU ME DAS LA LUZ',
     BasedOn: '(SALMO 18)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 108 },
       { BookName: 'CADV2019', Number: 108 },
       { BookName: 'Jesed2016', Number: '108' }
@@ -6473,7 +6473,7 @@ module.exports = [
   {
     Title: 'ESTALLA EN UNA CANCIÓN (ISAÍAS 54)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 109 },
       { BookName: 'CADV2019', Number: 109 },
       { BookName: 'Jesed2016', Number: '109' }
@@ -6541,7 +6541,7 @@ module.exports = [
   {
     Title: 'CASTILLO FUERTE ES NUESTRO DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 110 },
       { BookName: 'CADV2019', Number: 110 },
       { BookName: 'Jesed2016', Number: '110' }
@@ -6637,7 +6637,7 @@ module.exports = [
   {
     Title: 'SEÑOR, TU ME HAS CREADO (ISAÍAS 43)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 111 },
       { BookName: 'CADV2019', Number: 111 },
       { BookName: 'Jesed2016', Number: '111' }
@@ -6714,7 +6714,7 @@ module.exports = [
   {
     Title: 'LEVÁNTATE Y BRILLA',
     BasedOn: '(ISAÍAS 60)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 112 },
       { BookName: 'CADV2019', Number: 112 },
       { BookName: 'Jesed2016', Number: '112' }
@@ -6815,7 +6815,7 @@ module.exports = [
   {
     Title: 'DESPIERTA, ISRAEL',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 113 },
       { BookName: 'CADV2019', Number: 113 },
       { BookName: 'Jesed2016', Number: '113' }
@@ -6894,7 +6894,7 @@ module.exports = [
   {
     Title: 'DEL CIELO MIRA EL SEÑOR',
     BasedOn: ['(Sal 14:2; 45:1; 84:1-2)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 114 },
       { BookName: 'CADV2019', Number: 114 },
       { BookName: 'Jesed2016', Number: '114' }
@@ -6966,7 +6966,7 @@ module.exports = [
   {
     Title: 'AL SALVADOR JESÚS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 115 },
       { BookName: 'CADV2019', Number: 115 },
       { BookName: 'Jesed2016', Number: '115' }
@@ -7029,7 +7029,7 @@ module.exports = [
   {
     Title: 'OH SEÑOR, TESORO NUESTRO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 116 },
       { BookName: 'CADV2019', Number: 116 },
       { BookName: 'Jesed2016', Number: '116' }
@@ -7125,7 +7125,7 @@ module.exports = [
   {
     Title: 'CANTEN, HIJOS DE LA GLORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 117 },
       { BookName: 'CADV2019', Number: 117 },
       { BookName: 'Jesed2016', Number: '117' }
@@ -7225,7 +7225,7 @@ module.exports = [
   {
     Title: 'NOS HEMOS REUNIDO EN EL NOMBRE DE CRISTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 118 },
       { BookName: 'CADV2019', Number: 118 },
       { BookName: 'Jesed2016', Number: '118' }
@@ -7275,7 +7275,7 @@ module.exports = [
   {
     Title: 'LA CORAZA DE SAN PATRICIO',
     BasedOn: '(“Bunessan”)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 119 },
       { BookName: 'CADV2019', Number: 119 },
       { BookName: 'Jesed2016', Number: '119' }
@@ -7317,7 +7317,7 @@ module.exports = [
   {
     Title: 'SEÑOR, ¿QUIÉN ENTRARÁ EN TU SANTUARIO?',
     BasedOn: ['(cf. Sal 24:3-4)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 120 },
       { BookName: 'CADV2019', Number: 120 },
       { BookName: 'Jesed2016', Number: '120' }
@@ -7378,7 +7378,7 @@ module.exports = [
   {
     Title: 'CUÁN GRANDIOSAS SON TODAS TUS OBRAS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 445 },
       { BookName: 'CADV2019', Number: 121 },
       { BookName: 'Jesed2016', Number: '121' }
@@ -7424,7 +7424,7 @@ module.exports = [
   {
     Title: 'AMÉN, AMÉN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 122 },
       { BookName: 'CADV2019', Number: 122 },
       { BookName: 'Jesed2016', Number: '122' }
@@ -7492,7 +7492,7 @@ module.exports = [
   {
     Title: 'CÁNTICO DE MARÍA',
     BasedOn: '(Magníficat, Lc 1:46-55)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 123 },
       { BookName: 'CADV2019', Number: 123 },
       { BookName: 'Jesed2016', Number: '123' }
@@ -7570,7 +7570,7 @@ module.exports = [
   {
     Title: 'HOY QUIERO CANTARLE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 124 },
       { BookName: 'CADV2019', Number: 124 },
       { BookName: 'Jesed2016', Number: '124' }
@@ -7647,7 +7647,7 @@ module.exports = [
   {
     Title: 'CÁNTICO DE MOISÉS',
     BasedOn: ['(Ex 15:1-11)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 125 },
       { BookName: 'CADV2019', Number: 125 },
       { BookName: 'Jesed2016', Number: '125' }
@@ -7722,7 +7722,7 @@ module.exports = [
   {
     Title: 'CANCIÓN DE GRACIAS',
     BasedOn: ['(Sal 118)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 126 },
       { BookName: 'CADV2019', Number: 126 },
       { BookName: 'Jesed2016', Number: '126' }
@@ -7810,7 +7810,7 @@ module.exports = [
   {
     Title: 'PORQUE ÉL VIVE',
     BasedOn: ['(cf. Rom 14:8)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 127 },
       { BookName: 'CADV2019', Number: 127 },
       { BookName: 'Jesed2016', Number: '127' }
@@ -7851,7 +7851,7 @@ module.exports = [
   {
     Title: '¡OH VENID Y ALABAD! (SALMO 95)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 128 },
       { BookName: 'CADV2019', Number: 128 },
       { BookName: 'Jesed2016', Number: '128' }
@@ -7925,7 +7925,7 @@ module.exports = [
   {
     Title: 'VENGAN Y SUBAMOS',
     BasedOn: ['(Mi 4:2-3)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 129 },
       { BookName: 'CADV2019', Number: 129 },
       { BookName: 'Jesed2016', Number: '129' }
@@ -7977,7 +7977,7 @@ module.exports = [
   {
     Title: 'EL INCIENSO DE DIOS',
     BasedOn: ['(2 Cor 2:14-17)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 130 },
       { BookName: 'CADV2019', Number: 130 },
       { BookName: 'Jesed2016', Number: '130' }
@@ -8055,7 +8055,7 @@ module.exports = [
   {
     Title: 'TUYOS,SEÑOR,LA GRANDEZA Y EL PODER',
     BasedOn: ['1 Cr.29:11'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 131 },
       { BookName: 'CADV2019', Number: 131 },
       { BookName: 'Jesed2016', Number: '131' }
@@ -8092,7 +8092,7 @@ module.exports = [
   {
     Title: 'EL RETORNO DEL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 132 },
       { BookName: 'CADV2019', Number: 132 },
       { BookName: 'Jesed2016', Number: '132' }
@@ -8174,7 +8174,7 @@ module.exports = [
   {
     Title: 'EN TU LUZ VEO LA LUZ',
     BasedOn: ['Sal36:7-9'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 133 },
       { BookName: 'CADV2019', Number: 133 },
       { BookName: 'Jesed2016', Number: '133' }
@@ -8234,7 +8234,7 @@ module.exports = [
   {
     Title: 'DIOS ES MI REFUGIO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 134 },
       { BookName: 'CADV2019', Number: 134 },
       { BookName: 'Jesed2016', Number: '134' }
@@ -8280,7 +8280,7 @@ module.exports = [
   {
     Title: 'DANIEL 6',
     BasedOn: 'Dan6:26-28',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 135 },
       { BookName: 'CADV2019', Number: 135 },
       { BookName: 'Jesed2016', Number: '135' }
@@ -8336,7 +8336,7 @@ module.exports = [
   {
     Title: 'GRACIAS A DIOS',
     BasedOn: ['Ap 11:17'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 136 },
       { BookName: 'CADV2019', Number: 136 },
       { BookName: 'Jesed2016', Number: '136' }
@@ -8367,7 +8367,7 @@ module.exports = [
   {
     Title: 'SALMO 45',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 137 },
       { BookName: 'CADV2019', Number: 137 },
       { BookName: 'Jesed2016', Number: '137' }
@@ -8455,7 +8455,7 @@ module.exports = [
   {
     Title: '¡OH DIOS,SÉ TU MI VISIÓN!',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 138 },
       { BookName: 'CADV2019', Number: 138 },
       { BookName: 'Jesed2016', Number: '138' }
@@ -8528,7 +8528,7 @@ module.exports = [
   {
     Title: 'SALMO 67',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 139 },
       { BookName: 'CADV2019', Number: 139 },
       { BookName: 'Jesed2016', Number: '139' }
@@ -8589,7 +8589,7 @@ module.exports = [
   {
     Title: 'EL ESPIRÍTU Y LA NOVIA',
     BasedOn: ['Ap.22:12-21;Jn 7:37-39'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 140 },
       { BookName: 'CADV2019', Number: 140 },
       { BookName: 'Jesed2016', Number: '140' }
@@ -8657,7 +8657,7 @@ module.exports = [
   {
     Title: 'HAZ BRILLAR TU VERDAD Y TU LUZ',
     BasedOn: ['Sal.43:3-4'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 141 },
       { BookName: 'CADV2019', Number: 141 },
       { BookName: 'Jesed2016', Number: '141' }
@@ -8691,7 +8691,7 @@ module.exports = [
   {
     Title: 'NADA TE TURBE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 142 },
       { BookName: 'CADV2019', Number: 142 },
       { BookName: 'Jesed2016', Number: '142' }
@@ -8728,7 +8728,7 @@ module.exports = [
   {
     Title: 'DIOS DICHOSO Y SOBERANO',
     BasedOn: ['1Ti.6:15-16'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 143 },
       { BookName: 'CADV2019', Number: 143 },
       { BookName: 'Jesed2016', Number: '143' }
@@ -8772,7 +8772,7 @@ module.exports = [
   {
     Title: 'DIGNO ES EL CORDERO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 144 },
       { BookName: 'CADV2019', Number: 144 },
       { BookName: 'Jesed2016', Number: '144' }
@@ -8807,7 +8807,7 @@ module.exports = [
   {
     Title: 'GLORIA A TI,SEÑOR JESÚS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 145 },
       { BookName: 'CADV2019', Number: 145 },
       { BookName: 'Jesed2016', Number: '145' }
@@ -8830,7 +8830,7 @@ module.exports = [
   {
     Title: 'QUE GLORIOSA TU MORADA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 146 },
       { BookName: 'CADV2019', Number: 146 },
       { BookName: 'Jesed2016', Number: '146' }
@@ -8895,7 +8895,7 @@ module.exports = [
   {
     Title: 'OH CRIATURAS DEL SEÑOR',
     BasedOn: 'Cántico de las criaturas',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 147 },
       { BookName: 'CADV2019', Number: 147 },
       { BookName: 'Jesed2016', Number: '147' }
@@ -9070,7 +9070,7 @@ module.exports = [
   {
     Title: 'TODA GLORIA A TI',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 148 },
       { BookName: 'CADV2019', Number: 148 },
       { BookName: 'Jesed2016', Number: '148' }
@@ -9117,7 +9117,7 @@ module.exports = [
   {
     Title: 'SANTO,ETERNO Y PODEROSO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 149 },
       { BookName: 'CADV2019', Number: 149 },
       { BookName: 'Jesed2016', Number: '149' }
@@ -9172,7 +9172,7 @@ module.exports = [
   {
     Title: 'OH ISRAEL',
     BasedOn: ['Oseas 2'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 150 },
       { BookName: 'CADV2019', Number: 150 },
       { BookName: 'Jesed2016', Number: '150' }
@@ -9255,7 +9255,7 @@ module.exports = [
   {
     Title: 'SALMO 24',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 151 },
       { BookName: 'CADV2019', Number: 151 },
       { BookName: 'Jesed2016', Number: '151' }
@@ -9326,7 +9326,7 @@ module.exports = [
   {
     Title: 'TU REINO A COMENZADO  YA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 152 },
       { BookName: 'CADV2019', Number: 152 },
       { BookName: 'Jesed2016', Number: '152' }
@@ -9403,7 +9403,7 @@ module.exports = [
   {
     Title: 'SALMO 51',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 153 },
       { BookName: 'CADV2019', Number: 153 },
       { BookName: 'Jesed2016', Number: '153' }
@@ -9469,7 +9469,7 @@ module.exports = [
   {
     Title: 'SOLO DIOS, CON SU PODER',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 154 },
       { BookName: 'CADV2019', Number: 154 },
       { BookName: 'Jesed2016', Number: '154' }
@@ -9580,7 +9580,7 @@ module.exports = [
   {
     Title: 'Salmo  121',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 155 },
       { BookName: 'CADV2019', Number: 155 },
       { BookName: 'Jesed2016', Number: '155' }
@@ -9655,7 +9655,7 @@ module.exports = [
   {
     Title: 'ISAÍAS 9',
     BasedOn: ['(Is 9:1-7)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 156 },
       { BookName: 'CADV2019', Number: 156 },
       { BookName: 'Jesed2016', Number: '156' }
@@ -9737,7 +9737,7 @@ module.exports = [
   {
     Title: 'SOLO EN DIOS',
     BasedOn: ['(Sal 62:1-2; 5-8)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 157 },
       { BookName: 'CADV2019', Number: 157 },
       { BookName: 'Jesed2016', Number: '157' }
@@ -9795,7 +9795,7 @@ module.exports = [
   {
     Title: 'LA VICTORIA ES DE NUESTRO DIOS',
     BasedOn: ['(Ap 7:10, 12)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 158 },
       { BookName: 'CADV2019', Number: 158 },
       { BookName: 'Jesed2016', Number: '158' }
@@ -9834,7 +9834,7 @@ module.exports = [
   {
     Title: 'CANCIÓN DE ALABANZA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 159 },
       { BookName: 'CADV2019', Number: 159 },
       { BookName: 'Jesed2016', Number: '159' }
@@ -9914,7 +9914,7 @@ module.exports = [
   {
     Title: 'TE DEUM',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 160 },
       { BookName: 'CADV2019', Number: 160 },
       { BookName: 'Jesed2016', Number: '160' }
@@ -10010,7 +10010,7 @@ module.exports = [
   {
     Title: 'LA PRIMICIA DE CRISTO',
     BasedOn: ['Col.1:15-20'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 161 },
       { BookName: 'CADV2019', Number: 161 },
       { BookName: 'Jesed2016', Number: '161' }
@@ -10070,7 +10070,7 @@ module.exports = [
   {
     Title: 'MI TODO, MI DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 162 },
       { BookName: 'CADV2019', Number: 162 },
       { BookName: 'Jesed2016', Number: '162' }
@@ -10138,7 +10138,7 @@ module.exports = [
   {
     Title: 'ME ENTREGO A TI',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 163 },
       { BookName: 'CADV2019', Number: 163 },
       { BookName: 'Jesed2016', Number: '163' }
@@ -10180,7 +10180,7 @@ module.exports = [
   {
     Title: 'GLORIA A TI',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 164 },
       { BookName: 'CADV2019', Number: 164 },
       { BookName: 'Jesed2016', Number: '164' }
@@ -10221,7 +10221,7 @@ module.exports = [
   {
     Title: 'FUENTE DE VIDA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 165 },
       { BookName: 'CADV2019', Number: 165 },
       { BookName: 'Jesed2016', Number: '165' }
@@ -10276,7 +10276,7 @@ module.exports = [
   {
     Title: 'SALMO 63 (1)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 166 },
       { BookName: 'CADV2019', Number: 166 },
       { BookName: 'Jesed2016', Number: '166' }
@@ -10316,7 +10316,7 @@ module.exports = [
   {
     Title: 'AMARTE, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 167 },
       { BookName: 'CADV2019', Number: 167 },
       { BookName: 'Jesed2016', Number: '167' }
@@ -10377,7 +10377,7 @@ module.exports = [
   {
     Title: 'SANTO, OH SANTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 168 },
       { BookName: 'CADV2019', Number: 168 },
       { BookName: 'Jesed2016', Number: '168' }
@@ -10439,7 +10439,7 @@ module.exports = [
   {
     Title: 'SOMOS DEL SEÑOR',
     BasedOn: ['(Rm 14:8 y 1 Cor 15)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 169 },
       { BookName: 'CADV2019', Number: 169 },
       { BookName: 'Jesed2016', Number: '169' }
@@ -10512,7 +10512,7 @@ module.exports = [
   {
     Title: 'HONOR Y GLORIA A NUESTRO REDENTOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 170 },
       { BookName: 'CADV2019', Number: 170 },
       { BookName: 'Jesed2016', Number: '170' }
@@ -10577,7 +10577,7 @@ module.exports = [
   {
     Title: 'OFREZCAN A DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 171 },
       { BookName: 'CADV2019', Number: 171 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -10638,7 +10638,7 @@ module.exports = [
   {
     Title: 'TÚ ERES SANTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 316 },
       { BookName: 'CADV2019', Number: 172 },
       { BookName: 'Jesed2016', Number: '172' }
@@ -10706,7 +10706,7 @@ module.exports = [
   {
     Title: 'TE DAMOS, OH SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 173 },
       { BookName: 'CADV2019', Number: 173 },
       { BookName: 'Jesed2016', Number: '173' }
@@ -10749,7 +10749,7 @@ module.exports = [
   {
     Title: 'CRISTO JESÚS, SIENDO IGUAL A DIOS',
     BasedOn: 'Flp 2:6-11',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 174 },
       { BookName: 'CADV2019', Number: 174 },
       { BookName: 'Jesed2016', Number: '174' }
@@ -10811,7 +10811,7 @@ module.exports = [
   {
     Title: 'VAMOS A EXALTAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 175 },
       { BookName: 'CADV2019', Number: 175 },
       { BookName: 'Jesed2016', Number: '175' }
@@ -10876,7 +10876,7 @@ module.exports = [
   {
     Title: 'ENCUENTRO PAZ EN EL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 176 },
       { BookName: 'CADV2019', Number: 176 },
       { BookName: 'Jesed2016', Number: '176' }
@@ -10939,7 +10939,7 @@ module.exports = [
   {
     Title: 'VEN, ESPÍRITU DIVINO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 177 },
       { BookName: 'CADV2019', Number: 177 },
       { BookName: 'Jesed2016', Number: '177' }
@@ -11013,7 +11013,7 @@ module.exports = [
   {
     Title: 'JERUSALÉN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 178 },
       { BookName: 'CADV2019', Number: 178 },
       { BookName: 'Jesed2016', Number: '178' }
@@ -11075,7 +11075,7 @@ module.exports = [
   {
     Title: 'NO ESTÁ EN EL NÚMERO TU FUERZA',
     BasedOn: '(Jdt 9:11,14)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 179 },
       { BookName: 'CADV2019', Number: 179 },
       { BookName: 'Jesed2016', Number: '179' }
@@ -11113,7 +11113,7 @@ module.exports = [
   {
     Title: 'TODO ES TUYO',
     BasedOn: '(1 Cró 29:10-13)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 180 },
       { BookName: 'CADV2019', Number: 180 },
       { BookName: 'Jesed2016', Number: '180' }
@@ -11166,7 +11166,7 @@ module.exports = [
   {
     Title: 'OH SEÑOR, VOY A CANTAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 181 },
       { BookName: 'CADV2019', Number: 181 },
       { BookName: 'Jesed2016', Number: '181' }
@@ -11208,7 +11208,7 @@ module.exports = [
   {
     Title: 'AQUÍ ESTOY, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 182 },
       { BookName: 'CADV2019', Number: 182 },
       { BookName: 'Jesed2016', Number: '182' }
@@ -11293,7 +11293,7 @@ module.exports = [
   {
     Title: 'OH SEÑOR, MI REDENTOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 183 },
       { BookName: 'CADV2019', Number: 183 },
       { BookName: 'Jesed2016', Number: '183' }
@@ -11358,7 +11358,7 @@ module.exports = [
   {
     Title: 'DICHOSO AQUEL QUE CONFÍA EN DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 184 },
       { BookName: 'CADV2019', Number: 184 },
       { BookName: 'Jesed2016', Number: '184' }
@@ -11431,7 +11431,7 @@ module.exports = [
   {
     Title: 'DIOS NO SE DEJÓ SUPERAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 185 },
       { BookName: 'CADV2019', Number: 185 },
       { BookName: 'Jesed2016', Number: '185' }
@@ -11504,7 +11504,7 @@ module.exports = [
   {
     Title: 'SALMO 34: ¡OH, EXALTEMOS JUNTOS SU NOMBRE!',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 186 },
       { BookName: 'CADV2019', Number: 186 },
       { BookName: 'Jesed2016', Number: '186' }
@@ -11583,7 +11583,7 @@ module.exports = [
   {
     Title: 'ALABAD A YAHVÉ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 187 },
       { BookName: 'CADV2019', Number: 187 },
       { BookName: 'Jesed2016', Number: '187' }
@@ -11634,7 +11634,7 @@ module.exports = [
   {
     Title: 'A TU PRESENCIA, SEÑOR, ENTRAMOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 188 },
       { BookName: 'CADV2019', Number: 188 },
       { BookName: 'Jesed2016', Number: '188' }
@@ -11683,7 +11683,7 @@ module.exports = [
   {
     Title: 'FUEGO PURIFICADOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 189 },
       { BookName: 'CADV2019', Number: 189 },
       { BookName: 'Jesed2016', Number: '189' }
@@ -11734,7 +11734,7 @@ module.exports = [
   {
     Title: 'GRACIA REDENTORA',
     BasedOn: '(Salmo 130)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 190 },
       { BookName: 'CADV2019', Number: 190 },
       { BookName: 'Jesed2016', Number: '190' }
@@ -11837,7 +11837,7 @@ module.exports = [
   {
     Title: 'HASTA QUE TÚ CONTEMPLES TU HOGAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 191 },
       { BookName: 'CADV2019', Number: 191 },
       { BookName: 'Jesed2016', Number: '191' }
@@ -11897,7 +11897,7 @@ module.exports = [
   {
     Title: 'HIMNO AL CIELO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 192 },
       { BookName: 'CADV2019', Number: 192 },
       { BookName: 'Jesed2016', Number: '192' }
@@ -11972,7 +11972,7 @@ module.exports = [
   {
     Title: 'ILUMINA, OH SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 193 },
       { BookName: 'CADV2019', Number: 193 },
       { BookName: 'Jesed2016', Number: '193' }
@@ -12000,7 +12000,7 @@ module.exports = [
   {
     Title: 'JERUSALÉN DE ORO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 194 },
       { BookName: 'CADV2019', Number: 194 },
       { BookName: 'Jesed2016', Number: '194' }
@@ -12062,7 +12062,7 @@ module.exports = [
   {
     Title: 'OH MORADA CELESTIAL',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 195 },
       { BookName: 'CADV2019', Number: 195 },
       { BookName: 'Jesed2016', Number: '195' }
@@ -12128,7 +12128,7 @@ module.exports = [
   {
     Title: 'TE PERTENEZCO, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 196 },
       { BookName: 'CADV2019', Number: 196 },
       { BookName: 'Jesed2016', Number: '196' }
@@ -12185,7 +12185,7 @@ module.exports = [
   {
     Title: 'TÚ ERES REY DE GLORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 197 },
       { BookName: 'CADV2019', Number: 197 },
       { BookName: 'Jesed2016', Number: '197' }
@@ -12238,7 +12238,7 @@ module.exports = [
   {
     Title: 'TUYO SOY Y TÚ ERES MÍO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 198 },
       { BookName: 'CADV2019', Number: 198 },
       { BookName: 'Jesed2016', Number: '198' }
@@ -12270,7 +12270,7 @@ module.exports = [
   {
     Title: '¡VEN, SANTO ESPÍRITU!',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 199 },
       { BookName: 'CADV2019', Number: 199 },
       { BookName: 'Jesed2016', Number: '199' }
@@ -12294,7 +12294,7 @@ module.exports = [
   {
     Title: 'SEÑOR, MI DIOS, ENSÉÑAME A SER GENEROSO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 200 },
       { BookName: 'CADV2019', Number: 200 },
       { BookName: 'Jesed2016', Number: '200' }
@@ -12332,7 +12332,7 @@ module.exports = [
   {
     Title: 'PUEBLO DE MI PROPIEDAD',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 201 },
       { BookName: 'CADV2019', Number: 201 },
       { BookName: 'Jesed2016', Number: '201' }
@@ -12406,7 +12406,7 @@ module.exports = [
   {
     Title: 'TOMA, SEÑOR, Y RECIBE TODA MI LIBERTAD',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 202 },
       { BookName: 'CADV2019', Number: 202 },
       { BookName: 'Jesed2016', Number: '202' }
@@ -12436,7 +12436,7 @@ module.exports = [
   {
     Title: 'TU AMOR ES MEJOR QUE LA VIDA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 203 },
       { BookName: 'CADV2019', Number: 203 },
       { BookName: 'Jesed2016', Number: '203' }
@@ -12467,7 +12467,7 @@ module.exports = [
   {
     Title: 'REGRESA, ¡OH ISRAEL!',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 204 },
       { BookName: 'CADV2019', Number: 204 },
       { BookName: 'Jesed2016', Number: '204' }
@@ -12531,7 +12531,7 @@ module.exports = [
   {
     Title: 'MANDA EL FUEGO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 205 },
       { BookName: 'CADV2019', Number: 205 },
       { BookName: 'Jesed2016', Number: '205' }
@@ -12587,7 +12587,7 @@ module.exports = [
   {
     Title: 'ALABADO SEAS TÚ, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 206 },
       { BookName: 'CADV2019', Number: 206 },
       { BookName: 'Jesed2016', Number: '206' }
@@ -12641,7 +12641,7 @@ module.exports = [
   {
     Title: 'ENTRARÉ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 207 },
       { BookName: 'CADV2019', Number: 207 },
       { BookName: 'Jesed2016', Number: '207' }
@@ -12675,7 +12675,7 @@ module.exports = [
   {
     Title: 'TIERRA SANTA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 208 },
       { BookName: 'CADV2019', Number: 208 },
       { BookName: 'Jesed2016', Number: '208' }
@@ -12722,7 +12722,7 @@ module.exports = [
   {
     Title: 'EN JESÚS PUSE TODA MI ESPERANZA',
     BasedOn: ['(Adap. Sal 40)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 209 },
       { BookName: 'CADV2019', Number: 209 },
       { BookName: 'Jesed2016', Number: '209' }
@@ -12781,7 +12781,7 @@ module.exports = [
   {
     Title: 'ALMA, BENDICE AL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 210 },
       { BookName: 'CADV2019', Number: 210 },
       { BookName: 'Jesed2016', Number: '210' }
@@ -12836,7 +12836,7 @@ module.exports = [
   {
     Title: 'EL SEÑOR DE LA ALIANZA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 211 },
       { BookName: 'CADV2019', Number: 211 },
       { BookName: 'Jesed2016', Number: '211' }
@@ -12891,7 +12891,7 @@ module.exports = [
   {
     Title: 'EL REY VENDRÁ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 212 },
       { BookName: 'CADV2019', Number: 212 },
       { BookName: 'Jesed2016', Number: '212' }
@@ -12959,7 +12959,7 @@ module.exports = [
   {
     Title: 'EL SEÑOR RESUCITÓ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 213 },
       { BookName: 'CADV2019', Number: 213 },
       { BookName: 'Jesed2016', Number: '213' }
@@ -13030,7 +13030,7 @@ module.exports = [
   {
     Title: 'Y CONTEMPLAR TU FAZ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 214 },
       { BookName: 'CADV2019', Number: 214 },
       { BookName: 'Jesed2016', Number: '214' }
@@ -13090,7 +13090,7 @@ module.exports = [
   {
     Title: 'TARDE TE AMÉ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 466 },
       { BookName: 'CADV2019', Number: 215 },
       { BookName: 'Jesed2016', Number: '215' }
@@ -13168,7 +13168,7 @@ module.exports = [
   {
     Title: 'CORONAD AL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 216 },
       { BookName: 'CADV2019', Number: 216 },
       { BookName: 'Jesed2016', Number: '216' }
@@ -13217,7 +13217,7 @@ module.exports = [
   {
     Title: 'SIEMPRE AGRADECIDO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 217 },
       { BookName: 'CADV2019', Number: 217 },
       { BookName: 'Jesed2016', Number: '217' }
@@ -13253,7 +13253,7 @@ module.exports = [
   {
     Title: 'CONFIARÉ EN YAHVÉ TODA MI VIDA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 218 },
       { BookName: 'CADV2019', Number: 218 },
       { BookName: 'Jesed2016', Number: '218' }
@@ -13307,7 +13307,7 @@ module.exports = [
   {
     Title: 'AL FIN LLEGARÁ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 219 },
       { BookName: 'CADV2019', Number: 219 },
       { BookName: 'Jesed2016', Number: '219' }
@@ -13359,7 +13359,7 @@ module.exports = [
   {
     Title: 'JESUCRISTO: EL SEÑOR',
     BasedOn: '(Flp 2:6-11)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 220 },
       { BookName: 'CADV2019', Number: 220 },
       { BookName: 'Jesed2016', Number: '220' }
@@ -13427,7 +13427,7 @@ module.exports = [
   {
     Title: 'CRISTO ES EL PRINCIPIO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 221 },
       { BookName: 'CADV2019', Number: 221 },
       { BookName: 'Jesed2016', Number: '221' }
@@ -13490,7 +13490,7 @@ module.exports = [
   {
     Title: 'TÚ ERES MI TODO, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 222 },
       { BookName: 'CADV2019', Number: 222 },
       { BookName: 'Jesed2016', Number: '222' }
@@ -13552,7 +13552,7 @@ module.exports = [
   {
     Title: 'PADRE DE LO CREADO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 223 },
       { BookName: 'CADV2019', Number: 223 },
       { BookName: 'Jesed2016', Number: '223' }
@@ -13630,7 +13630,7 @@ module.exports = [
   {
     Title: 'CANTARÉ AL SEÑOR POR SIEMPRE',
     BasedOn: ['(Mosaico)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 224 },
       { BookName: 'CADV2019', Number: 224 },
       { BookName: 'Jesed2016', Number: '224' }
@@ -13704,7 +13704,7 @@ module.exports = [
   {
     Title: 'DESPIERTA, ALMA MÍA',
     BasedOn: ['(Adap. Salmo 108)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 225 },
       { BookName: 'CADV2019', Number: 225 },
       { BookName: 'Jesed2016', Number: '225' }
@@ -13754,7 +13754,7 @@ module.exports = [
   {
     Title: 'AL CONTEMPLAR TU ROSTRO, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 226 },
       { BookName: 'CADV2019', Number: 226 },
       { BookName: 'Jesed2016', Number: '226' }
@@ -13815,7 +13815,7 @@ module.exports = [
   {
     Title: 'TÓMAME, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 227 },
       { BookName: 'CADV2019', Number: 227 },
       { BookName: 'Jesed2016', Number: '227' }
@@ -13877,7 +13877,7 @@ module.exports = [
   {
     Title: 'HABLA, TU SIERVO ESCUCHA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 228 },
       { BookName: 'CADV2019', Number: 228 },
       { BookName: 'Jesed2016', Number: '228' }
@@ -13901,7 +13901,7 @@ module.exports = [
   {
     Title: 'VEN Y DERRÁMATE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 229 },
       { BookName: 'CADV2019', Number: 229 },
       { BookName: 'Jesed2016', Number: '229' }
@@ -13928,7 +13928,7 @@ module.exports = [
   {
     Title: 'YA NO SOY MÍO, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 230 },
       { BookName: 'CADV2019', Number: 230 },
       { BookName: 'Jesed2016', Number: '230' }
@@ -13975,7 +13975,7 @@ module.exports = [
   {
     Title: 'AL CREADOR DE LA LUZ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 231 },
       { BookName: 'CADV2019', Number: 231 },
       { BookName: 'Jesed2016', Number: '231' }
@@ -14044,7 +14044,7 @@ module.exports = [
   {
     Title: 'PUEBLO SANTO, VEN Y ADORA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 232 },
       { BookName: 'CADV2019', Number: 232 },
       { BookName: 'Jesed2016', Number: '232' }
@@ -14138,7 +14138,7 @@ module.exports = [
   {
     Title: '¡ALABA, ALMA MÍA, AL SEÑOR! (2)',
     BasedOn: ['( SALMO 103)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 233 },
       { BookName: 'CADV2019', Number: 233 },
       { BookName: 'Jesed2016', Number: '233' }
@@ -14194,7 +14194,7 @@ module.exports = [
   {
     Title: 'TE ADORARÉ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 234 },
       { BookName: 'CADV2019', Number: 234 },
       { BookName: 'Jesed2016', Number: '234' }
@@ -14235,7 +14235,7 @@ module.exports = [
   {
     Title: 'MI CORAZÓN, MI MENTE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 235 },
       { BookName: 'CADV2019', Number: 235 },
       { BookName: 'Jesed2016', Number: '235' }
@@ -14258,7 +14258,7 @@ module.exports = [
   {
     Title: 'RENUÉVAME',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 236 },
       { BookName: 'CADV2019', Number: 236 },
       { BookName: 'Jesed2016', Number: '236' }
@@ -14305,7 +14305,7 @@ module.exports = [
   {
     Title: 'SEÑOR, TÚ ERES MI DIOS',
     BasedOn: ['(SALMO 63)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 237 },
       { BookName: 'CADV2019', Number: 237 },
       { BookName: 'Jesed2016', Number: '237' }
@@ -14346,7 +14346,7 @@ module.exports = [
   {
     Title: 'ADELANTE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 238 },
       { BookName: 'CADV2019', Number: 238 },
       { BookName: 'Jesed2016', Number: '238' }
@@ -14414,7 +14414,7 @@ module.exports = [
   {
     Title: 'HA VENCIDO EL CORDERO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 239 },
       { BookName: 'CADV2019', Number: 239 },
       { BookName: 'Jesed2016', Number: '239' }
@@ -14478,7 +14478,7 @@ module.exports = [
   {
     Title: 'ORA EN MÍ, ESPÍRITU SANTO',
     BasedOn: ['(Mt 6:6; Rm 5:5, 8:26; 2 Pe 1:4; Lc 17:21; Jn 14:23; 1 Cor 3:16, 6:19; Gal 2:20)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 429 },
       { BookName: 'CADV2019', Number: 240 },
       { BookName: 'Jesed2016', Number: '240' }
@@ -14559,7 +14559,7 @@ module.exports = [
   {
     Title: ' VE AL FRENTE, OH DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 317 },
       { BookName: 'CADV2019', Number: 241 },
       { BookName: 'Jesed2016', Number: '241' }
@@ -14615,7 +14615,7 @@ module.exports = [
   {
     Title: 'MI HERENCIA ES EL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 418 },
       { BookName: 'CADV2019', Number: 242 },
       { BookName: 'Jesed2016', Number: '242' }
@@ -14686,7 +14686,7 @@ module.exports = [
   {
     Title: 'MIS LABIOS TE ALABARÁN',
     BasedOn: ['(Sal 63)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 476 },
       { BookName: 'CADV2019', Number: 243 },
       { BookName: 'Jesed2016', Number: '243' }
@@ -14776,7 +14776,7 @@ module.exports = [
   {
     Title: ' VIVA CRISTO REY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 328 },
       { BookName: 'CADV2019', Number: 244 },
       { BookName: 'Jesed2016', Number: '244' }
@@ -14882,7 +14882,7 @@ module.exports = [
   {
     Title: 'TODA LA TIERRA ACLAME AL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 302 },
       { BookName: 'CADV2019', Number: 245 },
       { BookName: 'Jesed2016', Number: '245' }
@@ -14938,7 +14938,7 @@ module.exports = [
   {
     Title: 'CUÁN HERMOSO ES TU SANTUARIO ',
     BasedOn: ['SALMO 84'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 333 },
       { BookName: 'CADV2019', Number: 246 },
       { BookName: 'Jesed2016', Number: '246 ' }
@@ -15025,7 +15025,7 @@ module.exports = [
   {
     Title: 'CANTO DE VICTORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 334 },
       { BookName: 'CADV2019', Number: 247 },
       { BookName: 'Jesed2016', Number: '247' }
@@ -15132,7 +15132,7 @@ module.exports = [
   {
     Title: 'LA CASA DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 427 },
       { BookName: 'CADV2019', Number: 248 },
       { BookName: 'Jesed2016', Number: '248' }
@@ -15199,7 +15199,7 @@ module.exports = [
   {
     Title: 'LA HORA HA LLEGADO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 336 },
       { BookName: 'CADV2019', Number: 249 },
       { BookName: 'Jesed2016', Number: '249' }
@@ -15263,7 +15263,7 @@ module.exports = [
   {
     Title: 'ACÉRCATE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 485 },
       { BookName: 'CADV2019', Number: 250 },
       { BookName: 'Jesed2016', Number: '250' }
@@ -15329,7 +15329,7 @@ module.exports = [
   {
     Title: 'HEME AQUÍ SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 473 },
       { BookName: 'CADV2019', Number: 251 },
       { BookName: 'Jesed2016', Number: '251' }
@@ -15370,7 +15370,7 @@ module.exports = [
   {
     Title: 'EL RIO DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 447 },
       { BookName: 'CADV2019', Number: 252 },
       { BookName: 'Jesed2016', Number: '252' }
@@ -15424,7 +15424,7 @@ module.exports = [
   {
     Title: 'ENTRAMOS YA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 484 },
       { BookName: 'CADV2019', Number: 253 },
       { BookName: 'Jesed2016', Number: '253' }
@@ -15495,7 +15495,7 @@ module.exports = [
   {
     Title: 'LA VOZ DEL SEÑOR (2)',
     BasedOn: ['Salmo 29'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 474 },
       { BookName: 'CADV2019', Number: 254 },
       { BookName: 'Jesed2016', Number: '254' }
@@ -15543,7 +15543,7 @@ module.exports = [
   {
     Title: 'VIVIMOS EN TI CELEBRÁNDOTE',
     BasedOn: ['( Efesios 5)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 495 },
       { BookName: 'CADV2019', Number: 255 },
       { BookName: 'Jesed2016', Number: '255' }
@@ -15675,7 +15675,7 @@ module.exports = [
   {
     Title: 'DEL CIELO SE OYE UNA VOZ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 256 },
       { BookName: 'Jesed2016', Number: '256' }
@@ -15782,7 +15782,7 @@ module.exports = [
   {
     Title: 'CON ALEGRÍA NOS UNIMOS A TI',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 321 },
       { BookName: 'CADV2019', Number: 257 },
       { BookName: 'Jesed2016', Number: '257' }
@@ -15857,7 +15857,7 @@ module.exports = [
   {
     Title: 'YO SOY TU SIERVO',
     BasedOn: ['(Salmo 116)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 492 },
       { BookName: 'CADV2019', Number: 258 },
       { BookName: 'Jesed2016', Number: '258' }
@@ -15904,7 +15904,7 @@ module.exports = [
   {
     Title: 'BRILLA HOY TU ANTORCHA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 426 },
       { BookName: 'CADV2019', Number: 259 },
       { BookName: 'Jesed2016', Number: '259' }
@@ -15963,7 +15963,7 @@ module.exports = [
   {
     Title: 'AQUÍ HAY UN MUCHACHO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 323 },
       { BookName: 'CADV2019', Number: 260 },
       { BookName: 'Jesed2016', Number: '260' }
@@ -16058,7 +16058,7 @@ module.exports = [
   {
     Title: 'EL RÍO LLEGÓ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 303 },
       { BookName: 'CADV2019', Number: 261 },
       { BookName: 'Jesed2016', Number: '261' }
@@ -16114,7 +16114,7 @@ module.exports = [
   {
     Title: 'AHORA ES CUANDO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 305 },
       { BookName: 'CADV2019', Number: 262 },
       { BookName: 'Jesed2016', Number: '262' }
@@ -16200,7 +16200,7 @@ module.exports = [
   {
     Title: 'AHORA ES NUESTRA OPORTUNIDAD',
     BasedOn: ['(Himno del Verano en Misión VEM)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 306 },
       { BookName: 'CADV2019', Number: 263 },
       { BookName: 'Jesed2016', Number: '263' }
@@ -16255,7 +16255,7 @@ module.exports = [
   {
     Title: 'EL TIEMPO DE LA VERDAD',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 307 },
       { BookName: 'CADV2019', Number: 264 },
       { BookName: 'Jesed2016', Number: '264' }
@@ -16343,7 +16343,7 @@ module.exports = [
   {
     Title: 'MORIR PARA VIVIR',
     BasedOn: ['(Himno del Programa de Misioneros Voluntarios en la Brecha)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 308 },
       { BookName: 'CADV2019', Number: 265 },
       { BookName: 'Jesed2016', Number: '265' }
@@ -16394,7 +16394,7 @@ module.exports = [
   {
     Title: 'ORAR, LUCHAR Y CONSTRUIR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 309 },
       { BookName: 'CADV2019', Number: 266 },
       { BookName: 'Jesed2016', Number: '266' }
@@ -16472,7 +16472,7 @@ module.exports = [
   {
     Title: 'DIOS NOS LLAMA A SER SANTOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 313 },
       { BookName: 'CADV2019', Number: 267 },
       { BookName: 'Jesed2016', Number: '267' }
@@ -16552,7 +16552,7 @@ module.exports = [
   {
     Title: 'TIEMPOS DE GRACIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 315 },
       { BookName: 'CADV2019', Number: 268 },
       { BookName: 'Jesed2016', Number: '268' }
@@ -16670,7 +16670,7 @@ module.exports = [
   {
     Title: '¿A QUIÉN ENVIARÉ?',
     BasedOn: ['(Is 6:5-8; Jer 1:5-10;1 Sam 3:4ss)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 320 },
       { BookName: 'CADV2019', Number: 269 },
       { BookName: 'Jesed2016', Number: '269' }
@@ -16749,7 +16749,7 @@ module.exports = [
   {
     Title: 'ÉL ES JESÚS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 331 },
       { BookName: 'CADV2019', Number: 270 },
       { BookName: 'Jesed2016', Number: '270' }
@@ -16856,7 +16856,7 @@ module.exports = [
   {
     Title: 'JEREMÍAS',
     BasedOn: ['(Jer. 1:4-10)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 332 },
       { BookName: 'CADV2019', Number: 271 },
       { BookName: 'Jesed2016', Number: '271' }
@@ -16927,7 +16927,7 @@ module.exports = [
   {
     Title: 'LLÉVAME ADELANTE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 272 },
       { BookName: 'Jesed2016', Number: '272' }
@@ -16990,7 +16990,7 @@ module.exports = [
   {
     Title: 'LEVANTARÁS NUESTROS CORAZONES',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 453 },
       { BookName: 'CADV2019', Number: 273 },
       { BookName: 'Jesed2016', Number: '273' }
@@ -17053,7 +17053,7 @@ module.exports = [
   {
     Title: 'CANTO DE SAN PATRICIO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 440 },
       { BookName: 'CADV2019', Number: 274 },
       { BookName: 'Jesed2016', Number: '274' }
@@ -17117,7 +17117,7 @@ module.exports = [
   {
     Title: 'TE ALABO AL DESPERTAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 275 },
       { BookName: 'Jesed2016', Number: '275' }
@@ -17180,7 +17180,7 @@ module.exports = [
   {
     Title: 'CRISTO VIVE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 276 },
       { BookName: 'CADV2019', Number: 312 },
       { BookName: 'Jesed2016', Number: '276' }
@@ -17300,7 +17300,7 @@ module.exports = [
   {
     Title: 'SANTO ES EL SALVADOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 469 },
       { BookName: 'CADV2019', Number: 277 },
       { BookName: 'Jesed2016', Number: '277' }
@@ -17351,7 +17351,7 @@ module.exports = [
   {
     Title: 'SE HA CUBIERTO DE GLORIA',
     BasedOn: ['(Éx 15:1-18)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 459 },
       { BookName: 'CADV2019', Number: 278 },
       { BookName: 'Jesed2016', Number: '278' }
@@ -17439,7 +17439,7 @@ module.exports = [
   {
     Title: 'VEN, EMMANUEL',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 446 },
       { BookName: 'CADV2019', Number: 279 },
       { BookName: 'Jesed2016', Number: '279' }
@@ -17543,7 +17543,7 @@ module.exports = [
   {
     Title: 'GLORIA A DIOS, GLORIA A DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 18 },
       { BookName: 'CADV2019', Number: 18 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -17627,7 +17627,7 @@ module.exports = [
   {
     Title: 'REGRESO DEL PUEBLO A SIÓN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 335 },
       { BookName: 'CADV2019', Number: 335 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -17701,7 +17701,7 @@ module.exports = [
   {
     Title: 'SEÑOR,TEN PIEDAD',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 501 },
       { BookName: 'CADV2019', Number: 501 },
       { BookName: 'Jesed2016', Number: '1 B' }
@@ -17730,7 +17730,7 @@ module.exports = [
   {
     Title: 'CONFIO EN DIOS',
     BasedOn: ['(Sal 56)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 701 },
       { BookName: 'Jesed2016', Number: '10 A' }
@@ -17769,7 +17769,7 @@ module.exports = [
   {
     Title: 'ME CONSAGRO A TI',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 407 },
       { BookName: 'CADV2019', Number: 407 },
       { BookName: 'Jesed2016', Number: '11 A' }
@@ -17795,7 +17795,7 @@ module.exports = [
   {
     Title: 'MI SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 408 },
       { BookName: 'CADV2019', Number: 408 },
       { BookName: 'Jesed2016', Number: '12 A' }
@@ -17832,7 +17832,7 @@ module.exports = [
   {
     Title: 'MI DIOS, MI REY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 702 },
       { BookName: 'Jesed2016', Number: '13 A' }
@@ -17877,7 +17877,7 @@ module.exports = [
   {
     Title: 'TALITA KUM',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 324 },
       { BookName: 'CADV2019', Number: 324 },
       { BookName: 'Jesed2016', Number: '14 A' }
@@ -17950,7 +17950,7 @@ module.exports = [
   {
     Title: 'EN MARCHA',
     BasedOn: ['varias profecías'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 703 },
       { BookName: 'Jesed2016', Number: '15 A' }
@@ -18011,7 +18011,7 @@ module.exports = [
   {
     Title: 'PERDONAME SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 704 },
       { BookName: 'Jesed2016', Number: '16 A' }
@@ -18073,7 +18073,7 @@ module.exports = [
   {
     Title: 'EL PUEBLO DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 705 },
       { BookName: 'Jesed2016', Number: '17 A' }
@@ -18120,7 +18120,7 @@ module.exports = [
   {
     Title: 'EL SEÑOR ES EL REY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 706 },
       { BookName: 'Jesed2016', Number: '18 A' }
@@ -18162,7 +18162,7 @@ module.exports = [
   {
     Title: 'ALABEN A DIOS',
     BasedOn: ['(Salmo 150)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 707 },
       { BookName: 'Jesed2016', Number: '19 A' }
@@ -18211,7 +18211,7 @@ module.exports = [
   {
     Title: 'TOMA, OH DIOS, MI CORAZÓN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 708 },
       { BookName: 'Jesed2016', Number: '2 A' }
@@ -18300,7 +18300,7 @@ module.exports = [
   {
     Title: 'ALELUYA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 511 },
       { BookName: 'CADV2019', Number: 511 },
       { BookName: 'Jesed2016', Number: '2 B' }
@@ -18334,7 +18334,7 @@ module.exports = [
   {
     Title: 'VAMOS A ENTRAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 709 },
       { BookName: 'Jesed2016', Number: '20 A' }
@@ -18418,7 +18418,7 @@ module.exports = [
   {
     Title: 'CON CRISTO ESTOY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 710 },
       { BookName: 'Jesed2016', Number: '21 A' }
@@ -18484,7 +18484,7 @@ module.exports = [
   {
     Title: 'CANTEN A DIOS',
     BasedOn: ['Salmo 33: 1-3 '],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 711 },
       { BookName: 'Jesed2016', Number: '22 A' }
@@ -18528,7 +18528,7 @@ module.exports = [
   {
     Title: 'OFRENDA AL AMOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 325 },
       { BookName: 'CADV2019', Number: 325 },
       { BookName: 'Jesed2016', Number: '23 A' }
@@ -18561,7 +18561,7 @@ module.exports = [
   {
     Title: 'SU LUZ NOS MOSTRÓ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 455 },
       { BookName: 'CADV2019', Number: 455 },
       { BookName: 'Jesed2016', Number: '24 A' }
@@ -18620,7 +18620,7 @@ module.exports = [
   {
     Title: 'REY Y SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 712 },
       { BookName: 'Jesed2016', Number: '25 A' }
@@ -18663,7 +18663,7 @@ module.exports = [
   {
     Title: 'SEGUIRÉ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 322 },
       { BookName: 'CADV2019', Number: 322 },
       { BookName: 'Jesed2016', Number: '26 A' }
@@ -18745,7 +18745,7 @@ module.exports = [
   {
     Title: 'TOMA MI VIDA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 438 },
       { BookName: 'CADV2019', Number: 438 },
       { BookName: 'Jesed2016', Number: '27 A' }
@@ -18808,7 +18808,7 @@ module.exports = [
   {
     Title: 'SUMO SACERDOTE',
     BasedOn: ['(Rom 12:1-2; Heb 6:19-20; 9:11,14; 10:20,23; 13:15; 1Pe 2:5,9-10; 2 Cor 6:16)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 478 },
       { BookName: 'CADV2019', Number: 478 },
       { BookName: 'Jesed2016', Number: '28 A' }
@@ -18863,7 +18863,7 @@ module.exports = [
   {
     Title: 'ALELUYA TU ERES REY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 462 },
       { BookName: 'CADV2019', Number: 462 },
       { BookName: 'Jesed2016', Number: '29 A' }
@@ -18920,7 +18920,7 @@ module.exports = [
   {
     Title: 'QUE LOS SANTOS SE REGOCIJEN',
     BasedOn: ['(Sal. 149:5- 6; 100:4)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 463 },
       { BookName: 'CADV2019', Number: 463 },
       { BookName: 'Jesed2016', Number: '3 A' }
@@ -18958,7 +18958,7 @@ module.exports = [
   {
     Title: 'GLORIA A DIOS EN EL CIELO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 508 },
       { BookName: 'CADV2019', Number: 508 },
       { BookName: 'Jesed2016', Number: '3 B' }
@@ -19078,7 +19078,7 @@ module.exports = [
   {
     Title: 'EN TU PRESENCIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 326 },
       { BookName: 'CADV2019', Number: 326 },
       { BookName: 'Jesed2016', Number: '30 A' }
@@ -19123,7 +19123,7 @@ module.exports = [
   {
     Title: 'REINA EN LO ALTO A LA DIESTRA DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 713 },
       { BookName: 'Jesed2016', Number: '31 A' }
@@ -19196,7 +19196,7 @@ module.exports = [
   {
     Title: 'SALVADOR DEL MUNDO, VEN',
     BasedOn: '(Veni redemptor gentium)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 714 },
       { BookName: 'Jesed2016', Number: '32 A' }
@@ -19278,7 +19278,7 @@ module.exports = [
   {
     Title: 'EL LEÓN DE JUDÁ ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 715 },
       { BookName: 'Jesed2016', Number: '33 A' }
@@ -19327,7 +19327,7 @@ module.exports = [
   {
     Title: 'SEÑOR TU TIENES PALABRAS DE VIDA ETERNA ',
     BasedOn: ['SALMO 19'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 716 },
       { BookName: 'Jesed2016', Number: '34 A' }
@@ -19393,7 +19393,7 @@ module.exports = [
   {
     Title: 'VICTORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 327 },
       { BookName: 'CADV2019', Number: 327 },
       { BookName: 'Jesed2016', Number: '35 A' }
@@ -19453,7 +19453,7 @@ module.exports = [
   {
     Title: 'TIENDE TU OÍDO, SEÑOR, RESPÓNDEME',
     BasedOn: [' (Sal. 86)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 330 },
       { BookName: 'CADV2019', Number: 330 },
       { BookName: 'Jesed2016', Number: '36 A' }
@@ -19504,7 +19504,7 @@ module.exports = [
   {
     Title: 'ERES LA LLAMA ENCENDIDA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 304 },
       { BookName: 'CADV2019', Number: 304 },
       { BookName: 'Jesed2016', Number: '37 A' }
@@ -19588,7 +19588,7 @@ module.exports = [
   {
     Title: 'REGOCÍJESE, PUEBLO ENTERO',
     BasedOn: '(1 Cor 5:7-8; Ap. 5:5-6; Ap. 19:7)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 717 },
       { BookName: 'Jesed2016', Number: '38 A' }
@@ -19652,7 +19652,7 @@ module.exports = [
   {
     Title: 'NO QUIERO, OH SEÑOR, UN CORAZÓN QUE SEA AMBICIOSO',
     BasedOn: [' SALMO 131'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 489 },
       { BookName: 'CADV2019', Number: 489 },
       { BookName: 'Jesed2016', Number: '39 A' }
@@ -19702,7 +19702,7 @@ module.exports = [
   {
     Title: 'MAJESTAD GLORIOSA ERES TÚ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 718 },
       { BookName: 'Jesed2016', Number: '4 A' }
@@ -19795,7 +19795,7 @@ module.exports = [
   {
     Title: 'HEMOS ENTREGADO NUESTRAS VIDAS AL SEÑOR',
     BasedOn: ['(OFERTORIO)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 521 },
       { BookName: 'CADV2019', Number: 521 },
       { BookName: 'Jesed2016', Number: '4 B' }
@@ -19853,7 +19853,7 @@ module.exports = [
   {
     Title: 'DUC IN ALTUM',
     BasedOn: ['(Lc 5:4; Rm 11:33, Ef 3:17-19)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 719 },
       { BookName: 'Jesed2016', Number: '40 A' }
@@ -19906,7 +19906,7 @@ module.exports = [
   {
     Title: 'LA PUERTA DEL CIELO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 720 },
       { BookName: 'Jesed2016', Number: '41 A' }
@@ -19966,7 +19966,7 @@ module.exports = [
   {
     Title: 'EL SEÑOR ES MI LUZ Y MI SALVACIÓN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 721 },
       { BookName: 'Jesed2016', Number: '42 A' }
@@ -20018,7 +20018,7 @@ module.exports = [
   {
     Title: 'VENGAN, ACLAMEMOS CON JUBILO AL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 722 },
       { BookName: 'Jesed2016', Number: '43 A' }
@@ -20067,7 +20067,7 @@ module.exports = [
   {
     Title: '¿DÓNDE ESTÁ, ¡OH MUERTE!, TU VICTORIA?',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 723 },
       { BookName: 'Jesed2016', Number: '44 A' }
@@ -20121,7 +20121,7 @@ module.exports = [
   {
     Title: 'LA BATALLA ESPIRITUAL',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 724 },
       { BookName: 'Jesed2016', Number: '45 A' }
@@ -20175,7 +20175,7 @@ module.exports = [
   {
     Title: 'ESPERARE EN SiLENCIO',
     BasedOn: ['Salmo 62'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 725 },
       { BookName: 'Jesed2016', Number: '46 A' }
@@ -20231,7 +20231,7 @@ module.exports = [
   {
     Title: 'CANTARÉ AL SEÑOR',
     BasedOn: 'EXODO 15',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 726 },
       { BookName: 'Jesed2016', Number: '47 A' }
@@ -20294,7 +20294,7 @@ module.exports = [
   {
     Title: 'REVÍSTENOS DE TU SANTIDAD',
     BasedOn: ['(Rm 12:1-2; 13:12; 2 Cor 5:1-5; Ef 4:22-24; 6:11; Gal 3:27; Col 3:9-14; Ap 22:14)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 727 },
       { BookName: 'Jesed2016', Number: '48 A' }
@@ -20428,7 +20428,7 @@ module.exports = [
   {
     Title: 'NUEVA CRIATURA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 728 },
       { BookName: 'Jesed2016', Number: '49 A' }
@@ -20474,7 +20474,7 @@ module.exports = [
   {
     Title: 'DíA DEL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 729 },
       { BookName: 'Jesed2016', Number: '5 A' }
@@ -20534,7 +20534,7 @@ module.exports = [
   {
     Title: 'SANTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 730 },
       { BookName: 'Jesed2016', Number: '5 B' }
@@ -20575,7 +20575,7 @@ module.exports = [
   {
     Title: 'ALELUYA, CANTAD AL SEÑOR',
     BasedOn: 'SALMO 150',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 731 },
       { BookName: 'Jesed2016', Number: '50 A' }
@@ -20617,7 +20617,7 @@ module.exports = [
   {
     Title: 'MI VIDA ENTREGO A TI',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 732 },
       { BookName: 'Jesed2016', Number: '51 A' }
@@ -20662,7 +20662,7 @@ module.exports = [
   {
     Title: 'LLÉNAME',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 733 },
       { BookName: 'Jesed2016', Number: '52 A' }
@@ -20711,7 +20711,7 @@ module.exports = [
   {
     Title: 'MANTENTE FIEL HASTA LA MUERTE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 498 },
       { BookName: 'CADV2019', Number: 498 },
       { BookName: 'Jesed2016', Number: '53 A' }
@@ -20820,7 +20820,7 @@ module.exports = [
   {
     Title: 'CRISTO, SIENDO RICO',
     BasedOn: ['(2 Cor 8:9; Rm 8:14-17; Gal 4:4-7; 1 Jn 3:1-2)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 734 },
       { BookName: 'Jesed2016', Number: '54 A' }
@@ -20865,7 +20865,7 @@ module.exports = [
   {
     Title: 'SANTO Y PODEROSO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 450 },
       { BookName: 'CADV2019', Number: 450 },
       { BookName: 'Jesed2016', Number: '55 A' }
@@ -20946,7 +20946,7 @@ module.exports = [
   {
     Title: 'VEN E ILUMINA',
     BasedOn: ['Veni Creator y liturgia.'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 735 },
       { BookName: 'Jesed2016', Number: '56 A' }
@@ -21015,7 +21015,7 @@ module.exports = [
   {
     Title: 'TE DOY MI VIDA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 736 },
       { BookName: 'Jesed2016', Number: '57 A' }
@@ -21056,7 +21056,7 @@ module.exports = [
   {
     Title: 'CANTEN LAS NACIONES',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 737 },
       { BookName: 'Jesed2016', Number: '58 A' }
@@ -21115,7 +21115,7 @@ module.exports = [
   {
     Title: 'SEÑOR, REINA EN MÍ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 318 },
       { BookName: 'CADV2019', Number: 318 },
       { BookName: 'Jesed2016', Number: '59 A' }
@@ -21156,7 +21156,7 @@ module.exports = [
   {
     Title: 'CANTEN GLORIA EN EL CIELO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 604 },
       { BookName: 'CADV2019', Number: 604 },
       { BookName: 'Jesed2016', Number: '6 A' }
@@ -21210,7 +21210,7 @@ module.exports = [
   {
     Title: 'CORDERO DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 535 },
       { BookName: 'CADV2019', Number: 535 },
       { BookName: 'Jesed2016', Number: '6 B' }
@@ -21244,7 +21244,7 @@ module.exports = [
   {
     Title: 'CRISTO YA RESUCITÓ, ¡ALELUYA!',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 738 },
       { BookName: 'Jesed2016', Number: '60A' }
@@ -21299,7 +21299,7 @@ module.exports = [
   {
     Title: 'ESCUCHA ISRAEL',
     BasedOn: ['Dt 6: 4-7'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 739 },
       { BookName: 'Jesed2016', Number: '61A' }
@@ -21341,7 +21341,7 @@ module.exports = [
   {
     Title: 'TÚ ERES LA FUENTE, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 740 },
       { BookName: 'Jesed2016', Number: '62A' }
@@ -21381,7 +21381,7 @@ module.exports = [
   {
     Title: 'HAZNOS TUYOS',
     BasedOn: ['Jer. 3:22, Isa. 35:9-10, isa. 43:4-7, Joel 2:12-13'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 741 },
       { BookName: 'Jesed2016', Number: '63A' }
@@ -21436,7 +21436,7 @@ module.exports = [
   {
     Title: 'ÁBREME QUE QUIERO ENTRAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 742 },
       { BookName: 'Jesed2016', Number: '64A' }
@@ -21508,7 +21508,7 @@ module.exports = [
   {
     Title: 'CANTO ANTE EL TRONO DE LA GRACIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 402 },
       { BookName: 'CADV2019', Number: 402 },
       { BookName: 'Jesed2016', Number: '7 A' }
@@ -21562,7 +21562,7 @@ module.exports = [
   {
     Title: 'THEOTOKOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 548 },
       { BookName: 'CADV2019', Number: 548 },
       { BookName: 'Jesed2016', Number: '7 B' }
@@ -21601,7 +21601,7 @@ module.exports = [
   {
     Title: 'EL SANTUARIO DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 743 },
       { BookName: 'Jesed2016', Number: '8 A' }
@@ -21653,7 +21653,7 @@ module.exports = [
   {
     Title: 'QUEREMOS SEGUIRTE OH DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 744 },
       { BookName: 'Jesed2016', Number: '9 A' }
@@ -21703,7 +21703,7 @@ module.exports = [
   {
     Title: 'SOMOS UNO EN ESPÍRITU',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 401 },
       { BookName: 'CADV2019', Number: 401 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -21764,7 +21764,7 @@ module.exports = [
   {
     Title: 'GRACIAS A DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 403 },
       { BookName: 'CADV2019', Number: 403 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -21836,7 +21836,7 @@ module.exports = [
   {
     Title: 'FIJA TUS OJOS EN CRISTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 404 },
       { BookName: 'CADV2019', Number: 404 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -21879,7 +21879,7 @@ module.exports = [
   {
     Title: 'YO TENGO GOZO EN MI ALMA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 405 },
       { BookName: 'CADV2019', Number: 405 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -21961,7 +21961,7 @@ module.exports = [
   {
     Title: 'SU NOMBRE ES JESÚS',
     BasedOn: ['(cf. Is 9:2; Jn 6:51; 1 Jn 1:1-4; 3:1)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 406 },
       { BookName: 'CADV2019', Number: 406 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22059,7 +22059,7 @@ module.exports = [
   {
     Title: 'DIOS DESCENDIÓ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 409 },
       { BookName: 'CADV2019', Number: 409 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22128,7 +22128,7 @@ module.exports = [
   {
     Title: 'ARDE EN MÍ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 410 },
       { BookName: 'CADV2019', Number: 410 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22164,7 +22164,7 @@ module.exports = [
   {
     Title: 'QUÉ GRANDE ES MI DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 411 },
       { BookName: 'CADV2019', Number: 411 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22196,7 +22196,7 @@ module.exports = [
   {
     Title: 'FLUIRÁ COMO RÍO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 412 },
       { BookName: 'CADV2019', Number: 412 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22219,7 +22219,7 @@ module.exports = [
   {
     Title: 'A NADA TEMERÉ',
     BasedOn: ['(cf. Salmo 27)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 413 },
       { BookName: 'CADV2019', Number: 413 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22274,7 +22274,7 @@ module.exports = [
   {
     Title: 'QUÉ QUIERO, MI JESÚS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 414 },
       { BookName: 'CADV2019', Number: 414 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22328,7 +22328,7 @@ module.exports = [
   {
     Title: 'ESPÍRITU DEL DIOS DE AMOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 415 },
       { BookName: 'CADV2019', Number: 415 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22353,7 +22353,7 @@ module.exports = [
   {
     Title: 'JESÚS, JESÚS DE NAZARET',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 416 },
       { BookName: 'CADV2019', Number: 416 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22385,7 +22385,7 @@ module.exports = [
   {
     Title: 'SALMO 121',
     BasedOn: ['(Sal 121:1-2,4-6; 127:1-2)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 417 },
       { BookName: 'CADV2019', Number: 417 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22426,7 +22426,7 @@ module.exports = [
   {
     Title: 'SEÑOR, MI DIOS, AL CONTEMPLAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 419 },
       { BookName: 'CADV2019', Number: 419 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22488,7 +22488,7 @@ module.exports = [
   {
     Title: 'PARA CORRESPONDER',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 420 },
       { BookName: 'CADV2019', Number: 420 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22541,7 +22541,7 @@ module.exports = [
   {
     Title: 'TAL COMO SOY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 421 },
       { BookName: 'CADV2019', Number: 421 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22581,7 +22581,7 @@ module.exports = [
   {
     Title: 'OH CRISTO VENCEDOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 423 },
       { BookName: 'CADV2019', Number: 423 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22611,7 +22611,7 @@ module.exports = [
   {
     Title: 'GLORIA AL REY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 424 },
       { BookName: 'CADV2019', Number: 424 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22639,7 +22639,7 @@ module.exports = [
   {
     Title: 'EL MANTO DE TU GLORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 428 },
       { BookName: 'CADV2019', Number: 428 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22681,7 +22681,7 @@ module.exports = [
   {
     Title: 'SALMO 48',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 430 },
       { BookName: 'CADV2019', Number: 430 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22766,7 +22766,7 @@ module.exports = [
   {
     Title: 'BENDITO SEA EL SEÑOR, MI DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 431 },
       { BookName: 'CADV2019', Number: 431 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22825,7 +22825,7 @@ module.exports = [
   {
     Title: 'EL EJÉRCITO DEL SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 432 },
       { BookName: 'CADV2019', Number: 432 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -22906,7 +22906,7 @@ module.exports = [
   {
     Title: 'HIMNO PASCUAL',
     BasedOn: ['(Flp 2:5-11)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 433 },
       { BookName: 'CADV2019', Number: 433 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -22975,7 +22975,7 @@ module.exports = [
   {
     Title: 'DIGNO EL CORDERO QUE FUE INMOLADO',
     BasedOn: '(cf. Ap 5:2)',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 434 },
       { BookName: 'CADV2019', Number: 434 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23029,7 +23029,7 @@ module.exports = [
   {
     Title: 'ADOREMOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 436 },
       { BookName: 'CADV2019', Number: 436 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23053,7 +23053,7 @@ module.exports = [
   {
     Title: 'CRISTO REY Y SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 437 },
       { BookName: 'CADV2019', Number: 437 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -23093,7 +23093,7 @@ module.exports = [
   {
     Title: 'TU ERES MI HIJO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 439 },
       { BookName: 'CADV2019', Number: 439 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23152,7 +23152,7 @@ module.exports = [
   {
     Title: 'CAUTÍVAME, SEÑOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 441 },
       { BookName: 'CADV2019', Number: 441 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23210,7 +23210,7 @@ module.exports = [
   {
     Title: 'TODO TU PUEBLO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 442 },
       { BookName: 'CADV2019', Number: 442 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23268,7 +23268,7 @@ module.exports = [
   {
     Title: 'A TI  LA GLORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 443 },
       { BookName: 'CADV2019', Number: 443 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23321,7 +23321,7 @@ module.exports = [
   {
     Title: 'GLORIA ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 444 },
       { BookName: 'CADV2019', Number: 444 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23347,7 +23347,7 @@ module.exports = [
   {
     Title: 'SUBLIME GRACIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 448 },
       { BookName: 'CADV2019', Number: 448 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -23398,7 +23398,7 @@ module.exports = [
   {
     Title: 'BENDITO ESPÍRITU SANTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 449 },
       { BookName: 'CADV2019', Number: 449 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23423,7 +23423,7 @@ module.exports = [
   {
     Title: 'POR SIEMPRE ALABARTE',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 451 },
       { BookName: 'CADV2019', Number: 451 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -23480,7 +23480,7 @@ module.exports = [
   {
     Title: 'QUÉ AMABLES TUS MORADAS',
     BasedOn: ['(cf. Sal 84; 63; 62)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 452 },
       { BookName: 'CADV2019', Number: 452 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23542,7 +23542,7 @@ module.exports = [
   {
     Title: 'HOSANNA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 454 },
       { BookName: 'CADV2019', Number: 454 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23578,7 +23578,7 @@ module.exports = [
   {
     Title: 'GLORIOSO CRISTO, REY DE LO CREADO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 456 },
       { BookName: 'CADV2019', Number: 456 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -23642,7 +23642,7 @@ module.exports = [
   {
     Title: 'POR LA EXCELSA MAJESTAD',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 458 },
       { BookName: 'CADV2019', Number: 458 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23727,7 +23727,7 @@ module.exports = [
   {
     Title: 'ALELUYA, SU ÁGAPE AQUÍ ESTÁ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 460 },
       { BookName: 'CADV2019', Number: 460 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -23828,7 +23828,7 @@ module.exports = [
   {
     Title: 'PROFECÍA DEL ÁRBOL',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 461 },
       { BookName: 'CADV2019', Number: 461 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23896,7 +23896,7 @@ module.exports = [
   {
     Title: 'VENGO A TU PRESENCIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 464 },
       { BookName: 'CADV2019', Number: 464 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -23957,7 +23957,7 @@ module.exports = [
   {
     Title: 'GLORIA AL SEÑOR',
     BasedOn: ['(Salmo 27)'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 465 },
       { BookName: 'CADV2019', Number: 465 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24007,7 +24007,7 @@ module.exports = [
   {
     Title: 'NADIE COMO TÚ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 467 },
       { BookName: 'CADV2019', Number: 467 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24080,7 +24080,7 @@ module.exports = [
   {
     Title: 'POR TU GRAN AMOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 468 },
       { BookName: 'CADV2019', Number: 468 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24155,7 +24155,7 @@ module.exports = [
   {
     Title: 'ERES TODOPODEROSO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 470 },
       { BookName: 'CADV2019', Number: 470 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24206,7 +24206,7 @@ module.exports = [
   {
     Title: 'EN TU PRESENCIA (2)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 471 },
       { BookName: 'CADV2019', Number: 471 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24255,7 +24255,7 @@ module.exports = [
   {
     Title: 'EN ESPÍRITU PARA ADORAR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 475 },
       { BookName: 'CADV2019', Number: 475 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24351,7 +24351,7 @@ module.exports = [
   {
     Title: 'MI PAZ TE DOY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 477 },
       { BookName: 'CADV2019', Number: 477 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24396,7 +24396,7 @@ module.exports = [
   {
     Title: 'JESUCRISTO ES MI BANDERA',
     BasedOn: ['Ex 17: 8-16'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 479 },
       { BookName: 'CADV2019', Number: 479 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24454,7 +24454,7 @@ module.exports = [
   {
     Title: 'OH DIOS, SOL DE NUESTRO AMOR',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 480 },
       { BookName: 'CADV2019', Number: 480 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24523,7 +24523,7 @@ module.exports = [
   {
     Title: 'TÚ ERES SANTO (3)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 481 },
       { BookName: 'CADV2019', Number: 481 },
       { BookName: 'Jesed2016', Number: 'zzz' }
@@ -24579,7 +24579,7 @@ module.exports = [
   {
     Title: 'SANTUARIO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 482 },
       { BookName: 'CADV2019', Number: 482 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24620,7 +24620,7 @@ module.exports = [
   {
     Title: 'VENGAN A MÍ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 483 },
       { BookName: 'CADV2019', Number: 483 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24677,7 +24677,7 @@ module.exports = [
   {
     Title: 'CONFÍA EN DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 486 },
       { BookName: 'CADV2019', Number: 486 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24721,7 +24721,7 @@ module.exports = [
   {
     Title: 'MI HERENCIA SEÑOR ERES TU',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 487 },
       { BookName: 'CADV2019', Number: 487 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24781,7 +24781,7 @@ module.exports = [
   {
     Title: 'KADOSH, KADOSH, KADOSH',
     BasedOn: ['“Santo, santo, santo”; Is 6:3'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 488 },
       { BookName: 'CADV2019', Number: 488 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24826,7 +24826,7 @@ module.exports = [
   {
     Title: 'CRISTO NOS RESCATA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 490 },
       { BookName: 'CADV2019', Number: 490 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24880,7 +24880,7 @@ module.exports = [
   {
     Title: 'FE ESPERANZA Y CARIDAD',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 491 },
       { BookName: 'CADV2019', Number: 491 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -24960,7 +24960,7 @@ module.exports = [
   {
     Title: 'NUESTRA PATRIA ESTÁ EN EL CIELO',
     BasedOn: ['Basado en un texto de Sta. Magdalena de Canossa'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 493 },
       { BookName: 'CADV2019', Number: 493 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25056,7 +25056,7 @@ module.exports = [
   {
     Title: 'NO PASARÁ',
     BasedOn: ['1 Sam 17:26, 32, 37, 45-47'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 496 },
       { BookName: 'CADV2019', Number: 496 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25151,7 +25151,7 @@ module.exports = [
   {
     Title: 'AUNQUE TODOS, YO NO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 497 },
       { BookName: 'CADV2019', Number: 497 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25218,7 +25218,7 @@ module.exports = [
   {
     Title: 'LA OBEDIENCIA ES MI ALEGRÍA',
     BasedOn: ['Basado en un texto de Sta. Magdalena de Canossa'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 499 },
       { BookName: 'CADV2019', Number: 499 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25291,7 +25291,7 @@ module.exports = [
   {
     Title: 'SEÑOR, TEN PIEDAD (2)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 502 },
       { BookName: 'CADV2019', Number: 502 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25319,7 +25319,7 @@ module.exports = [
   {
     Title: 'SEÑOR, TEN PIEDAD (3)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 503 },
       { BookName: 'CADV2019', Number: 503 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25341,7 +25341,7 @@ module.exports = [
   {
     Title: 'OH SEÑOR, TEN PIEDAD DE NOSOTROS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 504 },
       { BookName: 'CADV2019', Number: 504 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25363,7 +25363,7 @@ module.exports = [
   {
     Title: 'KYRIE, ELEISON',
     BasedOn: 'Señor, ten piedad',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 505 },
       { BookName: 'CADV2019', Number: 505 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25392,7 +25392,7 @@ module.exports = [
   {
     Title: 'KYRIE, KYRIE',
     BasedOn: ['Señor, ten piedad'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 506 },
       { BookName: 'CADV2019', Number: 506 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25418,7 +25418,7 @@ module.exports = [
   {
     Title: 'GLORIA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 507 },
       { BookName: 'CADV2019', Number: 507 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25473,7 +25473,7 @@ module.exports = [
   {
     Title: 'GLORIA A DIOS EN EL CIELO (2)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 509 },
       { BookName: 'CADV2019', Number: 509 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25533,7 +25533,7 @@ module.exports = [
   {
     Title: 'GLORIA (2)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 510 },
       { BookName: 'CADV2019', Number: 510 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25600,7 +25600,7 @@ module.exports = [
   {
     Title: 'ALELUYA  (2)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 512 },
       { BookName: 'CADV2019', Number: 512 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25622,7 +25622,7 @@ module.exports = [
   {
     Title: 'ALELUYA  (3)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 513 },
       { BookName: 'CADV2019', Number: 513 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25645,7 +25645,7 @@ module.exports = [
   {
     Title: 'CANTA ALELUYA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 512 },
       { BookName: 'CADV2019', Number: 512 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25668,7 +25668,7 @@ module.exports = [
   {
     Title: 'ALELUYA, EL SEÑOR MI DIOS',
     BasedOn: ['cf. Ap 19:6-7'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 515 },
       { BookName: 'CADV2019', Number: 515 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25698,7 +25698,7 @@ module.exports = [
   {
     Title: 'NO SOLO DE PAN VIVE EL HOMBRE',
     BasedOn: 'Antífona para el evangelio — Dt 8:3',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 516 },
       { BookName: 'CADV2019', Number: 516 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25724,7 +25724,7 @@ module.exports = [
   {
     Title: 'EN TU PALABRA, SEÑOR, MEDITO',
     BasedOn: ['Antífona para el evangelio'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 517 },
       { BookName: 'CADV2019', Number: 517 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25756,7 +25756,7 @@ module.exports = [
   {
     Title: 'TU PALABRA ME DA VIDA',
     BasedOn: ['Antifona para el evangelio'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 518 },
       { BookName: 'CADV2019', Number: 518 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25779,7 +25779,7 @@ module.exports = [
   {
     Title: 'TE PRESENTAMOS EL VINO Y EL PAN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 519 },
       { BookName: 'CADV2019', Number: 519 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25820,7 +25820,7 @@ module.exports = [
   {
     Title: 'ESTO QUE TE DOY',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 520 },
       { BookName: 'CADV2019', Number: 520 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25881,7 +25881,7 @@ module.exports = [
   {
     Title: 'SANTO, SANTO, SANTO (3)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 522 },
       { BookName: 'CADV2019', Number: 522 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25935,7 +25935,7 @@ module.exports = [
   {
     Title: 'SANTO, SANTO, SANTO  (4)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 523 },
       { BookName: 'CADV2019', Number: 523 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25966,7 +25966,7 @@ module.exports = [
   {
     Title: 'SANTO, SANTO, SANTO  (5)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 524 },
       { BookName: 'CADV2019', Number: 524 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -25994,7 +25994,7 @@ module.exports = [
   {
     Title: 'SANTO, SANTO, SANTO (6)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 525 },
       { BookName: 'CADV2019', Number: 525 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26019,7 +26019,7 @@ module.exports = [
   {
     Title: 'SANTO ES EL SEÑOR, MI DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 526 },
       { BookName: 'CADV2019', Number: 526 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26069,7 +26069,7 @@ module.exports = [
   {
     Title: 'ACLAMACIÓN  (1)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 527 },
       { BookName: 'CADV2019', Number: 527 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26092,7 +26092,7 @@ module.exports = [
   {
     Title: 'ACLAMACIÓN  (2)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 528 },
       { BookName: 'CADV2019', Number: 528 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26113,7 +26113,7 @@ module.exports = [
   {
     Title: 'ACLAMACIÓN  (3)',
     BasedOn: ['cf. 1 Cor 11:26'],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 529 },
       { BookName: 'CADV2019', Number: 529 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26137,7 +26137,7 @@ module.exports = [
   {
     Title: 'ACLAMACIÓN  (4)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 530 },
       { BookName: 'CADV2019', Number: 530 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26160,7 +26160,7 @@ module.exports = [
   {
     Title: 'ACLAMACIÓN  (5)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 531 },
       { BookName: 'CADV2019', Number: 531 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26182,7 +26182,7 @@ module.exports = [
   {
     Title: 'AMÉN  (1)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 532 },
       { BookName: 'CADV2019', Number: 532 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26200,7 +26200,7 @@ module.exports = [
   {
     Title: 'AMÉN  (2)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 533 },
       { BookName: 'CADV2019', Number: 533 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26221,7 +26221,7 @@ module.exports = [
   {
     Title: 'AMÉN  (3)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 534 },
       { BookName: 'CADV2019', Number: 534 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26243,7 +26243,7 @@ module.exports = [
   {
     Title: 'CORDERO DE DIOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 536 },
       { BookName: 'CADV2019', Number: 536 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26275,7 +26275,7 @@ module.exports = [
   {
     Title: 'CORDERO DE DIOS  (3)',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 537 },
       { BookName: 'CADV2019', Number: 537 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26310,7 +26310,7 @@ module.exports = [
   {
     Title: 'YO SOY EL PAN DE VIDA',
     BasedOn: 'Basado en Juan 6',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 538 },
       { BookName: 'CADV2019', Number: 538 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26380,7 +26380,7 @@ module.exports = [
   {
     Title: 'DE RODILLAS PARTAMOS HOY EL PAN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 539 },
       { BookName: 'CADV2019', Number: 539 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26426,7 +26426,7 @@ module.exports = [
   {
     Title: 'QUÉDATE CON NOSOTROS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 540 },
       { BookName: 'CADV2019', Number: 540 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26468,7 +26468,7 @@ module.exports = [
   {
     Title: 'PRESENCIA Y MISTERIO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 541 },
       { BookName: 'CADV2019', Number: 541 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26541,7 +26541,7 @@ module.exports = [
   {
     Title: 'QUÉDATE',
     BasedOn: ['Basado en oración de '],
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 542 },
       { BookName: 'CADV2019', Number: 542 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26627,7 +26627,7 @@ module.exports = [
   {
     Title: 'ALMA DE CRISTO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 543 },
       { BookName: 'CADV2019', Number: 543 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26674,7 +26674,7 @@ module.exports = [
   {
     Title: 'ALMA MISIONERA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 545 },
       { BookName: 'CADV2019', Number: 545 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26729,7 +26729,7 @@ module.exports = [
   {
     Title: 'DE NUEVO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 546 },
       { BookName: 'CADV2019', Number: 546 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26780,7 +26780,7 @@ module.exports = [
   {
     Title: 'SALVE, REINA DE LOS CIELOS',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 547 },
       { BookName: 'CADV2019', Number: 547 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26816,7 +26816,7 @@ module.exports = [
   {
     Title: 'SALVE REGINA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 549 },
       { BookName: 'CADV2019', Number: 549 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26865,7 +26865,7 @@ module.exports = [
   {
     Title: 'OH REINA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 550 },
       { BookName: 'CADV2019', Number: 550 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -26923,7 +26923,7 @@ module.exports = [
   {
     Title: 'HIMNO A LA CRUZ',
     BasedOn: 'Crux fidelis — Pange, lingua, gloriosi proelium certaminis',
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 551 },
       { BookName: 'CADV2019', Number: 551 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27072,7 +27072,7 @@ module.exports = [
   {
     Title: 'OÍD UN SON EN ALTA ESFERA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 601 },
       { BookName: 'CADV2019', Number: 601 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27136,7 +27136,7 @@ module.exports = [
   {
     Title: 'OH SANTÍSIMO, FELICÍSIMO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 602 },
       { BookName: 'CADV2019', Number: 602 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27186,7 +27186,7 @@ module.exports = [
   {
     Title: 'ADESTE, FIDELES',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 603 },
       { BookName: 'CADV2019', Number: 603 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27288,7 +27288,7 @@ module.exports = [
   {
     Title: 'NOCHE DE PAZ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 605 },
       { BookName: 'CADV2019', Number: 605 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27366,7 +27366,7 @@ module.exports = [
   {
     Title: 'AL MUNDO PAZ',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 606 },
       { BookName: 'CADV2019', Number: 606 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27424,7 +27424,7 @@ module.exports = [
   {
     Title: 'OH, NOCHE SANTA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 607 },
       { BookName: 'CADV2019', Number: 607 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27487,7 +27487,7 @@ module.exports = [
   {
     Title: 'GLORIA IN EXCELSIS DEO',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 608 },
       { BookName: 'CADV2019', Number: 608 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27547,7 +27547,7 @@ module.exports = [
   {
     Title: 'REGOCÍJATE, BELÉN',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 609 },
       { BookName: 'CADV2019', Number: 609 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27594,7 +27594,7 @@ module.exports = [
   {
     Title: 'SOBRE LA ROCA',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 999 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27659,7 +27659,7 @@ module.exports = [
   {
     Title: 'Cantico de Simeon',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 999 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
@@ -27712,7 +27712,7 @@ module.exports = [
   {
     Title: 'Oración de la Noche',
     BasedOn: null,
-    SongBooks: [
+    Cancioneros: [
       { BookName: 'CADV2011', Number: 999 },
       { BookName: 'CADV2019', Number: 999 },
       { BookName: 'Jesed2016', Number: 'ZZZ' }
