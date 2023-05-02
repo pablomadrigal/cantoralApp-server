@@ -1,7 +1,7 @@
 // During the automated test the env variable, We will set it to "test"
 process.env.NODE_ENV = 'test'
 process.env.MONGODB_URL =
-  'mongodb+srv://pablomadrigal:6sKkZuHF3kH7N9s@cantoralapp.jef2i.mongodb.net/DEV?retryWrites=true&w=majority'
+  'mongodb+srv://pablomadrigal:6sKkZuHF3kH7N9s@cantoralapp.jef2i.mongodb.net/Test?retryWrites=true&w=majority'
 
 // Require the dev-dependencies
 const chai = require('chai')

@@ -52,14 +52,14 @@ exports.songBookStore = [
     try {
       const errors = validationResult(req)
       const songBook = new SongBook({
-        name: req.body.name
+        Name: req.body.name
       })
 
       if (!errors.isEmpty()) {
         return apiResponse.validationErrorWithData(res, 'Validation Error.', errors.array())
       } else {
         SongBook.findOne({
-          name: req.body.name
+          Name: req.body.name
         }).then((oldSongBook) => {
           if (oldSongBook) {
             return Promise.reject(new Error('SongBook already exist.'))
@@ -71,7 +71,7 @@ exports.songBookStore = [
             return apiResponse.errorResponse(res, err)
           }
           const songBookData = new SongBookData(songBook)
-          return apiResponse.successResponseWithData(res, 'songBookadd Success.', songBookData)
+          return apiResponse.successResponseWithData(res, 'Song Book Add Success.', songBookData)
         })
       }
     } catch (err) {
@@ -96,7 +96,7 @@ exports.songBookUpdate = [
     try {
       const errors = validationResult(req)
       const songBook = new SongBook({
-        name: req.body.name,
+        Name: req.body.name,
         _id: req.params.id
       })
       if (!errors.isEmpty()) {
@@ -117,7 +117,7 @@ exports.songBookUpdate = [
             const songBookData = new SongBookData(songBook)
             return apiResponse.successResponseWithData(
               res,
-              'SongBook update Success.',
+              'Song Book update Success.',
               songBookData
             )
           }
@@ -153,7 +153,7 @@ exports.songBookDelete = [
             if (err) {
               return apiResponse.errorResponse(res, err)
             } else {
-              return apiResponse.successResponse(res, 'SongBook delete Success.')
+              return apiResponse.successResponse(res, 'Song Book delete Success.')
             }
           })
         }

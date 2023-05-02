@@ -1,10 +1,7 @@
 require('dotenv').config()
-const songs = require('./data/datos')
-const songBooks = require('./data/songBooks')
-const authors = require('./data/authors')
-const Song = require('./models/SongModel')
-const SongBook = require('./models/SongBookModel')
-const Author = require('./models/AuthorModel')
+const types = require('./data/authorsType')
+
+const AuthorType = require('./models/AuthorTypeModel')
 
 // DB connection
 const MONGODB_URL = process.env.MONGODB_URL
@@ -27,25 +24,9 @@ const db = mongoose.connection
 
 const importData = async () => {
   try {
-    await SongBook.deleteMany()
-    await Author.deleteMany()
-    await Song.deleteMany()
-    const adminUser = createdUsers[0].email
-    console.log(adminUser)
-    await SongBook.insertMany(songBooks)
-    console.log('SongBooks imported')
-    await Author.insertMany(authors)
-    console.log('Authors imported')
-    const songBooksInDB = await SongBook.find({})
-    const songsUpdated = songs.map((song) => {
-      const cantorales = song.Cancioneros.map((cantoral) => {
-        const foundSongBook = songBooksInDB.find((sb) => sb.Name === cantoral.BookName)
-        if (foundSongBook) return { SongBookId: foundSongBook._id, Number: cantoral.Number }
-      })
-      return { ...song, SongBooks: cantorales || [], Authors: [] }
-    })
-    await Song.insertMany(songsUpdated)
-    console.log('Songs imported')
+    await AuthorType.deleteMany()
+    await AuthorType.insertMany(types)
+    console.log('AuthorType imported')
     console.log('Data imported')
     process.exit()
   } catch (e) {

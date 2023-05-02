@@ -9,10 +9,7 @@ const SongBookSchema = new Schema({
 
 const AuthorSongSchema = new Schema({
   AuthorId: { type: Schema.Types.ObjectId, ref: 'AuthorSchema', required: true },
-  Type: {
-    type: String,
-    required: true
-  }
+  Type: { type: Schema.Types.ObjectId, ref: 'AuthorTypeSchema', required: true }
 })
 
 const ChorSchema = new Schema({

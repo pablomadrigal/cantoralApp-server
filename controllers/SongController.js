@@ -1,6 +1,8 @@
 /* eslint-disable require-jsdoc */
 /* eslint-disable valid-jsdoc */
 const Song = require('../models/SongModel')
+const Author = require('../models/AuthorModel')
+const AuthorType = require('../models/AuthorTypeModel')
 const { body, validationResult } = require('express-validator')
 const { sanitizeBody } = require('express-validator')
 const apiResponse = require('../helpers/apiResponse')
@@ -291,6 +293,94 @@ exports.songUpdate = [
         // update song.
         song.Version = foundSong.Version + 1
         Song.findByIdAndUpdate(req.params.id, song, {}, function (err) {
+          if (err) {
+            return apiResponse.errorResponse(res, err)
+          } else {
+            const songData = new SongData(song)
+            return apiResponse.successResponseWithData(res, 'Song update Success.', songData)
+          }
+        })
+      })
+    } catch (err) {
+      // throw error in json response with status 500.
+      return apiResponse.errorResponse(res, err.message)
+    }
+  }
+]
+
+/**
+ * Song update.
+ *
+ * @param {string}      idSong required
+ * @param {string}      idAuthor required
+ * @param {string}      idAuthorType required
+ *
+ * @return {Object}
+ */
+exports.songAddAuthor = [
+  auth,
+  (req, res) => {
+    try {
+      if (
+        !mongoose.Types.ObjectId.isValid(req.params.idSong) ||
+        !mongoose.Types.ObjectId.isValid(req.params.idAuthor) ||
+        !mongoose.Types.ObjectId.isValid(req.params.idAuthorType)
+      ) {
+        return apiResponse.validationErrorWithData(res, 'Invalid Error.', 'Invalid ID')
+      }
+      Song.findById(req.params.idSong, function (err, foundSong) {
+        if (foundSong === null) {
+          return apiResponse.notFoundResponse(res, 'Song not exists with this id')
+        }
+        // update song.
+        song = { ...foundSong }
+        song.Authors = [...foundSong.Authors, { AuthorId: req.params.idAuthor, Type: req.params.idAuthorType }]
+        Song.findByIdAndUpdate(req.params.idSong, song, {}, function (err) {
+          if (err) {
+            return apiResponse.errorResponse(res, err)
+          } else {
+            const songData = new SongData(song)
+            return apiResponse.successResponseWithData(res, 'Song update Success.', songData)
+          }
+        })
+      })
+    } catch (err) {
+      // throw error in json response with status 500.
+      return apiResponse.errorResponse(res, err.message)
+    }
+  }
+]
+
+/**
+ * Song update.
+ *
+ * @param {string}      idSong required
+ * @param {string}      idAuthor required
+ * @param {string}      idAuthorType required
+ *
+ * @return {Object}
+ */
+exports.songRemoveAuthor = [
+  auth,
+  (req, res) => {
+    try {
+      if (
+        !mongoose.Types.ObjectId.isValid(req.params.idSong) ||
+        !mongoose.Types.ObjectId.isValid(req.params.idAuthor) ||
+        !mongoose.Types.ObjectId.isValid(req.params.idAuthorType)
+      ) {
+        return apiResponse.validationErrorWithData(res, 'Invalid Error.', 'Invalid ID')
+      }
+      Song.findById(req.params.idSong, function (err, foundSong) {
+        if (foundSong === null) {
+          return apiResponse.notFoundResponse(res, 'Song not exists with this id')
+        }
+        // update song.
+        song = { ...foundSong }
+        song.Authors = foundSong.Authors.filter((author) => {
+          return author.AuthorId !== req.params.idAuthor && author.Type !== req.params.idAuthorType
+        })
+        Song.findByIdAndUpdate(req.params.idSong, song, {}, function (err) {
           if (err) {
             return apiResponse.errorResponse(res, err)
           } else {
