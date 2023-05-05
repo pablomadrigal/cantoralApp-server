@@ -23,7 +23,8 @@ exports.songThemeList = [
     try {
       SongTheme.find().then((songThemes) => {
         if (songThemes.length > 0) {
-          return apiResponse.successResponseWithData(res, 'Operation success', songThemes)
+          const songThemeData = songThemes.map((songTheme) => new SongThemeData(songTheme))
+          return apiResponse.successResponseWithData(res, 'Operation success', songThemeData)
         } else {
           return apiResponse.successResponseWithData(res, 'Operation success', [])
         }

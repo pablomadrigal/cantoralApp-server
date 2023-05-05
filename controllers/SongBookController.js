@@ -25,7 +25,8 @@ exports.songBookList = [
     try {
       SongBook.find().then((songBooks) => {
         if (songBooks.length > 0) {
-          return apiResponse.successResponseWithData(res, 'Operation success', songBooks)
+          const songBookData = songBooks.map((songBook) => new SongBookData(songBook))
+          return apiResponse.successResponseWithData(res, 'Operation success', songBookData)
         } else {
           return apiResponse.successResponseWithData(res, 'Operation success', [])
         }

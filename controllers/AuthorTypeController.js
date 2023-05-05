@@ -23,7 +23,10 @@ exports.authorTypeList = [
     try {
       AuthorType.find().then((authorTypes) => {
         if (authorTypes.length > 0) {
-          return apiResponse.successResponseWithData(res, 'Operation success', authorTypes)
+          const authorTypesData = authorTypes.map((authorType) => {
+            return new AuthorTypeData(authorType)
+          })
+          return apiResponse.successResponseWithData(res, 'Operation success', authorTypesData)
         } else {
           return apiResponse.successResponseWithData(res, 'Operation success', [])
         }
@@ -101,7 +104,7 @@ exports.authorTypeDelete = [
         if (foundAuthor === null) {
           return apiResponse.notFoundResponse(res, 'Author Type not exists with this id')
         } else {
-          // delete book.
+          // delete AuthorType.
           AuthorType.findByIdAndRemove(req.params.id, function (err) {
             if (err) {
               return apiResponse.errorResponse(res, err)

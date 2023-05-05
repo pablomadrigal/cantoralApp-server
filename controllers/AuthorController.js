@@ -9,8 +9,8 @@ mongoose.set('useFindAndModify', false)
 // Author Schema
 function AuthorData(data) {
   this.id = data._id
-  this.name = data.name
-  this.lastName = data.lastName
+  this.name = data.Name
+  this.lastName = data.LastName
   this.createdAt = data.createdAt
 }
 
@@ -25,7 +25,10 @@ exports.authorList = [
     try {
       Author.find().then((authors) => {
         if (authors.length > 0) {
-          return apiResponse.successResponseWithData(res, 'Operation success', authors)
+          const authorData = authors.map((author) => {
+            return new AuthorData(author)
+          })
+          return apiResponse.successResponseWithData(res, 'Operation success', authorData)
         } else {
           return apiResponse.successResponseWithData(res, 'Operation success', [])
         }
@@ -81,16 +84,16 @@ exports.authorStore = [
     try {
       const errors = validationResult(req)
       const author = new Author({
-        name: req.body.name,
-        lastName: req.body.lastName
+        Name: req.body.name,
+        LastName: req.body.lastName
       })
 
       if (!errors.isEmpty()) {
         return apiResponse.validationErrorWithData(res, 'Validation Error.', errors.array())
       } else {
         Author.findOne({
-          name: req.body.name,
-          lastName: req.body.lastName
+          Name: req.body.name,
+          LastName: req.body.lastName
         }).then((oldAuthor) => {
           if (oldAuthor) {
             return Promise.reject(new Error('Author already exist.'))
@@ -129,8 +132,8 @@ exports.authorUpdate = [
     try {
       const errors = validationResult(req)
       const author = new Author({
-        name: req.body.name,
-        lastName: req.body.lastName,
+        Name: req.body.name,
+        LastName: req.body.lastName,
         _id: req.params.id
       })
       if (!errors.isEmpty()) {

@@ -51,7 +51,8 @@ exports.songList = [
     try {
       Song.find({ Active: true, Deleted: false }).then((songs) => {
         if (songs.length > 0) {
-          return apiResponse.successResponseWithData(res, 'Operation success', songs)
+          const songList = songs.map((song) => new SongData(song))
+          return apiResponse.successResponseWithData(res, 'Operation success', songList)
         } else {
           return apiResponse.successResponseWithData(res, 'Operation success', [])
         }
@@ -333,8 +334,13 @@ exports.songAddAuthor = [
           return apiResponse.notFoundResponse(res, 'Song not exists with this id')
         }
         // update song.
-        song = { ...foundSong }
-        song.Authors = [...foundSong.Authors, { AuthorId: req.params.idAuthor, Type: req.params.idAuthorType }]
+        const song = {
+          ...foundSong,
+          Authors: [
+            ...foundSong.Authors,
+            { AuthorId: req.params.idAuthor, Type: req.params.idAuthorType }
+          ]
+        }
         Song.findByIdAndUpdate(req.params.idSong, song, {}, function (err) {
           if (err) {
             return apiResponse.errorResponse(res, err)
@@ -376,10 +382,14 @@ exports.songRemoveAuthor = [
           return apiResponse.notFoundResponse(res, 'Song not exists with this id')
         }
         // update song.
-        song = { ...foundSong }
-        song.Authors = foundSong.Authors.filter((author) => {
-          return author.AuthorId !== req.params.idAuthor && author.Type !== req.params.idAuthorType
-        })
+        const song = {
+          ...foundSong,
+          Authors: foundSong.Authors.filter((author) => {
+            return (
+              author.AuthorId !== req.params.idAuthor && author.Type !== req.params.idAuthorType
+            )
+          })
+        }
         Song.findByIdAndUpdate(req.params.idSong, song, {}, function (err) {
           if (err) {
             return apiResponse.errorResponse(res, err)
