@@ -9,7 +9,7 @@ mongoose.set('useFindAndModify', false)
 // Song Theme Schema
 function SongThemeData(data) {
   this.id = data._id
-  this.name = data.name
+  this.name = data.Name
 }
 
 /**

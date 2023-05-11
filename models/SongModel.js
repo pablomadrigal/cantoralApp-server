@@ -3,13 +3,13 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const SongBookSchema = new Schema({
-  SongBookId: { type: Schema.Types.ObjectId, ref: 'SongBookSchema', required: true },
+  SongBook: { type: Schema.Types.ObjectId, ref: 'SongBookSchema', required: true },
   Number: { type: String, required: true }
 })
 
 const AuthorSongSchema = new Schema({
-  AuthorId: { type: Schema.Types.ObjectId, ref: 'AuthorSchema', required: true },
-  Type: { type: Schema.Types.ObjectId, ref: 'AuthorTypeSchema', required: true }
+  Author: { type: Schema.Types.ObjectId, ref: 'AuthorSchema', required: true },
+  AuthorType: { type: Schema.Types.ObjectId, ref: 'AuthorTypeSchema', required: true }
 })
 
 const ChorSchema = new Schema({
@@ -79,7 +79,13 @@ const LineSchema = new Schema({
 
 const VerseSchema = new Schema({
   Type: { type: String, required: true },
+  Title: { type: String, required: true },
   Lines: { type: [LineSchema], required: true }
+})
+
+const VerseOrderSchema = new Schema({
+  VerseTitle: { type: String, required: true },
+  Order: { type: Number, required: true }
 })
 
 const SongSchema = new Schema(
@@ -89,7 +95,9 @@ const SongSchema = new Schema(
     BasedOn: { type: [String] },
     SongBooks: { type: [SongBookSchema], default: [], required: false },
     Authors: { type: [AuthorSongSchema], default: [], required: false },
-    VerseOrder: { type: [String] },
+    LyricsVerseOrder: { type: [VerseOrderSchema] },
+    PresenterVerseOrder: { type: [VerseOrderSchema] },
+    ChoresVerseOrder: { type: [VerseOrderSchema] },
     SongTheme: { type: [String] },
     ChoresIntro: { type: [ChorSchema] },
     Verses: { type: [VerseSchema] },

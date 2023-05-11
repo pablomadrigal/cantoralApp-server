@@ -9,7 +9,7 @@ mongoose.set('useFindAndModify', false)
 // AuthorType Schema
 function AuthorTypeData(data) {
   this.id = data._id
-  this.type = data.type
+  this.type = data.Type
 }
 
 /**

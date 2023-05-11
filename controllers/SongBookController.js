@@ -10,7 +10,7 @@ mongoose.set('useFindAndModify', false)
 
 function SongBookData(data) {
   this.id = data._id
-  this.name = data.name
+  this.name = data.Name
   this.createdAt = data.createdAt
 }
 

@@ -1,7 +1,15 @@
 require('dotenv').config()
-const types = require('./data/authorsType')
+const users = require('./data/users')
+const songThemes = require('./data/songThemes')
+const songBooks = require('./data/songBooks')
+const authors = require('./data/authors')
+const authorsType = require('./data/authorsType')
 
-const AuthorType = require('./models/AuthorTypeModel')
+const User = require('./models/UserModel')
+const SongTheme = require('./models/SongThemeModel')
+const SongBook = require('./models/SongBookModel')
+const Author = require('./models/AuthorModel')
+const AuthorsType = require('./models/AuthorsTypeModel')
 
 // DB connection
 const MONGODB_URL = process.env.MONGODB_URL
@@ -24,9 +32,24 @@ const db = mongoose.connection
 
 const importData = async () => {
   try {
-    await AuthorType.deleteMany()
-    await AuthorType.insertMany(types)
-    console.log('AuthorType imported')
+    await User.deleteMany()
+    await SongTheme.deleteMany()
+    await SongBook.deleteMany()
+    await Author.deleteMany()
+    await AuthorsType.deleteMany()
+    console.log('prev data detele')
+
+    await User.insertMany(users)
+    console.log('Users imported')
+    await SongTheme.insertMany(songThemes)
+    console.log('songThemes imported')
+    await SongBook.insertMany(songBooks)
+    console.log('SongBook imported')
+    await Author.insertMany(authors)
+    console.log('Authors imported')
+    await AuthorsType.insertMany(authorsType)
+    console.log('AuthorsType imported')
+    
     console.log('Data imported')
     process.exit()
   } catch (e) {
@@ -38,6 +61,14 @@ const importData = async () => {
 const destroyData = async () => {
   try {
     await User.deleteMany()
+    console.log('users data detele')
+    await SongTheme.deleteMany()
+    console.log('users data detele')
+    await SongBook.deleteMany()
+    console.log('users data detele')
+    await Author.deleteMany()
+    console.log('users data detele')
+    await AuthorsType.deleteMany()
     console.log('users data detele')
     process.exit()
   } catch (e) {

@@ -13,17 +13,17 @@ mongoose.set('useFindAndModify', false)
 // Song Schema
 function SongData(data) {
   this.id = data._id
-  this.Title = data.Title
-  this.Subtitles = data.Subtitles
-  this.BasedOn = data.BasedOn
-  this.SongBooks = data.SongBooks
-  this.VerseOrder = data.VerseOrder
-  this.SongTheme = data.SongTheme
-  this.ChoresIntro = data.ChoresIntro
-  this.Verses = data.Verses
-  this.Capo = data.Capo
-  this.Version = data.Version
-  this.MusicURL = data.MusicURL
+  this.title = data.Title
+  this.subtitles = data.Subtitles
+  this.basedOn = data.BasedOn
+  this.songBooks = data.SongBooks
+  this.verseOrder = data.VerseOrder
+  this.songTheme = data.SongTheme
+  this.choresIntro = data.ChoresIntro
+  this.verses = data.Verses
+  this.capo = data.Capo
+  this.version = data.Version
+  this.musicURL = data.MusicURL
 }
 
 // Song Light Schema
