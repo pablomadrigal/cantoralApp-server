@@ -99,12 +99,12 @@ const SongSchema = new Schema(
     PresenterVerseOrder: { type: [VerseOrderSchema] },
     ChoresVerseOrder: { type: [VerseOrderSchema] },
     SongTheme: { type: [String] },
-    ChoresIntro: { type: [ChorSchema] },
     Verses: { type: [VerseSchema] },
     Capo: { type: Number, default: 0 },
     Version: { type: Number, default: 1 },
     MusicURL: { type: String },
     Active: { type: Boolean, default: true },
+    Approved: { type: Boolean, default: false },
     Deleted: { type: Boolean, default: false }
   },
   { timestamps: true }

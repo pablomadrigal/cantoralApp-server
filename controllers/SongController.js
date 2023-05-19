@@ -17,13 +17,16 @@ function SongData(data) {
   this.subtitles = data.Subtitles
   this.basedOn = data.BasedOn
   this.songBooks = data.SongBooks
-  this.verseOrder = data.VerseOrder
+  this.authors = data.Authors
+  this.lyricsVerseOrder = data.LyricsVerseOrder
+  this.presenterVerseOrder = data.PresenterVerseOrder
+  this.choresVerseOrder = data.ChoresVerseOrder
   this.songTheme = data.SongTheme
-  this.choresIntro = data.ChoresIntro
   this.verses = data.Verses
   this.capo = data.Capo
   this.version = data.Version
   this.musicURL = data.MusicURL
+  this.approved = data.Approved
 }
 
 // Song Light Schema
@@ -34,6 +37,7 @@ function SongLightData(data) {
   this.BasedOn = data.BasedOn
   this.SongBooks = data.SongBooks
   this.SongTheme = data.SongTheme
+  this.approved = data.Approved
 }
 
 function SongBookData(data) {
@@ -140,13 +144,18 @@ exports.songDetail = [
 /**
  * Song Create
  *
- * @param {string}      title required
+ * @param {string}    title required
  * @param {json}      subtitles
  * @param {json}      basedOn
- * @param {json}      songTheme
  * @param {json}      songBooks
- * @param {string}    musicUrl
+ * @param {json}      authors
+ * @param {json}      lyricsVerseOrder
+ * @param {json}      presenterVerseOrder
+ * @param {json}      choresVerseOrder
+ * @param {json}      songTheme
+ * @param {json}      verses
  * @param {number}    capo
+ * @param {string}    musicUrl
  *
  * @return {Object}
  */
@@ -155,28 +164,21 @@ exports.songStore = [
   body('title', 'Title must not be empty.').isLength({ min: 1 }).trim(),
   body('subtitles').optional().isJSON({ allow_primitives: true }),
   body('basedOn').optional().isJSON({ allow_primitives: true }),
-  body('songTheme').optional().isJSON({ allow_primitives: true }),
   body('songBooks').optional().isJSON({ allow_primitives: true }),
-  body('musicUrl').optional(),
+  body('authors').optional().isJSON({ allow_primitives: true }),
+  body('lyricsVerseOrder').optional().isJSON({ allow_primitives: true }),
+  body('presenterVerseOrder').optional().isJSON({ allow_primitives: true }),
+  body('choresVerseOrder').optional().isJSON({ allow_primitives: true }),
+  body('songTheme').optional().isJSON({ allow_primitives: true }),
+  body('verses').optional().isJSON({ allow_primitives: true }),
   body('capo').optional().isNumeric(),
+  body('musicUrl').optional(),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
-      let subtitles = []
-      if (req.body.subtitles) {
-        subtitles = JSON.parse(req.body.subtitles)
-      }
-
-      let basedOn = []
-      if (req.body.basedOn) {
-        basedOn = JSON.parse(req.body.basedOn)
-      }
-
-      let songThemes = []
-      if (req.body.songTheme) {
-        songThemes = JSON.parse(req.body.songTheme)
-      }
-
+      const subtitles = req.body.subtitles ? JSON.parse(req.body.subtitles) :  [];
+      const basedOn = req.body.basedOn ? JSON.parse(req.body.basedOn) :  []
+         
       let songBooksJSON = null
       let songBooks = []
       if (req.body.songBooks) {
@@ -186,13 +188,26 @@ exports.songStore = [
         })
       }
 
+      const authors = req.body.authors ? JSON.parse(req.body.authors) :  []
+      const lyricsVerseOrder = req.body.lyricsVerseOrder ? JSON.parse(req.body.lyricsVerseOrder) :  []
+      const presenterVerseOrder = req.body.presenterVerseOrder ? JSON.parse(req.body.presenterVerseOrder) :  []
+      const choresVerseOrder = req.body.choresVerseOrder ? JSON.parse(req.body.choresVerseOrder) :  []
+      const songThemes = req.body.songTheme ? JSON.parse(req.body.songTheme) :  []
+      const verses = req.body.verses ? JSON.parse(req.body.verses) :  []
+
+
       const errors = validationResult(req)
       const song = new Song({
         Title: req.body.title,
         Subtitles: subtitles,
         BasedOn: basedOn,
-        SongTheme: songThemes,
         SongBooks: songBooks,
+        Authors: authors,
+        LyricsVerseOrder: lyricsVerseOrder,
+        PresenterVerseOrder: presenterVerseOrder,
+        ChoresVerseOrder: choresVerseOrder,
+        SongTheme: songThemes,
+        Verses: verses,
         MusicURL: req.body.musicUrl | '',
         Capo: req.body.capo | 0
       })
