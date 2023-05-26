@@ -3,13 +3,13 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const SongBookSchema = new Schema({
-  SongBook: { type: Schema.Types.ObjectId, ref: 'SongBookSchema', required: true },
+  SongBook: { type: String, required: true },
   Number: { type: String, required: true }
 })
 
 const AuthorSongSchema = new Schema({
-  Author: { type: Schema.Types.ObjectId, ref: 'AuthorSchema', required: true },
-  AuthorType: { type: Schema.Types.ObjectId, ref: 'AuthorTypeSchema', required: true }
+  Author: { type: String, required: true },
+  AuthorType: { type: String, required: true }
 })
 
 const ChorSchema = new Schema({
@@ -30,44 +30,14 @@ const ChorSchema = new Schema({
       'LA',
       'LA#',
       'SI',
-      'Dom',
-      'Do#m',
-      'Rem',
-      'Re#m',
-      'Mim',
-      'Fam',
-      'Fa#m',
-      'Solm',
-      'Sol#m',
-      'Lam',
-      'La#m',
-      'Sim',
-      'Dom7',
-      'Do#m7',
-      'Rem7',
-      'Re#m7',
-      'Mim7',
-      'Fam7',
-      'Fa#m7',
-      'Solm7',
-      'Sol#m7',
-      'Lam7',
-      'La#m7',
-      'Sim7',
-      'DO7',
-      'DO#7',
-      'RE7',
-      'RE#7',
-      'MI7',
-      'FA7',
-      'FA#7',
-      'SOL7',
-      'SOL#7',
-      'LA7',
-      'LA#7',
-      'SI7'
     ],
     required: true
+  },
+  Decoration: {
+    type: [String],
+    enum: ['m','sus', '7', '9', 'sus4', 'sus2'],
+    required: true,
+    default: []
   }
 })
 
@@ -95,14 +65,15 @@ const SongSchema = new Schema(
     BasedOn: { type: [String] },
     SongBooks: { type: [SongBookSchema], default: [], required: false },
     Authors: { type: [AuthorSongSchema], default: [], required: false },
+    SongTheme: { type: [String] },
+    Capo: { type: Number, default: 0 },
+    BaseChord: {type: ChorSchema, required: false},
+    MusicURL: { type: String },
+    Verses: { type: [VerseSchema] },
     LyricsVerseOrder: { type: [VerseOrderSchema] },
     PresenterVerseOrder: { type: [VerseOrderSchema] },
     ChoresVerseOrder: { type: [VerseOrderSchema] },
-    SongTheme: { type: [String] },
-    Verses: { type: [VerseSchema] },
-    Capo: { type: Number, default: 0 },
     Version: { type: Number, default: 1 },
-    MusicURL: { type: String },
     Active: { type: Boolean, default: true },
     Approved: { type: Boolean, default: false },
     Deleted: { type: Boolean, default: false }

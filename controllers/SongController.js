@@ -7,6 +7,7 @@ const { body, validationResult } = require('express-validator')
 const { sanitizeBody } = require('express-validator')
 const apiResponse = require('../helpers/apiResponse')
 const auth = require('../middlewares/jwt')
+const utility = require('../helpers/utility')
 const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false)
 
@@ -18,15 +19,17 @@ function SongData(data) {
   this.basedOn = data.BasedOn
   this.songBooks = data.SongBooks
   this.authors = data.Authors
+  this.songTheme = data.SongTheme
+  this.capo = data.Capo
+  this.baseChord = data.BaseChord
+  this.musicURL = data.MusicURL
+  this.verses = data.Verses
   this.lyricsVerseOrder = data.LyricsVerseOrder
   this.presenterVerseOrder = data.PresenterVerseOrder
   this.choresVerseOrder = data.ChoresVerseOrder
-  this.songTheme = data.SongTheme
-  this.verses = data.Verses
-  this.capo = data.Capo
   this.version = data.Version
-  this.musicURL = data.MusicURL
   this.approved = data.Approved
+  this.active = data.Active
 }
 
 // Song Light Schema
@@ -41,8 +44,120 @@ function SongLightData(data) {
 }
 
 function SongBookData(data) {
-  this.BookName = data.BookName
-  this.Number = data.Number
+  this.bookName = data.BookName
+  this.number = data.Number
+}
+
+function AuthorData(data) {
+  this.author = data.Author
+  this.authorType = data.AuthorType
+}
+
+function ChordData(data) {
+  this.beginning = data.Beginning
+  this.end = data.End
+  this.type = data.Type
+  this.decoration = data.Decoration
+}
+
+function ChordAPIData(data) {
+  this.Beginning = data.beginning
+  this.End = data.end
+  this.Type = data.type
+  this.Decoration = data.decoration
+}
+
+function VerseOrderApiData(data) {
+  this.VerseTitle = data.verseTitle
+  this.Order = data.order
+}
+
+getAuthorData = function (authorData) {
+  try {
+    const authorsJSON = JSON.parse(authorData)
+    if (Array.isArray(authorsJSON)) {
+      return authorsJSON.map((author) => {
+        return {
+          Author: author.author,
+          AuthorType: author.authorType
+        }
+      })
+    } else {
+      return []
+    }
+  } catch (e) {
+    return []
+  }
+}
+
+getSongBookData = function (songBookData) {
+  try {
+    const songBookJSON = JSON.parse(songBookData)
+    if (Array.isArray(songBookJSON)) {
+      return songBookJSON.map((songBook) => {
+        return {
+          BookName: songBook.bookName,
+          Number: songBook.number
+        }
+      })
+    } else {
+      return []
+    }
+  } catch (e) {
+    return []
+  }
+}
+
+getChordData = function (chordData) {
+  try {
+    const chordJSON = JSON.parse(chordData)
+    if (Array.isArray(chordJSON)) {
+      return chordJSON.map((chord) => {
+        return new ChordAPIData(chord)
+      })
+    } else {
+      return null
+    }
+  } catch (e) {
+    return null
+  }
+}
+
+getVerseLineData = function (verseLineData) {
+  return {
+    LineNumber: verseLineData.lineNumber,
+    Letter: verseLineData.letter,
+    Chores: verseLineData.chores.map((lineItem) => new ChordAPIData(lineItem))
+  }
+}
+
+getVerseData = function (verseData) {
+  try {
+    const verseJSON = JSON.parse(verseData)
+    if (Array.isArray(verseJSON)) {
+      return verseJSON.map((verse) => {
+        return {
+          Title: verse.title,
+          Type: verse.type,
+          Lines: verse.map((verseItem) => getVerseLineData(verseItem))
+        }
+      })
+    } else {
+      return []
+    }
+  } catch (e) {
+    return []
+  }
+}
+
+getVerseOrderData = function (verseOrderData) {
+  try {
+    const array = JSON.parse(verseOrderData)
+    if (!Array.isArray(array)) return []
+    return array.map((item) => new VerseOrderApiData(item))
+  } catch (error) {
+    return []
+  }
 }
 
 /**
@@ -149,13 +264,14 @@ exports.songDetail = [
  * @param {json}      basedOn
  * @param {json}      songBooks
  * @param {json}      authors
+ * @param {json}      songTheme
+ * @param {number}    capo
+ * @param {json}      baseChord
+ * @param {string}    musicUrl
+ * @param {json}      verses
  * @param {json}      lyricsVerseOrder
  * @param {json}      presenterVerseOrder
  * @param {json}      choresVerseOrder
- * @param {json}      songTheme
- * @param {json}      verses
- * @param {number}    capo
- * @param {string}    musicUrl
  *
  * @return {Object}
  */
@@ -166,50 +282,43 @@ exports.songStore = [
   body('basedOn').optional().isJSON({ allow_primitives: true }),
   body('songBooks').optional().isJSON({ allow_primitives: true }),
   body('authors').optional().isJSON({ allow_primitives: true }),
+  body('songTheme').optional().isJSON({ allow_primitives: true }),
+  body('capo').optional().isNumeric(),
+  body('baseChord').optional().isJSON({ allow_primitives: true }),
+  body('musicUrl').optional(),
+  body('verses').optional().isJSON({ allow_primitives: true }),
   body('lyricsVerseOrder').optional().isJSON({ allow_primitives: true }),
   body('presenterVerseOrder').optional().isJSON({ allow_primitives: true }),
   body('choresVerseOrder').optional().isJSON({ allow_primitives: true }),
-  body('songTheme').optional().isJSON({ allow_primitives: true }),
-  body('verses').optional().isJSON({ allow_primitives: true }),
-  body('capo').optional().isNumeric(),
-  body('musicUrl').optional(),
   sanitizeBody('*').escape(),
   (req, res) => {
     try {
-      const subtitles = req.body.subtitles ? JSON.parse(req.body.subtitles) :  [];
-      const basedOn = req.body.basedOn ? JSON.parse(req.body.basedOn) :  []
-         
-      let songBooksJSON = null
-      let songBooks = []
-      if (req.body.songBooks) {
-        songBooksJSON = JSON.parse(req.body.songBooks)
-        songBooks = songBooksJSON.map((songBook) => {
-          return new SongBookData(songBook)
-        })
-      }
-
-      const authors = req.body.authors ? JSON.parse(req.body.authors) :  []
-      const lyricsVerseOrder = req.body.lyricsVerseOrder ? JSON.parse(req.body.lyricsVerseOrder) :  []
-      const presenterVerseOrder = req.body.presenterVerseOrder ? JSON.parse(req.body.presenterVerseOrder) :  []
-      const choresVerseOrder = req.body.choresVerseOrder ? JSON.parse(req.body.choresVerseOrder) :  []
-      const songThemes = req.body.songTheme ? JSON.parse(req.body.songTheme) :  []
-      const verses = req.body.verses ? JSON.parse(req.body.verses) :  []
-
-
       const errors = validationResult(req)
+
       const song = new Song({
         Title: req.body.title,
-        Subtitles: subtitles,
-        BasedOn: basedOn,
-        SongBooks: songBooks,
-        Authors: authors,
-        LyricsVerseOrder: lyricsVerseOrder,
-        PresenterVerseOrder: presenterVerseOrder,
-        ChoresVerseOrder: choresVerseOrder,
-        SongTheme: songThemes,
-        Verses: verses,
+        Subtitles: req.body.subtitles ? utility.getStringArray(req.body.subtitles) : [],
+        BasedOn: req.body.basedOn ? utility.getStringArray(req.body.basedOn) : [],
+        SongBooks: req.body.songBooks ? getSongBookData(req.body.songBooks) : [],
+        Authors: req.body.authors ? getAuthorData(req.body.authors) : [],
+        SongTheme: req.body.songTheme ? utility.getStringArray(req.body.songTheme) : [],
+        Capo: req.body.capo | 0,
+        BaseChord: req.body.baseChord ? getChordData(req.body.baseChord) : null,
         MusicURL: req.body.musicUrl | '',
-        Capo: req.body.capo | 0
+        Verses: req.body.verses ? getVerseData(req.body.verses) : [],
+        LyricsVerseOrder: req.body.lyricsVerseOrder
+          ? getVerseOrderData(req.body.lyricsVerseOrder)
+          : [],
+        PresenterVerseOrder: req.body.presenterVerseOrder
+          ? getVerseOrderData(req.body.presenterVerseOrder)
+          : [],
+        ChoresVerseOrder: req.body.choresVerseOrder
+          ? getVerseOrderData(req.body.choresVerseOrder)
+          : [],
+        Version: 1,
+        Active: false,
+        Approved: false,
+        Deleted: false
       })
 
       if (!errors.isEmpty()) {
