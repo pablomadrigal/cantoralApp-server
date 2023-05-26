@@ -17,25 +17,12 @@ const ChorSchema = new Schema({
   End: { type: Number, required: true },
   Type: {
     type: String,
-    enum: [
-      'DO',
-      'DO#',
-      'RE',
-      'RE#',
-      'MI',
-      'FA',
-      'FA#',
-      'SOL',
-      'SOL#',
-      'LA',
-      'LA#',
-      'SI',
-    ],
+    enum: ['DO', 'DO#', 'RE', 'RE#', 'MI', 'FA', 'FA#', 'SOL', 'SOL#', 'LA', 'LA#', 'SI'],
     required: true
   },
   Decoration: {
     type: [String],
-    enum: ['m','sus', '7', '9', 'sus4', 'sus2'],
+    enum: ['m', 'sus', '7', '9', 'sus4', 'sus2'],
     required: true,
     default: []
   }
@@ -44,7 +31,7 @@ const ChorSchema = new Schema({
 const LineSchema = new Schema({
   LineNumber: { type: Number, required: true },
   Letter: { type: String, required: true },
-  Chores: { type: [ChorSchema] }
+  Chords: { type: [ChorSchema] }
 })
 
 const VerseSchema = new Schema({
@@ -63,16 +50,16 @@ const SongSchema = new Schema(
     Title: { type: String, require: true },
     Subtitles: { type: [String] },
     BasedOn: { type: [String] },
-    SongBooks: { type: [SongBookSchema], default: [], required: false },
-    Authors: { type: [AuthorSongSchema], default: [], required: false },
-    SongTheme: { type: [String] },
+    SongBooks: { type: [SongBookSchema], default: [], required: true },
+    Authors: { type: [AuthorSongSchema], default: [], required: true },
+    SongTheme: { type: [String], default: [], required: true },
     Capo: { type: Number, default: 0 },
-    BaseChord: {type: ChorSchema, required: false},
-    MusicURL: { type: String },
-    Verses: { type: [VerseSchema] },
-    LyricsVerseOrder: { type: [VerseOrderSchema] },
-    PresenterVerseOrder: { type: [VerseOrderSchema] },
-    ChoresVerseOrder: { type: [VerseOrderSchema] },
+    BaseChord: { type: ChorSchema, required: false },
+    MusicURL: { type: String, required: false },
+    Verses: { type: [VerseSchema], default: [], required: true },
+    LyricsVerseOrder: { type: [VerseOrderSchema], default: [], required: true },
+    PresenterVerseOrder: { type: [VerseOrderSchema], default: [], required: true },
+    ChordsVerseOrder: { type: [VerseOrderSchema], default: [], required: true },
     Version: { type: Number, default: 1 },
     Active: { type: Boolean, default: true },
     Approved: { type: Boolean, default: false },

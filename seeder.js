@@ -9,7 +9,7 @@ const User = require('./models/UserModel')
 const SongTheme = require('./models/SongThemeModel')
 const SongBook = require('./models/SongBookModel')
 const Author = require('./models/AuthorModel')
-const AuthorsType = require('./models/AuthorsTypeModel')
+const AuthorType = require('./models/AuthorTypeModel')
 
 // DB connection
 const MONGODB_URL = process.env.MONGODB_URL
@@ -36,7 +36,7 @@ const importData = async () => {
     await SongTheme.deleteMany()
     await SongBook.deleteMany()
     await Author.deleteMany()
-    await AuthorsType.deleteMany()
+    await AuthorType.deleteMany()
     console.log('prev data detele')
 
     await User.insertMany(users)
@@ -47,9 +47,9 @@ const importData = async () => {
     console.log('SongBook imported')
     await Author.insertMany(authors)
     console.log('Authors imported')
-    await AuthorsType.insertMany(authorsType)
+    await AuthorType.insertMany(authorsType)
     console.log('AuthorsType imported')
-    
+
     console.log('Data imported')
     process.exit()
   } catch (e) {
