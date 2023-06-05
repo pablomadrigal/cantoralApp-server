@@ -198,7 +198,7 @@ const getVerseOrderData = (verseOrderData) => {
 exports.songList = [
   function (req, res) {
     try {
-      Song.find({ Deleted: false }).then((songs) => {
+      Song.find({ Active: true, Deleted: false }).then((songs) => {
         if (songs.length > 0) {
           const songList = songs.map((song) => new SongData(song))
           return apiResponse.successResponseWithData(res, 'Operation success', songList)
