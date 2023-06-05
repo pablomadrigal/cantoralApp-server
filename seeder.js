@@ -1,9 +1,15 @@
 require('dotenv').config()
 const users = require('./data/users')
-const songs = require('./data/datos')
+const songThemes = require('./data/songThemes')
+const songBooks = require('./data/songBooks')
+const authors = require('./data/authors')
+const authorsType = require('./data/authorsType')
+
 const User = require('./models/UserModel')
-const Song = require('./models/SongModel')
-const utility = require('./helpers/utility')
+const SongTheme = require('./models/SongThemeModel')
+const SongBook = require('./models/SongBookModel')
+const Author = require('./models/AuthorModel')
+const AuthorType = require('./models/AuthorTypeModel')
 
 // DB connection
 const MONGODB_URL = process.env.MONGODB_URL
@@ -27,15 +33,23 @@ const db = mongoose.connection
 const importData = async () => {
   try {
     await User.deleteMany()
-    await Song.deleteMany()
-    const createdUsers = await User.insertMany(users)
-    const adminUser = createdUsers[0].email
-    const sampleSongs = songs.map((song) => {
-      return { ...song, history: `${adminUser}/${utility.getDate()}/Create/` }
-    })
-    console.log(sampleSongs)
-    await Song.insertMany(sampleSongs)
-    console.log(adminUser)
+    await SongTheme.deleteMany()
+    await SongBook.deleteMany()
+    await Author.deleteMany()
+    await AuthorType.deleteMany()
+    console.log('prev data detele')
+
+    await User.insertMany(users)
+    console.log('Users imported')
+    await SongTheme.insertMany(songThemes)
+    console.log('songThemes imported')
+    await SongBook.insertMany(songBooks)
+    console.log('SongBook imported')
+    await Author.insertMany(authors)
+    console.log('Authors imported')
+    await AuthorType.insertMany(authorsType)
+    console.log('AuthorsType imported')
+
     console.log('Data imported')
     process.exit()
   } catch (e) {
@@ -47,6 +61,14 @@ const importData = async () => {
 const destroyData = async () => {
   try {
     await User.deleteMany()
+    console.log('users data detele')
+    await SongTheme.deleteMany()
+    console.log('users data detele')
+    await SongBook.deleteMany()
+    console.log('users data detele')
+    await Author.deleteMany()
+    console.log('users data detele')
+    await AuthorsType.deleteMany()
     console.log('users data detele')
     process.exit()
   } catch (e) {
