@@ -147,7 +147,8 @@ exports.login = [
                       firstName: user.firstName,
                       lastName: user.lastName,
                       email: user.email,
-                      database: user.databaseName
+                      database: user.databaseName,
+                      permitions: user.permitions
                     }
                     // Prepare JWT token for authentication
                     const jwtPayload = userData

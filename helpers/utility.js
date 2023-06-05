@@ -14,11 +14,6 @@ exports.getDate = function () {
 }
 
 exports.getStringArray = function (stringData) {
-  try {
-    const array = JSON.parse(stringData)
-    if (!Array.isArray(array)) return []
-    return array.filter((item) => typeof item === 'string')
-  } catch (error) {
-    return []
-  }
+  if (!Array.isArray(stringData)) return []
+  return stringData.filter((item) => typeof item === 'string')
 }

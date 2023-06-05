@@ -3,13 +3,30 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const SongBookSchema = new Schema({
-  SongBook: { type: String, required: true },
+  Id: { type: Schema.Types.ObjectId, ref: 'SongBook', required: true },
+  Name: { type: String, required: true }
+})
+
+const SongBookItemSchema = new Schema({
+  SongBook: { type: SongBookSchema, required: false },
+  SongBookName: { type: String, required: true },
   Number: { type: String, required: true }
 })
 
-const AuthorSongSchema = new Schema({
-  Author: { type: String, required: true },
-  AuthorType: { type: String, required: true }
+const AuthorSchema = new Schema({
+  Id: { type: Schema.Types.ObjectId, ref: 'Author', required: true },
+  Name: { type: String, required: true },
+  LastName: { type: String, required: true }
+})
+
+const AuthorTypeSchema = new Schema({
+  Id: { type: Schema.Types.ObjectId, ref: 'AuthorType', required: true },
+  Type: { type: String, required: true }
+})
+
+const AuthorItemSchema = new Schema({
+  Author: { type: AuthorSchema, required: true },
+  AuthorType: { type: AuthorTypeSchema, required: true }
 })
 
 const ChorSchema = new Schema({
@@ -50,8 +67,8 @@ const SongSchema = new Schema(
     Title: { type: String, require: true },
     Subtitles: { type: [String] },
     BasedOn: { type: [String] },
-    SongBooks: { type: [SongBookSchema], default: [], required: true },
-    Authors: { type: [AuthorSongSchema], default: [], required: true },
+    SongBooks: { type: [SongBookItemSchema], default: [], required: true },
+    Authors: { type: [AuthorItemSchema], default: [], required: true },
     SongTheme: { type: [String], default: [], required: true },
     Capo: { type: Number, default: 0 },
     BaseChord: { type: ChorSchema, required: false },
