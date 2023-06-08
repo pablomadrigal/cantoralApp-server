@@ -44,11 +44,12 @@ function SongData(data) {
 // Song Light Schema
 function SongLightData(data) {
   this.id = data?._id
-  this.Title = data?.Title
-  this.Subtitles = data?.Subtitles
-  this.BasedOn = data?.BasedOn
-  this.SongBooks = data?.SongBooks
-  this.SongTheme = data?.SongTheme
+  this.title = data?.Title
+  this.subtitles = data?.Subtitles
+  this.basedOn = data?.BasedOn
+  this.songBooks =
+    data.SongBooks.length > 0 ? data.SongBooks.map((item) => new SongBookData(item)) : []
+  this.songTheme = data?.SongTheme
   this.approved = data?.Approved
 }
 
@@ -198,7 +199,7 @@ const getVerseOrderData = (verseOrderData) => {
 exports.songList = [
   function (req, res) {
     try {
-      Song.find({ Active: true, Deleted: false }).then((songs) => {
+      Song.find({ Deleted: false }).then((songs) => {
         if (songs.length > 0) {
           const songList = songs.map((song) => new SongData(song))
           return apiResponse.successResponseWithData(res, 'Operation success', songList)
