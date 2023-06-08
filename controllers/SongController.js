@@ -64,9 +64,20 @@ function SongBookData(data) {
   this.number = data?.Number
 }
 
+function AuthorDBData(data) {
+  this.id = data?.Id
+  this.name = data?.Name
+  this.lastName = data?.LastName
+}
+
+function AuthorTypeBDData(data) {
+  this.id = data?.Id
+  this.type = data?.Type
+}
+
 function AuthorData(data) {
-  this.author = data?.Author
-  this.authorType = data?.AuthorType
+  this.author = data?.Author && new AuthorDBData(data?.Author)
+  this.authorType = data?.AuthorType && new AuthorTypeBDData(data?.AuthorType)
 }
 
 function ChordData(data) {
@@ -106,29 +117,17 @@ function VerseOrderApiData(data) {
 }
 
 const getAuthorData = (authorData) => {
-  try {
-    const authorsJSON = JSON.parse(authorData)
-    if (Array.isArray(authorsJSON)) {
-      const newAuthors = authorsJSON.map((author) => {
-        if (author.author.id && author.authorType.id) {
-          Author.findById(author.author.id, (authorDB) => {
-            if (authorDB !== null)
-              AuthorType.findById(author.authorType.id, (authorTypeDB) => {
-                if (authorTypeDB !== null) {
-                  return {
-                    Author: { Id: authorDB._id, Name: authorDB.Name, LastName: authorDB.LastName },
-                    AuthorType: { Id: authorTypeDB._id, Type: authorTypeDB.Type }
-                  }
-                }
-              })
-          })
+  if (Array.isArray(authorData)) {
+    const newAuthors = authorData.map((item) => {
+      if (item.author.id && item.authorType.id) {
+        return {
+          Author: { Id: item.author.id, Name: item.author.name, LastName: item.author.lastName },
+          AuthorType: { Id: item.authorType.id, Type: item.authorType.type }
         }
-      })
-      return newAuthors.filter((author) => author !== undefined)
-    } else {
-      return []
-    }
-  } catch (e) {
+      }
+    })
+    return newAuthors.filter((author) => author !== undefined)
+  } else {
     return []
   }
 }
@@ -138,7 +137,6 @@ const getSongBookData = (songBookData) => {
     return songBookData.map((songBook) => {
       if (songBook.songBook.id) {
         const songBookData = { Id: songBook.songBook.id, Name: songBook.songBook.name }
-        console.log(songBookData)
         return {
           SongBook: songBookData,
           SongBookName: songBook.songBook.name,
@@ -406,6 +404,7 @@ exports.songUpdate = [
       const errors = validationResult(req)
 
       const song = new Song({
+        _id: req.params.id,
         Title: req.body.title,
         Subtitles: req.body.subtitles ? utility.getStringArray(req.body.subtitles) : [],
         BasedOn: req.body.basedOn ? utility.getStringArray(req.body.basedOn) : [],
