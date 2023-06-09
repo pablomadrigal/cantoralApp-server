@@ -292,7 +292,6 @@ exports.songVersionList = [
  * @return {Object}
  */
 exports.songDetail = [
-  auth,
   function (req, res) {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
       return apiResponse.successResponseWithData(res, 'Operation success', {})
