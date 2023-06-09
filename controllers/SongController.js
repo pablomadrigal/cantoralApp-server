@@ -44,12 +44,19 @@ function SongData(data) {
 // Song Light Schema
 function SongLightData(data) {
   this.id = data?._id
-  this.Title = data?.Title
-  this.Subtitles = data?.Subtitles
-  this.BasedOn = data?.BasedOn
-  this.SongBooks = data?.SongBooks
-  this.SongTheme = data?.SongTheme
+  this.title = data?.Title
+  this.subtitles = data?.Subtitles
+  this.basedOn = data?.BasedOn
+  this.songBooks =
+    data.SongBooks.length > 0 ? data.SongBooks.map((item) => new SongBookData(item)) : []
+  this.songTheme = data?.SongTheme
   this.approved = data?.Approved
+}
+
+// Song Light Schema
+function SongVersionData(data) {
+  this.id = data?._id
+  this.version = data?.Version
 }
 
 function SongBookDBData(data) {
@@ -63,9 +70,20 @@ function SongBookData(data) {
   this.number = data?.Number
 }
 
+function AuthorDBData(data) {
+  this.id = data?.Id
+  this.name = data?.Name
+  this.lastName = data?.LastName
+}
+
+function AuthorTypeBDData(data) {
+  this.id = data?.Id
+  this.type = data?.Type
+}
+
 function AuthorData(data) {
-  this.author = data?.Author
-  this.authorType = data?.AuthorType
+  this.author = data?.Author && new AuthorDBData(data?.Author)
+  this.authorType = data?.AuthorType && new AuthorTypeBDData(data?.AuthorType)
 }
 
 function ChordData(data) {
@@ -105,29 +123,17 @@ function VerseOrderApiData(data) {
 }
 
 const getAuthorData = (authorData) => {
-  try {
-    const authorsJSON = JSON.parse(authorData)
-    if (Array.isArray(authorsJSON)) {
-      const newAuthors = authorsJSON.map((author) => {
-        if (author.author.id && author.authorType.id) {
-          Author.findById(author.author.id, (authorDB) => {
-            if (authorDB !== null)
-              AuthorType.findById(author.authorType.id, (authorTypeDB) => {
-                if (authorTypeDB !== null) {
-                  return {
-                    Author: { Id: authorDB._id, Name: authorDB.Name, LastName: authorDB.LastName },
-                    AuthorType: { Id: authorTypeDB._id, Type: authorTypeDB.Type }
-                  }
-                }
-              })
-          })
+  if (Array.isArray(authorData)) {
+    const newAuthors = authorData.map((item) => {
+      if (item.author.id && item.authorType.id) {
+        return {
+          Author: { Id: item.author.id, Name: item.author.name, LastName: item.author.lastName },
+          AuthorType: { Id: item.authorType.id, Type: item.authorType.type }
         }
-      })
-      return newAuthors.filter((author) => author !== undefined)
-    } else {
-      return []
-    }
-  } catch (e) {
+      }
+    })
+    return newAuthors.filter((author) => author !== undefined)
+  } else {
     return []
   }
 }
@@ -137,7 +143,6 @@ const getSongBookData = (songBookData) => {
     return songBookData.map((songBook) => {
       if (songBook.songBook.id) {
         const songBookData = { Id: songBook.songBook.id, Name: songBook.songBook.name }
-        console.log(songBookData)
         return {
           SongBook: songBookData,
           SongBookName: songBook.songBook.name,
@@ -258,6 +263,28 @@ exports.songListLightNotDelete = [
 ]
 
 /**
+ * Song List Light
+ *
+ * @return {Object}
+ */
+exports.songVersionList = [
+  function (req, res) {
+    try {
+      Song.find({ Deleted: false }).then((songs) => {
+        if (songs.length > 0) {
+          const songListLight = songs.map((song) => new SongVersionData(song))
+          return apiResponse.successResponseWithData(res, 'Operation success', songListLight)
+        } else {
+          return apiResponse.successResponseWithData(res, 'Operation success', [])
+        }
+      })
+    } catch (err) {
+      return apiResponse.errorResponse(res, err)
+    }
+  }
+]
+
+/**
  * Song Detail.
  *
  * @param {string}      id
@@ -265,7 +292,6 @@ exports.songListLightNotDelete = [
  * @return {Object}
  */
 exports.songDetail = [
-  auth,
   function (req, res) {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
       return apiResponse.successResponseWithData(res, 'Operation success', {})
@@ -405,6 +431,7 @@ exports.songUpdate = [
       const errors = validationResult(req)
 
       const song = new Song({
+        _id: req.params.id,
         Title: req.body.title,
         Subtitles: req.body.subtitles ? utility.getStringArray(req.body.subtitles) : [],
         BasedOn: req.body.basedOn ? utility.getStringArray(req.body.basedOn) : [],
@@ -458,92 +485,30 @@ exports.songUpdate = [
 ]
 
 /**
- * Song update.
+ * Song delete.
  *
- * @param {string}      idSong required
- * @param {string}      idAuthor required
- * @param {string}      idAuthorType required
+ * @param {string}      id required
  *
- * @return {Object}
+ * @return {string}
  */
-exports.songAddAuthor = [
+exports.songDelete = [
   auth,
   (req, res) => {
     try {
-      if (
-        !mongoose.Types.ObjectId.isValid(req.params.idSong) ||
-        !mongoose.Types.ObjectId.isValid(req.params.idAuthor) ||
-        !mongoose.Types.ObjectId.isValid(req.params.idAuthorType)
-      ) {
+      if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
         return apiResponse.validationErrorWithData(res, 'Invalid Error.', 'Invalid ID')
       }
-      Song.findById(req.params.idSong, function (err, foundSong) {
+      Song.findById(req.params.id, function (err, foundSong) {
         if (foundSong === null) {
           return apiResponse.notFoundResponse(res, 'Song not exists with this id')
         }
         // update song.
-        const song = {
-          ...foundSong,
-          Authors: [
-            ...foundSong.Authors,
-            { AuthorId: req.params.idAuthor, Type: req.params.idAuthorType }
-          ]
-        }
-        Song.findByIdAndUpdate(req.params.idSong, song, {}, function (err) {
+        foundSong.Deleted = true
+        Song.findByIdAndUpdate(req.params.id, foundSong, {}, function (err) {
           if (err) {
             return apiResponse.errorResponse(res, err)
           } else {
-            const songData = new SongData(song)
-            return apiResponse.successResponseWithData(res, 'Song update Success.', songData)
-          }
-        })
-      })
-    } catch (err) {
-      // throw error in json response with status 500.
-      return apiResponse.errorResponse(res, err.message)
-    }
-  }
-]
-
-/**
- * Song update.
- *
- * @param {string}      idSong required
- * @param {string}      idAuthor required
- * @param {string}      idAuthorType required
- *
- * @return {Object}
- */
-exports.songRemoveAuthor = [
-  auth,
-  (req, res) => {
-    try {
-      if (
-        !mongoose.Types.ObjectId.isValid(req.params.idSong) ||
-        !mongoose.Types.ObjectId.isValid(req.params.idAuthor) ||
-        !mongoose.Types.ObjectId.isValid(req.params.idAuthorType)
-      ) {
-        return apiResponse.validationErrorWithData(res, 'Invalid Error.', 'Invalid ID')
-      }
-      Song.findById(req.params.idSong, function (err, foundSong) {
-        if (foundSong === null) {
-          return apiResponse.notFoundResponse(res, 'Song not exists with this id')
-        }
-        // update song.
-        const song = {
-          ...foundSong,
-          Authors: foundSong.Authors.filter((author) => {
-            return (
-              author.AuthorId !== req.params.idAuthor && author.Type !== req.params.idAuthorType
-            )
-          })
-        }
-        Song.findByIdAndUpdate(req.params.idSong, song, {}, function (err) {
-          if (err) {
-            return apiResponse.errorResponse(res, err)
-          } else {
-            const songData = new SongData(song)
-            return apiResponse.successResponseWithData(res, 'Song update Success.', songData)
+            return apiResponse.successResponseWithData(res, 'Song Delete Success.', foundSong._id)
           }
         })
       })
